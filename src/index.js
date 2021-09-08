@@ -1,12 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './app'
-import Theme, { GlobalStyle } from 'theme'
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import App from "./app";
+import Theme, { GlobalStyle } from "theme";
 
-ReactDOM.render(
-	<Theme darkMode={true}>
-		<GlobalStyle />
-		<App />
-	</Theme>,
-	document.getElementById('root')
-);
+function Index() {
+	const [darkMode, setDarkMode] = useState(false);
+
+	return (
+		<Theme darkMode={darkMode}>
+			<GlobalStyle />
+			<App toggleDarkMode={() => setDarkMode(!darkMode)} />
+		</Theme>
+	);
+}
+
+ReactDOM.render(<Index />, document.getElementById("root"));
