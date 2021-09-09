@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { Typography } from "theme";
 
-const StyledButton = styled.a`
+const StyledButton = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -23,6 +23,9 @@ const StyledButton = styled.a`
 			color: ${({ theme }) => theme.color.text2};
 			border: none;
 		`}
+	:hover {
+		cursor: pointer;
+	}
 `;
 
 export default function Button({ variant, onClick, width, flex, children }) {

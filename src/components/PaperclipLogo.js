@@ -17,9 +17,9 @@ const ImageContainer = styled.img`
 	width: 100%;
 `;
 
-export default function PaperclipLogo({ size }) {
+export default function PaperclipLogo({ onClickCallback }) {
 	return (
-		<Background>
+		<Background onClick={onClickCallback}>
 			<ImageContainer src={paperclipSvg} />
 		</Background>
 	);

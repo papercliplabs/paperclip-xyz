@@ -2,14 +2,14 @@ import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import styled, { css } from "styled-components";
 
-// Media queries
-export const mediaQuerySizes = {
-	small: "400px",
+// Media queries (px)
+const mediaQuerySizes = {
+	small: 400,
 };
 
 const mediaQueries = Object.keys(mediaQuerySizes).reduce((acc, key) => {
 	acc[key] = (...args) => css`
-		@media (max-width: ${mediaQuerySizes[key]}) {
+		@media (max-width: ${mediaQuerySizes[key]}px) {
 			${css(...args)};
 		}
 	`;
@@ -18,12 +18,14 @@ const mediaQueries = Object.keys(mediaQuerySizes).reduce((acc, key) => {
 
 const theme = (darkMode) => ({
 	color: {
+		white: "#FFFFFF",
+		black: "#000000",
+
 		bg1: darkMode ? "#000000" : "#FFFFFF",
 		bg2: darkMode ? "#FFFFFF" : "#000000",
 
 		text1: darkMode ? "#FFFFFF" : "#000000",
 		text2: darkMode ? "#000000" : "#FFFFFF",
-		text3: darkMode ? "#999999" : "#666666",
 
 		primary1: "#43EF44",
 		secondary1: "#ECFF0C",
@@ -65,11 +67,16 @@ const StyledText = styled.div`
 	font-weight: ${({ fontWeight }) => fontWeight};
 	line-height: ${({ lineHeight, useDefaultLineHeight }) => (useDefaultLineHeight ? "auto" : lineHeight + "px")};
 	text-align: ${({ align }) => align ?? "left"};
+	opacity: ${({ opacity }) => opacity ?? 1};
+	letter-spacing: 0.02em;
 `;
 
 export const Typography = {
-	displayL(props) {
+	displayXL(props) {
 		return <StyledText family="Space Grotesk" fontSize={48} fontWeight={600} lineHeight={61} {...props} />;
+	},
+	displayL(props) {
+		return <StyledText family="Space Grotesk" fontSize={36} fontWeight={600} lineHeight={46} {...props} />;
 	},
 	displayM(props) {
 		return <StyledText family="Space Grotesk" fontSize={20} fontWeight={400} lineHeight={24} {...props} />;
