@@ -1,0 +1,2058 @@
+{
+	"object": {
+		"uuid": "B32A9B35-0A99-4207-A567-81E12B436F73",
+		"objectType": "Scene",
+		"name": "Camera - Copy",
+		"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+		"layers": 1,
+		"children": [
+			{
+				"uuid": "AE7FAA45-1E09-47B9-BDAF-08622CF0D6CD",
+				"objectType": "CombinedCamera",
+				"name": "Default Camera",
+				"matrix": [
+					0.8956933007610918, 2.0816681711721673e-17, -0.4446723636248369, 0, -0.09344546783976763, 0.9776703297598575,
+					-0.18822505371883425, 0, 0.4347429763801897, 0.2101445367056947, 0.8756927647187922, 0, 451.7429763801898,
+					268.14453670569475, 875.6927647187924, 1
+				],
+				"layers": 1,
+				"userData": { "activeCamera": true },
+				"children": [
+					{
+						"uuid": "EF1A943F-760E-4F75-9CC9-17C4B1A1FA68",
+						"type": "DirectionalLight",
+						"name": "Default Directional Light",
+						"layers": 1,
+						"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 850000, 1300000, 1000000, 1],
+						"color": 16777215,
+						"intensity": 0.6,
+						"shadow": {
+							"camera": {
+								"uuid": "0E1B6091-029F-4952-A132-FFB2881B7924",
+								"type": "OrthographicCamera",
+								"layers": 1,
+								"zoom": 1,
+								"left": -5,
+								"right": 5,
+								"top": 5,
+								"bottom": -5,
+								"near": 0.5,
+								"far": 500
+							}
+						}
+					}
+				],
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+				"interaction": { "uuid": "31AA3CEA-863F-4CF9-8555-29D08F810CE1" },
+				"enableHelper": false,
+				"cameraType": "OrthographicCamera",
+				"targetOffset": 1000,
+				"left": -960,
+				"right": 960,
+				"top": 504.5,
+				"bottom": -504.5,
+				"zoomOrtho": 0.8000000000000002,
+				"nearOrtho": -50000,
+				"far": 100000,
+				"aspect": 1.9028741328047571,
+				"fov": 45,
+				"focus": 10,
+				"filmGauge": 35,
+				"filmOffset": 0,
+				"zoomPersp": 1,
+				"nearPersp": 0.1
+			},
+			{
+				"uuid": "1C058ABF-BA65-4B83-8B3A-D0399725E371",
+				"type": "HemisphereLight",
+				"name": "Default Ambient Light",
+				"userData": { "isDefaultHemisphereLight": true },
+				"layers": 1,
+				"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1],
+				"color": 13882323,
+				"intensity": 1.1,
+				"groundColor": 8553090
+			},
+			{
+				"uuid": "60458EDC-6C5B-474A-8D19-07701274C833",
+				"objectType": "LightDirectional",
+				"name": "Directional Light",
+				"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -445.7192647466459, 566.8144887142985, 309.6707029391473, 1],
+				"castShadow": true,
+				"layers": 1,
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+				"interaction": {
+					"uuid": "44D227A5-2C07-4914-80B9-DB7185F8C927",
+					"events": [
+						{
+							"type": 2,
+							"ui": { "isCollapsed": false },
+							"targets": [
+								{
+									"easing": 4,
+									"duration": 1000,
+									"delay": 0,
+									"cubicControls": [0.5, 0.05, 0.1, 0.3],
+									"springParameters": { "mass": 1, "stiffness": 80, "damping": 10, "velocity": 0 },
+									"object": "60458EDC-6C5B-474A-8D19-07701274C833"
+								}
+							]
+						}
+					]
+				},
+				"enableHelper": false,
+				"color": 9710122,
+				"intensity": 0.1,
+				"shadow": {
+					"mapSize": [1024, 1024],
+					"camera": {
+						"uuid": "9EB2B8B8-E5FF-47ED-8246-3C34502F5771",
+						"type": "OrthographicCamera",
+						"layers": 1,
+						"zoom": 1,
+						"left": -700,
+						"right": 700,
+						"top": 700,
+						"bottom": -700,
+						"near": 1,
+						"far": 5400
+					}
+				}
+			},
+			{
+				"uuid": "EDEF73A0-B8ED-44A0-B359-36BA412954BB",
+				"objectType": "Mesh3D",
+				"name": "Cube",
+				"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 8, 29.5, -72.940066103329, 1],
+				"castShadow": true,
+				"receiveShadow": true,
+				"layers": 1,
+				"userData": { "positionToCenter": { "x": 0, "y": 0, "z": 0 } },
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+				"interaction": { "uuid": "62143E30-3528-4B90-BE2D-217F478C4BCB" },
+				"geometry": "E84C2950-DE9C-4427-81D2-6C76B585E58B",
+				"material": "D146101A-28F3-40E0-BE0D-4705FF3B53E5"
+			},
+			{
+				"uuid": "4957F2C0-866A-4FFF-B6F1-99B540BA356A",
+				"objectType": "Mesh3D",
+				"name": "Cylinder",
+				"matrix": [
+					1, 0, 0, 0, 0, -0.016025486611559447, 0.9998715836440512, 0, 0, -0.9998715836440512, -0.016025486611559447, 0,
+					7.999999999999929, 27.5, 21.43586297390692, 1
+				],
+				"castShadow": true,
+				"receiveShadow": true,
+				"layers": 1,
+				"userData": { "positionToCenter": { "x": 0, "y": 0, "z": 0 } },
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+				"interaction": { "uuid": "B08CEB87-F012-4F95-83C6-0813B37D8F5F" },
+				"geometry": "0B3D1C88-534F-480A-A4A0-C0F097170831",
+				"material": "98F5B028-F963-428E-A9D0-C2B329120729"
+			},
+			{
+				"uuid": "0947FE6F-5933-4C7D-B76A-61493993C0A8",
+				"objectType": "Mesh3D",
+				"name": "Cylinder copy",
+				"matrix": [
+					1, 0, 0, 0, 0, -0.016025486611559447, 0.9998715836440512, 0, 0, -0.9998715836440512, -0.016025486611559447, 0,
+					-80.00000000000003, -116.92808381794686, -182.0570225813412, 1
+				],
+				"castShadow": true,
+				"receiveShadow": true,
+				"layers": 1,
+				"userData": { "positionToCenter": { "x": 0, "y": 0, "z": 0 } },
+				"hiddenMatrix": [
+					1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 86.00000000000013, 146.87207027936168, 255.9863878662684, 1
+				],
+				"interaction": {
+					"uuid": "43011740-9D5E-4AA6-B2AF-481FC4B7FD5B",
+					"selectedState": 0,
+					"states": ["5C2FF8CE-C5E6-4521-9FFD-3B5F35AA5C64", "CF2D54D3-5EA5-4B18-8B4C-7CEDCE240392"],
+					"events": [
+						{
+							"type": 2,
+							"ui": { "isCollapsed": false },
+							"targets": [
+								{
+									"easing": 6,
+									"duration": 1000,
+									"delay": 0,
+									"cubicControls": [0.5, 0.05, 0.1, 0.3],
+									"springParameters": { "mass": 1, "stiffness": 80, "damping": 10, "velocity": 0 },
+									"object": "0947FE6F-5933-4C7D-B76A-61493993C0A8",
+									"state": "CF2D54D3-5EA5-4B18-8B4C-7CEDCE240392"
+								}
+							]
+						}
+					]
+				},
+				"geometry": "7AE2846C-3F61-404E-902A-B76A9524D06E",
+				"material": "7D48AFE3-3A63-4CF5-86AB-3DB56E9E1F77"
+			},
+			{
+				"uuid": "733A500F-E1E5-48EE-A58C-20F2E5D0E46E",
+				"objectType": "Mesh3D",
+				"name": "Sphere",
+				"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 9.5, 28.5, 127.42225084017633, 1],
+				"castShadow": true,
+				"receiveShadow": true,
+				"layers": 1,
+				"userData": { "positionToCenter": { "x": 0, "y": 0, "z": 0 } },
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+				"interaction": { "uuid": "38327380-B1C9-4F36-AD01-2241F7F2780B" },
+				"geometry": "E24D2FD4-7EF5-49F7-BEA2-B77C1E5F6F04",
+				"material": "986F927D-E3E0-43FE-84C9-556140CA0EBF"
+			},
+			{
+				"uuid": "8520F2A9-6DA3-40E7-9A3D-1BA3396B50D9",
+				"objectType": "Mesh3D",
+				"name": "Cube 2",
+				"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -68.5, 197.87207027936165, -72.940066103329, 1],
+				"castShadow": true,
+				"receiveShadow": true,
+				"layers": 1,
+				"userData": { "positionToCenter": { "x": 0, "y": 0, "z": 0 } },
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+				"interaction": { "uuid": "E5D4F908-6107-4361-B6F8-C0320CC00E55" },
+				"geometry": "192C960A-1794-44C9-8B18-6DE557C74D87",
+				"material": "7777FEE9-5E8C-4372-811E-A7FACF9FD060"
+			},
+			{
+				"uuid": "A774D7EB-B000-4F25-A652-299DC5F9B45A",
+				"objectType": "Mesh3D",
+				"name": "Cube 3",
+				"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -68.5, 203.216242465307, -50.75890763157636, 1],
+				"castShadow": true,
+				"receiveShadow": true,
+				"layers": 1,
+				"userData": { "positionToCenter": { "x": 0, "y": 0, "z": 0 } },
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+				"interaction": { "uuid": "1CCF0849-A213-47C2-A48A-7499C6C4D238" },
+				"geometry": "A5DA8F35-8589-4F9F-9FF2-889A8471A3C7",
+				"material": "A305DA0B-D59A-4493-B76F-78238850B7F4"
+			},
+			{
+				"uuid": "56E05CE8-6BE4-40CB-B7C3-9BFFB6E6286F",
+				"objectType": "Mesh3D",
+				"name": "Cylinder 2",
+				"matrix": [
+					1, 0, 0, 0, 0, 0.9999999999999993, 0, 0, 0, 0, 0.9999999999999993, 0, 95.9999999999999, 38.844172185942085,
+					-626.3023830468344, 1
+				],
+				"castShadow": true,
+				"receiveShadow": true,
+				"layers": 1,
+				"userData": { "positionToCenter": { "x": 0, "y": 0, "z": 0 } },
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 16, 125.87207027936165, 555.3623169435053, 1],
+				"interaction": {
+					"uuid": "AF2FB748-6A50-4612-8B6D-74DCCF24B3A6",
+					"selectedState": 0,
+					"states": ["70DA374A-671B-44E0-8C65-B30CF2EF0F15"],
+					"events": [
+						{
+							"type": 2,
+							"ui": { "isCollapsed": false },
+							"targets": [
+								{
+									"easing": 6,
+									"duration": 1000,
+									"delay": 0,
+									"cubicControls": [0.5, 0.05, 0.1, 0.3],
+									"springParameters": { "mass": 1, "stiffness": 80, "damping": 10, "velocity": 0 },
+									"object": "56E05CE8-6BE4-40CB-B7C3-9BFFB6E6286F"
+								}
+							]
+						}
+					]
+				},
+				"geometry": "90FF361A-F416-4F25-BA41-43E21C873B49",
+				"material": "9B8EEB88-B459-464F-A6CB-2454E69C2F68"
+			},
+			{
+				"uuid": "A4BD8D62-1EEA-4AC5-9A1F-8C2A186F7163",
+				"objectType": "Mesh3D",
+				"name": "Cube 4",
+				"matrix": [
+					1, 0, 0, 0, 0, 2.220446049250313e-16, -1, 0, 0, 1, 2.220446049250313e-16, 0, 0.2354978846445306,
+					-138.81249999999994, -99.78622492538881, 1
+				],
+				"castShadow": true,
+				"receiveShadow": true,
+				"layers": 1,
+				"userData": { "positionToCenter": { "x": 0, "y": 0, "z": 0 } },
+				"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+				"interaction": { "uuid": "E1B6F438-F760-4D20-8414-067AA5478E88" },
+				"geometry": "00814F0A-948E-4F4F-B15D-83FCE911AE47",
+				"material": "DDF7AD77-99C1-4555-9866-F14E94ADBDD1"
+			}
+		],
+		"activeCamera": "AE7FAA45-1E09-47B9-BDAF-08622CF0D6CD",
+		"camera": "AE7FAA45-1E09-47B9-BDAF-08622CF0D6CD",
+		"directionalLight": "EF1A943F-760E-4F75-9CC9-17C4B1A1FA68",
+		"ambientLight": "1C058ABF-BA65-4B83-8B3A-D0399725E371",
+		"color": [0.6980392156862745, 0.3333333333333333, 1],
+		"alpha": 0,
+		"directionalLightState": true,
+		"ambientLightState": true,
+		"canvas": {
+			"mode": 1,
+			"preset": "fullscreen",
+			"editorSize": { "width": 1920, "height": 1009 },
+			"color": [0, 0, 0, 0.5]
+		},
+		"postprocessing": {
+			"enabled": false,
+			"bloom": {
+				"enabled": false,
+				"opacity": 1,
+				"blendFunction": 16,
+				"intensity": 1,
+				"luminanceThreshold": 0.9,
+				"luminanceSmoothing": 0.025,
+				"blurScale": 1,
+				"kernelSize": 3
+			},
+			"chromaticAberration": { "enabled": false, "opacity": 1, "blendFunction": 13, "offset": [10, 10] },
+			"vignette": {
+				"enabled": false,
+				"opacity": 1,
+				"blendFunction": 13,
+				"eskil": false,
+				"darkness": 0.5,
+				"offset": 0.5
+			},
+			"noise": { "enabled": false, "opacity": 1, "blendFunction": 14 },
+			"colorAverage": { "enabled": false, "opacity": 1, "blendFunction": 13 },
+			"hueSaturation": { "enabled": false, "opacity": 1, "blendFunction": 13, "_hue": 0, "hue": 0, "saturation": 0 },
+			"brightnessContrast": { "enabled": false, "opacity": 1, "blendFunction": 13, "contrast": 0, "brightness": 0 },
+			"depthOfField": {
+				"enabled": false,
+				"opacity": 1,
+				"blendFunction": 13,
+				"focalLength": 0.1,
+				"focusDistance": 0,
+				"bokehScale": 1
+			},
+			"pixelation": { "enabled": false, "opacity": 1, "blendFunction": 13, "granularity": 30 }
+		}
+	},
+	"metadata": { "version": 1.5, "type": "Object", "generator": "Object3D.toJSON" },
+	"geometries": [
+		{
+			"uuid": "E84C2950-DE9C-4427-81D2-6C76B585E58B",
+			"userData": {
+				"parameters": {
+					"width": 368,
+					"widthSegments": 1,
+					"heightSegments": 1,
+					"depthSegments": 1,
+					"cornerRadius": 35,
+					"cornerSegments": 9,
+					"height": 285,
+					"depth": 221,
+					"extrudeDepth": 0,
+					"extrudeBevelSize": 0,
+					"extrudeBevelSegments": 1
+				},
+				"type": "CubeGeometry"
+			}
+		},
+		{
+			"uuid": "0B3D1C88-534F-480A-A4A0-C0F097170831",
+			"userData": {
+				"parameters": {
+					"width": 208,
+					"radialSegments": 64,
+					"heightSegments": 1,
+					"openEnded": false,
+					"thetaStart": 0,
+					"thetaLength": 360,
+					"cornerRadius": 16,
+					"cornerSegments": 8,
+					"hollow": 0,
+					"height": 212,
+					"depth": 208,
+					"radiusTop": 104,
+					"radiusBottom": 104,
+					"extrudeDepth": 0,
+					"extrudeBevelSize": 0,
+					"extrudeBevelSegments": 1
+				},
+				"type": "CylinderGeometry"
+			}
+		},
+		{
+			"uuid": "7AE2846C-3F61-404E-902A-B76A9524D06E",
+			"userData": {
+				"parameters": {
+					"width": 158,
+					"radialSegments": 64,
+					"heightSegments": 1,
+					"openEnded": false,
+					"thetaStart": 0,
+					"thetaLength": 360,
+					"cornerRadius": 16,
+					"cornerSegments": 8,
+					"hollow": 0.59,
+					"height": 160,
+					"depth": 158,
+					"radiusTop": 79,
+					"radiusBottom": 79,
+					"extrudeDepth": 0,
+					"extrudeBevelSize": 0,
+					"extrudeBevelSegments": 1
+				},
+				"type": "CylinderGeometry"
+			}
+		},
+		{
+			"uuid": "E24D2FD4-7EF5-49F7-BEA2-B77C1E5F6F04",
+			"userData": {
+				"parameters": {
+					"width": 111,
+					"widthSegments": 64,
+					"heightSegments": 64,
+					"phiStart": 0,
+					"phiLength": 6.283185307179586,
+					"thetaStart": 0,
+					"thetaLength": 3.141592653589793,
+					"height": 111,
+					"depth": 111,
+					"extrudeDepth": 0,
+					"extrudeBevelSize": 0,
+					"extrudeBevelSegments": 1
+				},
+				"type": "SphereGeometry"
+			}
+		},
+		{
+			"uuid": "192C960A-1794-44C9-8B18-6DE557C74D87",
+			"userData": {
+				"parameters": {
+					"width": 111,
+					"widthSegments": 1,
+					"heightSegments": 1,
+					"depthSegments": 1,
+					"cornerRadius": 11,
+					"cornerSegments": 8,
+					"height": 82,
+					"depth": 81,
+					"extrudeDepth": 0,
+					"extrudeBevelSize": 0,
+					"extrudeBevelSegments": 1
+				},
+				"type": "CubeGeometry"
+			}
+		},
+		{
+			"uuid": "A5DA8F35-8589-4F9F-9FF2-889A8471A3C7",
+			"userData": {
+				"parameters": {
+					"width": 71,
+					"widthSegments": 1,
+					"heightSegments": 1,
+					"depthSegments": 1,
+					"cornerRadius": 16,
+					"cornerSegments": 8,
+					"height": 51,
+					"depth": 71,
+					"extrudeDepth": 0,
+					"extrudeBevelSize": 0,
+					"extrudeBevelSegments": 1
+				},
+				"type": "CubeGeometry"
+			}
+		},
+		{
+			"uuid": "90FF361A-F416-4F25-BA41-43E21C873B49",
+			"userData": {
+				"parameters": {
+					"width": 77,
+					"radialSegments": 64,
+					"heightSegments": 1,
+					"openEnded": false,
+					"thetaStart": 0,
+					"thetaLength": 360,
+					"cornerRadius": 13,
+					"cornerSegments": 8,
+					"hollow": 0,
+					"height": 77,
+					"depth": 77,
+					"radiusTop": 38.5,
+					"radiusBottom": 38.5,
+					"extrudeDepth": 0,
+					"extrudeBevelSize": 0,
+					"extrudeBevelSegments": 1
+				},
+				"type": "CylinderGeometry"
+			}
+		},
+		{
+			"uuid": "00814F0A-948E-4F4F-B15D-83FCE911AE47",
+			"userData": {
+				"parameters": {
+					"width": 770,
+					"widthSegments": 1,
+					"heightSegments": 1,
+					"depthSegments": 1,
+					"cornerRadius": 128,
+					"cornerSegments": 12,
+					"height": 528,
+					"depth": 57,
+					"extrudeDepth": 0,
+					"extrudeBevelSize": 0,
+					"extrudeBevelSegments": 1
+				},
+				"type": "CubeGeometry"
+			}
+		}
+	],
+	"materials": [
+		{
+			"uuid": "D146101A-28F3-40E0-BE0D-4705FF3B53E5",
+			"type": "ShaderMaterial",
+			"emissiveIntensity": {
+				"uuid": "BE52EF5A-6C00-44ED-8704-17B3636BFCEC",
+				"type": "f",
+				"value": 1,
+				"nodeType": "Float"
+			},
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"dithering": true,
+			"wireframeLinecap": "",
+			"wireframeLinejoin": "",
+			"userData": {
+				"type": "LambertMaterial",
+				"category": "Lambert",
+				"nodeType": "LambertNodeMaterial",
+				"layers": {
+					"id": 3,
+					"uuid": "806249E9-A1FC-4B5E-AF2D-242F0B08BF74",
+					"head": {
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "C116BFBF-5674-440E-9574-CEDAA83DE400",
+							"f0_alpha": "9BA3DB90-C956-4FB4-B2F3-C29DAC9B8FFF",
+							"f0_mode": "640F6636-E7BA-4E7E-9BAB-85E6677E41AC"
+						},
+						"next": {
+							"id": 1,
+							"type": "light",
+							"defines": {},
+							"uniforms": {
+								"f1_alpha": "EC4A8AB6-19FB-42D2-AFA4-C85C0888008A",
+								"f1_mode": "34AE19CC-3109-4BDF-A146-C263E4546ECE"
+							},
+							"next": {
+								"id": 2,
+								"type": "fresnel",
+								"defines": {},
+								"uniforms": {
+									"f2_color": "264014B4-B0EB-4D1A-B1F3-86164F805A2B",
+									"f2_bias": "6EDAD10A-7AE1-489C-B3E3-2A6FC91B9817",
+									"f2_scale": "FC6DE586-FA30-47EC-8BE8-C22F78DEB7FF",
+									"f2_intensity": "E7FFD923-B55E-4887-A606-E8D77E592DEF",
+									"f2_factor": "5AC44115-81F3-473A-93CD-D0E5C91DB63B",
+									"f2_alpha": "22C5F94F-CBDB-4891-8290-CBBF9433ADE4",
+									"f2_mode": "3A11ECC6-166E-4729-8A55-E10A678DC397"
+								}
+							}
+						}
+					}
+				}
+			},
+			"glslVersion": null,
+			"defines": { "LAMBERT": 1 },
+			"vertex": "3A5B9430-CFCA-4896-AB00-69900AE5F183",
+			"fragment": "3A5B9430-CFCA-4896-AB00-69900AE5F183"
+		},
+		{
+			"uuid": "98F5B028-F963-428E-A9D0-C2B329120729",
+			"type": "ShaderMaterial",
+			"reflectivity": {
+				"uuid": "FBC8E651-86CC-4BD9-83C0-06EADEC342DC",
+				"type": "f",
+				"value": 0.5,
+				"nodeType": "Float"
+			},
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"dithering": true,
+			"wireframeLinecap": "",
+			"wireframeLinejoin": "",
+			"userData": {
+				"type": "PhysicalMaterial",
+				"category": "Physical",
+				"nodeType": "StandardNodeMaterial",
+				"layers": {
+					"id": 3,
+					"uuid": "2372A354-DCE4-4895-9A31-986C7C03C947",
+					"head": {
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "0A23FA0B-CD34-4D4F-994E-BE08A3409216",
+							"f0_alpha": "792110A3-178A-47B9-8D05-EDFDB0EA331C",
+							"f0_mode": "9D6043D4-7D6F-4641-9A03-B93897EB12B5"
+						},
+						"next": {
+							"id": 1,
+							"type": "light",
+							"defines": {},
+							"uniforms": {
+								"f1_alpha": "37D55CAA-B9DC-482A-985C-EDAC8FF82BCE",
+								"f1_mode": "5062BD4A-181E-4C88-A7E5-B976D24DA317"
+							},
+							"next": {
+								"id": 2,
+								"type": "fresnel",
+								"defines": {},
+								"uniforms": {
+									"f2_color": "CAC6CB34-C02A-4933-AA14-A412F48D02DB",
+									"f2_bias": "0EFA72CE-9D1A-475B-A9F2-CBA0B50E22A0",
+									"f2_scale": "97DEFB4C-0F30-46E4-8AA7-9E2DA107DF19",
+									"f2_intensity": "F9D08648-0642-4352-A10A-220A6800846C",
+									"f2_factor": "D7087A0D-7EBC-495E-A054-4D2337F61261",
+									"f2_alpha": "154F4CC9-CD04-4BCF-A9B5-3CB3B3E375A6",
+									"f2_mode": "6FE519AD-AB7C-405E-8E29-FF54B9B07557"
+								}
+							}
+						}
+					}
+				}
+			},
+			"glslVersion": null,
+			"defines": { "STANDARD": 1 },
+			"extensions": { "derivatives": true, "shaderTextureLOD": true },
+			"vertex": "91CCCC29-23C5-45AC-95EE-CDCED9EC4A0E",
+			"fragment": "91CCCC29-23C5-45AC-95EE-CDCED9EC4A0E"
+		},
+		{
+			"uuid": "7D48AFE3-3A63-4CF5-86AB-3DB56E9E1F77",
+			"type": "ShaderMaterial",
+			"reflectivity": {
+				"uuid": "CB35684C-EF03-45C6-B8C4-FCF6CE82DE57",
+				"type": "f",
+				"value": 0.5,
+				"nodeType": "Float"
+			},
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"dithering": true,
+			"wireframeLinecap": "",
+			"wireframeLinejoin": "",
+			"userData": {
+				"type": "PhysicalMaterial",
+				"category": "Physical",
+				"nodeType": "StandardNodeMaterial",
+				"layers": {
+					"id": 3,
+					"uuid": "6164F807-845D-425C-8CC5-20DD503AF5A9",
+					"head": {
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "2FFCC00B-EDB6-45C9-ACF5-C9344305845F",
+							"f0_alpha": "02A5EDEA-BAE4-40E8-8C49-3CA42CF30FDA",
+							"f0_mode": "A16F6EE8-38C8-458A-BB08-651F7F6AC0D5"
+						},
+						"next": {
+							"id": 1,
+							"type": "light",
+							"defines": {},
+							"uniforms": {
+								"f1_alpha": "4DC0D787-6670-4DE3-93B1-5D8D62C8AB5F",
+								"f1_mode": "A613BD01-8018-461E-B0DF-39E7A6CACAAA"
+							},
+							"next": {
+								"id": 2,
+								"type": "fresnel",
+								"defines": {},
+								"uniforms": {
+									"f2_color": "5F055F52-6A67-4D82-AA24-A3C55300376E",
+									"f2_bias": "26B5D038-C66E-4A35-8DF4-496AC76E0C3C",
+									"f2_scale": "5D8769F9-E653-4236-83D3-4E2D24884809",
+									"f2_intensity": "C7C5F1C7-17F8-45C2-A9C7-3FD0B91E304E",
+									"f2_factor": "BB8420C0-3838-4092-A1C5-17C3CA3C0034",
+									"f2_alpha": "AE275620-F4C8-466E-B9A9-88F3C2010F7C",
+									"f2_mode": "E999717B-53D2-4B2E-B535-F4EE0DD630C7"
+								}
+							}
+						}
+					}
+				}
+			},
+			"glslVersion": null,
+			"defines": { "STANDARD": 1 },
+			"extensions": { "derivatives": true, "shaderTextureLOD": true },
+			"vertex": "DD611DA3-E38E-4378-BDEF-3E046CDA514A",
+			"fragment": "DD611DA3-E38E-4378-BDEF-3E046CDA514A"
+		},
+		{
+			"uuid": "986F927D-E3E0-43FE-84C9-556140CA0EBF",
+			"type": "ShaderMaterial",
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"dithering": true,
+			"wireframeLinecap": "",
+			"wireframeLinejoin": "",
+			"userData": {
+				"type": "ToonMaterial",
+				"category": "Toon",
+				"nodeType": "ToonNodeMaterial",
+				"layers": {
+					"id": 3,
+					"uuid": "8E212F85-7024-4DC3-9509-6EED47EBFE8D",
+					"head": {
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "E2DA52A4-47D1-4777-8CB3-5D550BDFDDA7",
+							"f0_alpha": "4F88D8DA-4CB2-465B-A45D-9633E4397E9A",
+							"f0_mode": "04769BED-E52D-465F-8038-8AB2DD686E82"
+						},
+						"next": {
+							"id": 1,
+							"type": "light",
+							"defines": {},
+							"uniforms": {
+								"f1_alpha": "BB22F7E9-0D77-4D67-BCAE-7ED0E52BC345",
+								"f1_mode": "A3DAA7C7-4727-4D21-9391-FF2F0B34A90B"
+							},
+							"next": {
+								"id": 2,
+								"type": "fresnel",
+								"defines": {},
+								"uniforms": {
+									"f2_color": "B281C109-9B36-46FA-8ECE-1F94D3977C84",
+									"f2_bias": "8FD97BD8-2217-47CD-9F86-017A4E079B10",
+									"f2_scale": "D0ADE782-5E62-46BD-AACE-276A4A6012F2",
+									"f2_intensity": "E6A6D2EB-70A0-4821-9AF3-5D47A266BD37",
+									"f2_factor": "53260959-0B31-4BE8-8A89-C8749CCD1952",
+									"f2_alpha": "5109EE8F-9B4B-4810-9B7E-E3B1B415327B",
+									"f2_mode": "1B28DBC4-4F8A-4798-92B1-54D5CCAA452B"
+								}
+							}
+						}
+					}
+				}
+			},
+			"glslVersion": null,
+			"defines": { "TOON": 1 },
+			"vertex": "DAA79FC9-CB2D-4E27-8A7B-C22BB59509D7",
+			"fragment": "DAA79FC9-CB2D-4E27-8A7B-C22BB59509D7"
+		},
+		{
+			"uuid": "7777FEE9-5E8C-4372-811E-A7FACF9FD060",
+			"type": "ShaderMaterial",
+			"reflectivity": {
+				"uuid": "A2EDF95C-2AF6-4404-9FC9-80A812A8B5A5",
+				"type": "f",
+				"value": 0.5,
+				"nodeType": "Float"
+			},
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"dithering": true,
+			"wireframeLinecap": "",
+			"wireframeLinejoin": "",
+			"userData": {
+				"type": "PhysicalMaterial",
+				"category": "Physical",
+				"nodeType": "StandardNodeMaterial",
+				"layers": {
+					"id": 3,
+					"uuid": "6164F807-845D-425C-8CC5-20DD503AF5A9",
+					"head": {
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "0D2CBE22-34D2-453C-9FC8-62718BFA9C08",
+							"f0_alpha": "D944FE14-266D-498F-974B-D350A85C588B",
+							"f0_mode": "76D7799B-7B08-4E5A-A54E-62B281B5F228"
+						},
+						"next": {
+							"id": 1,
+							"type": "light",
+							"defines": {},
+							"uniforms": {
+								"f1_alpha": "B4BDBAD7-2585-41E1-A495-7EE41116D60D",
+								"f1_mode": "131F7960-1603-41E6-9E6D-754995141EE4"
+							},
+							"next": {
+								"id": 2,
+								"type": "fresnel",
+								"defines": {},
+								"uniforms": {
+									"f2_color": "DEA2E50E-5364-41B7-9311-8B50E3EBFB16",
+									"f2_bias": "3801A2DA-2BC9-4859-A3E9-C812E4566439",
+									"f2_scale": "D9141A47-F116-4506-B62C-C51A3FECF303",
+									"f2_intensity": "0823879D-C659-447D-8F91-6F67F7CE8961",
+									"f2_factor": "15912C8C-56F9-4F46-9565-F141EDFAD171",
+									"f2_alpha": "4E881E17-224A-4E77-BB75-D0DE6EDCCB9E",
+									"f2_mode": "2E4C8057-CA33-4B2C-B674-C2200022390C"
+								}
+							}
+						}
+					}
+				}
+			},
+			"glslVersion": null,
+			"defines": { "STANDARD": 1 },
+			"extensions": { "derivatives": true, "shaderTextureLOD": true },
+			"vertex": "29939A39-C4F6-48BF-82FB-F1673F06ADF8",
+			"fragment": "29939A39-C4F6-48BF-82FB-F1673F06ADF8"
+		},
+		{
+			"uuid": "A305DA0B-D59A-4493-B76F-78238850B7F4",
+			"type": "ShaderMaterial",
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"dithering": true,
+			"wireframeLinecap": "",
+			"wireframeLinejoin": "",
+			"userData": {
+				"type": "ToonMaterial",
+				"category": "Toon",
+				"nodeType": "ToonNodeMaterial",
+				"layers": {
+					"id": 3,
+					"uuid": "5B0D91BD-7EBC-4B58-88C7-EC41C00122F9",
+					"head": {
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "2BFF7345-498A-4B4E-AA04-FE3E42159CD1",
+							"f0_alpha": "939873A5-AA7B-49A1-B438-B77EC637A93C",
+							"f0_mode": "83DBE9C9-D99B-4A3C-BD9D-500B2B3768A1"
+						},
+						"next": {
+							"id": 1,
+							"type": "light",
+							"defines": {},
+							"uniforms": {
+								"f1_alpha": "141BD765-269A-4E87-BB89-C27CAD0416AD",
+								"f1_mode": "E5E239A3-046D-428C-9F9D-CBDFEFFACE24"
+							},
+							"next": {
+								"id": 2,
+								"type": "fresnel",
+								"defines": {},
+								"uniforms": {
+									"f2_color": "AC36432F-EE37-4EDA-8E09-E972B2BB4471",
+									"f2_bias": "411A1623-7BC7-42EC-9967-BC23EC85D039",
+									"f2_scale": "18230896-ADF4-41F8-B760-6A156885B959",
+									"f2_intensity": "8C2C8F0A-3E32-494C-B736-C45A9AE556DB",
+									"f2_factor": "D3B95E68-20A7-4223-9DB0-AB05C0236FC6",
+									"f2_alpha": "F6D9A638-5BC5-4953-B8AF-0CF78CF2E4E2",
+									"f2_mode": "AB5B0BC0-618D-4692-8C6F-6D9416D4670D"
+								}
+							}
+						}
+					}
+				}
+			},
+			"glslVersion": null,
+			"defines": { "TOON": 1 },
+			"vertex": "AAC278AE-82D3-484B-BF3D-2B3A343B03EB",
+			"fragment": "AAC278AE-82D3-484B-BF3D-2B3A343B03EB"
+		},
+		{
+			"uuid": "9B8EEB88-B459-464F-A6CB-2454E69C2F68",
+			"type": "ShaderMaterial",
+			"reflectivity": {
+				"uuid": "81225BC7-92BA-4F95-A928-7E4686F8D790",
+				"type": "f",
+				"value": 0.5,
+				"nodeType": "Float"
+			},
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"dithering": true,
+			"wireframeLinecap": "",
+			"wireframeLinejoin": "",
+			"userData": {
+				"type": "PhysicalMaterial",
+				"category": "Physical",
+				"nodeType": "StandardNodeMaterial",
+				"layers": {
+					"id": 3,
+					"uuid": "2372A354-DCE4-4895-9A31-986C7C03C947",
+					"head": {
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "5CA93F96-ACE3-4FD9-85D0-7B6DC8EDD950",
+							"f0_alpha": "D0F57BD5-F849-4279-B962-0DB187C47F8C",
+							"f0_mode": "94E9D3D6-CD50-4623-8714-26F1E5C6D0A1"
+						},
+						"next": {
+							"id": 1,
+							"type": "light",
+							"defines": {},
+							"uniforms": {
+								"f1_alpha": "9169A41F-9420-4CC5-A186-35AB523F83C7",
+								"f1_mode": "18121F60-0888-4CA3-B167-E21BF2ED2E41"
+							},
+							"next": {
+								"id": 2,
+								"type": "fresnel",
+								"defines": {},
+								"uniforms": {
+									"f2_color": "9175D9A9-0D46-4003-892B-796F71023A54",
+									"f2_bias": "7E333D84-94EA-449A-A707-7D8ABD033ACF",
+									"f2_scale": "0110A545-99DC-48C7-A005-66325561C45E",
+									"f2_intensity": "C748020F-FC0C-442F-9110-FD29168C070D",
+									"f2_factor": "D4B68E4E-E123-49B3-8B37-E05BA53F743A",
+									"f2_alpha": "77F7D8DD-CE7A-4980-8C87-ABFB4954B95F",
+									"f2_mode": "1EDD3B2B-E247-4D85-96A6-40A5809E1160"
+								}
+							}
+						}
+					}
+				}
+			},
+			"glslVersion": null,
+			"defines": { "STANDARD": 1 },
+			"extensions": { "derivatives": true, "shaderTextureLOD": true },
+			"vertex": "ADF5CB8D-090F-4348-8C0C-7BE347E0AF88",
+			"fragment": "ADF5CB8D-090F-4348-8C0C-7BE347E0AF88"
+		},
+		{
+			"uuid": "DDF7AD77-99C1-4555-9866-F14E94ADBDD1",
+			"type": "ShaderMaterial",
+			"emissiveIntensity": {
+				"uuid": "B8DBE8EC-73BD-4C01-9C79-85631F267872",
+				"type": "f",
+				"value": 1,
+				"nodeType": "Float"
+			},
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"dithering": true,
+			"wireframeLinecap": "",
+			"wireframeLinejoin": "",
+			"userData": {
+				"type": "LambertMaterial",
+				"category": "Lambert",
+				"nodeType": "LambertNodeMaterial",
+				"layers": {
+					"id": 3,
+					"uuid": "83618F60-8986-4D30-BD63-2FAFF0163CE7",
+					"head": {
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "DD514657-6E71-4761-AF88-A9210E52E147",
+							"f0_alpha": "D13EF70E-86A6-450A-8F98-3B637A622E54",
+							"f0_mode": "7B3F6C7E-2290-4928-A0F2-E80683CEEC6F"
+						},
+						"next": {
+							"id": 1,
+							"type": "light",
+							"defines": {},
+							"uniforms": {
+								"f1_alpha": "E99E4765-3089-4E8F-A223-A37B510DBA5C",
+								"f1_mode": "A79AE374-5DFB-4A87-9319-403AFC957D43"
+							},
+							"next": {
+								"id": 2,
+								"type": "fresnel",
+								"defines": {},
+								"uniforms": {
+									"f2_color": "E694568A-8ECC-4703-834C-CDAB9B5B8665",
+									"f2_bias": "D49CDBA4-6B05-4B77-B843-F96F01A01518",
+									"f2_scale": "B7D70EAC-0776-43B0-BBF2-C741CA56AE94",
+									"f2_intensity": "BF8BD70A-1D5E-4090-BFF1-A80590F3A55D",
+									"f2_factor": "BF408307-26C1-40C9-A5A1-267DA2310F65",
+									"f2_alpha": "BA841445-21A7-44B0-9844-67F9EB81BABF",
+									"f2_mode": "E440C034-D002-44E3-85AE-0DD48B865472"
+								}
+							}
+						}
+					}
+				}
+			},
+			"glslVersion": null,
+			"defines": { "LAMBERT": 1 },
+			"vertex": "3592D363-1C8F-4AAE-AB6F-1C1876109A8D",
+			"fragment": "3592D363-1C8F-4AAE-AB6F-1C1876109A8D"
+		}
+	],
+	"interactionStates": [
+		{
+			"uuid": "5C2FF8CE-C5E6-4521-9FFD-3B5F35AA5C64",
+			"name": "Base State",
+			"position": [-80.00000000000003, -116.92808381794686, -182.0570225813412],
+			"rotation": [1.586822499419892, 0, 0, "XYZ"],
+			"scale": [1, 1, 1],
+			"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 86.00000000000013, 146.87207027936168, 255.9863878662684, 1],
+			"geometry": { "width": 158, "height": 160, "depth": 158 },
+			"material": {
+				"layersList": [
+					{
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "F8228E69-3BD2-44FF-96C2-3BBD747763F8",
+							"f0_alpha": "8F22CA34-C2A3-428B-853E-719D3C8B4E88",
+							"f0_mode": "D01FC680-FFBA-433E-A7B5-372D99441F5E"
+						}
+					},
+					{
+						"id": 1,
+						"type": "light",
+						"defines": {},
+						"uniforms": {
+							"f1_alpha": "FB6AE038-E87B-4C34-A1E3-779D720C1190",
+							"f1_mode": "844D80CF-CDC0-4D38-8FF6-2CBFA0EF2A57"
+						}
+					},
+					{
+						"id": 2,
+						"type": "fresnel",
+						"defines": { "USE_LAYER_FRESNEL": "" },
+						"uniforms": {
+							"f2_color": "A85053BA-2B07-4D47-AC94-28EB4C1EA88A",
+							"f2_bias": "F93F7D9D-D48D-48FD-B2F5-A7F96C79ABB2",
+							"f2_scale": "748F9EF1-DA8C-4B2E-8D77-47197DBF3788",
+							"f2_intensity": "AAE9F944-2CD3-475A-8574-741C63A749F4",
+							"f2_factor": "9EA14A27-4FC2-48FB-ADC2-2DCB655DAB82",
+							"f2_alpha": "3F412D60-5F73-4818-BD13-CE86EDD93268",
+							"f2_mode": "1A549314-A19D-41ED-9D9B-DD175A3AF8D7"
+						}
+					}
+				]
+			}
+		},
+		{
+			"uuid": "CF2D54D3-5EA5-4B18-8B4C-7CEDCE240392",
+			"name": "State 1",
+			"position": [-62.0000000000002, 7.666561335933103, 651.3324683308651],
+			"rotation": [1.586822499419892, 0, 0, "XYZ"],
+			"scale": [1, 1, 1],
+			"hiddenMatrix": [
+				1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 70.00000000000013, 21.00000000000003, -299.37592907723695, 1
+			],
+			"geometry": { "width": 158, "height": 245, "depth": 158 },
+			"material": {
+				"layersList": [
+					{
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "BCBBB6B0-6563-4463-9B29-585E0614603E",
+							"f0_alpha": "FEE32827-13E3-4B69-802C-6F0E0E5EA760",
+							"f0_mode": "0D276953-A1D2-45AA-8CFD-811FE4B893C7"
+						}
+					},
+					{
+						"id": 1,
+						"type": "light",
+						"defines": {},
+						"uniforms": {
+							"f1_alpha": "C0146000-E4B5-42CC-8EB1-E82B1212E6EE",
+							"f1_mode": "778832F9-F603-47EC-827B-A9D422ACAE29"
+						}
+					},
+					{
+						"id": 2,
+						"type": "fresnel",
+						"defines": { "USE_LAYER_FRESNEL": "" },
+						"uniforms": {
+							"f2_color": "E8F14781-ACAC-48BA-B8D3-10E7DFE66C32",
+							"f2_bias": "3C52E4CB-94BD-4B33-876A-079B29BC22BD",
+							"f2_scale": "1020092E-2482-4781-9103-2E07056B7904",
+							"f2_intensity": "ABA48F56-1446-4158-AE49-B7B9456BCB43",
+							"f2_factor": "334BB963-6C8C-4316-9F43-AD85E2742CE2",
+							"f2_alpha": "214D7580-A88F-4A80-AF85-7EB8495EDA1C",
+							"f2_mode": "BD8494D3-D7FC-4C23-AA5C-92C56486D1D4"
+						}
+					}
+				]
+			}
+		},
+		{
+			"uuid": "70DA374A-671B-44E0-8C65-B30CF2EF0F15",
+			"name": "Base State",
+			"position": [95.9999999999999, 38.844172185942085, -626.3023830468344],
+			"rotation": [0, 0, 0, "XYZ"],
+			"scale": [1, 0.9999999999999993, 0.9999999999999993],
+			"hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 16, 125.87207027936165, 555.3623169435053, 1],
+			"geometry": { "width": 77, "height": 77, "depth": 77 },
+			"material": {
+				"layersList": [
+					{
+						"id": 0,
+						"type": "color",
+						"defines": {},
+						"uniforms": {
+							"f0_color": "73DDAF41-BBD3-48EE-BB71-58710B9C4A9A",
+							"f0_alpha": "49DCC26B-3789-46A7-8AD0-0789BEB00271",
+							"f0_mode": "F151E951-2845-41D6-BD99-7119315DA257"
+						}
+					},
+					{
+						"id": 1,
+						"type": "light",
+						"defines": {},
+						"uniforms": {
+							"f1_alpha": "B8546FB7-F9CA-4550-98B4-E4EBEA323BCE",
+							"f1_mode": "EFF1B3DD-D3BA-417A-8E4B-8500E9793D8E"
+						}
+					},
+					{
+						"id": 2,
+						"type": "fresnel",
+						"defines": { "USE_LAYER_FRESNEL": "" },
+						"uniforms": {
+							"f2_color": "FE68102D-4753-49CA-BF69-071873CA88E8",
+							"f2_bias": "3247F869-7979-4E3C-8792-8E314B9C0928",
+							"f2_scale": "B0DE7ECB-C56C-40EA-9E73-FACEB31716FE",
+							"f2_intensity": "C07D23D0-5EDF-4C81-B42C-FF4BA5235319",
+							"f2_factor": "A4E1EC80-055F-4D1A-85ED-A07819E529EF",
+							"f2_alpha": "1996431A-49E3-4069-859E-D311756E9D43",
+							"f2_mode": "578AE022-AB4E-4DD3-A030-6FC189AFCBD7"
+						}
+					}
+				]
+			}
+		}
+	],
+	"nodes": [
+		{
+			"uuid": "C116BFBF-5674-440E-9574-CEDAA83DE400",
+			"type": "c",
+			"r": 0.0784313725490196,
+			"g": 0.5529411764705883,
+			"b": 1,
+			"value": 1347071,
+			"alpha": "9BA3DB90-C956-4FB4-B2F3-C29DAC9B8FFF",
+			"nodeType": "Color"
+		},
+		{ "uuid": "9BA3DB90-C956-4FB4-B2F3-C29DAC9B8FFF", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "640F6636-E7BA-4E7E-9BAB-85E6677E41AC", "type": "i", "value": 0, "nodeType": "Int" },
+		{ "uuid": "EC4A8AB6-19FB-42D2-AFA4-C85C0888008A", "type": "f", "value": 0.6900000000000001, "nodeType": "Float" },
+		{ "uuid": "34AE19CC-3109-4BDF-A146-C263E4546ECE", "type": "i", "value": "3", "nodeType": "Int" },
+		{
+			"uuid": "264014B4-B0EB-4D1A-B1F3-86164F805A2B",
+			"type": "c",
+			"r": 0.5098039215686274,
+			"g": 0.7725490196078432,
+			"b": 1,
+			"value": 8570367,
+			"nodeType": "Color"
+		},
+		{ "uuid": "6EDAD10A-7AE1-489C-B3E3-2A6FC91B9817", "type": "f", "value": -0.07899999999999999, "nodeType": "Float" },
+		{ "uuid": "FC6DE586-FA30-47EC-8BE8-C22F78DEB7FF", "type": "f", "value": 1.25, "nodeType": "Float" },
+		{ "uuid": "E7FFD923-B55E-4887-A606-E8D77E592DEF", "type": "f", "value": 2.05, "nodeType": "Float" },
+		{ "uuid": "5AC44115-81F3-473A-93CD-D0E5C91DB63B", "type": "f", "value": 1.02, "nodeType": "Float" },
+		{ "uuid": "22C5F94F-CBDB-4891-8290-CBBF9433ADE4", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "3A11ECC6-166E-4729-8A55-E10A678DC397", "type": "i", "value": 3, "nodeType": "Int" },
+		{
+			"uuid": "3A5B9430-CFCA-4896-AB00-69900AE5F183",
+			"type": "lambert",
+			"color": "C116BFBF-5674-440E-9574-CEDAA83DE400",
+			"emissiveIntensity": "BE52EF5A-6C00-44ED-8704-17B3636BFCEC",
+			"shadingAlpha": "EC4A8AB6-19FB-42D2-AFA4-C85C0888008A",
+			"shadingBlend": "34AE19CC-3109-4BDF-A146-C263E4546ECE",
+			"afterColor": "A6654A22-F3A6-446C-841B-EC8CBB0F403D",
+			"alpha": "CF1264FF-BB00-405A-A26A-5D942E02A6D9",
+			"emissive": "1F34726A-19D4-456B-8ABF-6084DD18F581",
+			"nodeType": "Lambert"
+		},
+		{ "uuid": "BE52EF5A-6C00-44ED-8704-17B3636BFCEC", "type": "f", "value": 1, "nodeType": "Float" },
+		{
+			"uuid": "A6654A22-F3A6-446C-841B-EC8CBB0F403D",
+			"type": "v3",
+			"a": "0653F527-3268-401E-BEE5-88C6DFBFB737",
+			"b": "5FD8FCB2-B994-4679-8CBF-652DA7F87A07",
+			"alpha": "0E7B6AAD-91EB-4E63-AD11-CB5805CE2939",
+			"mode": "3A11ECC6-166E-4729-8A55-E10A678DC397",
+			"nodeType": "Blend"
+		},
+		{
+			"uuid": "0653F527-3268-401E-BEE5-88C6DFBFB737",
+			"type": "f",
+			"src": "outgoingLight",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "5FD8FCB2-B994-4679-8CBF-652DA7F87A07",
+			"type": "v3",
+			"color": "264014B4-B0EB-4D1A-B1F3-86164F805A2B",
+			"bias": "6EDAD10A-7AE1-489C-B3E3-2A6FC91B9817",
+			"scale": "FC6DE586-FA30-47EC-8BE8-C22F78DEB7FF",
+			"intensity": "E7FFD923-B55E-4887-A606-E8D77E592DEF",
+			"factor": "5AC44115-81F3-473A-93CD-D0E5C91DB63B",
+			"alpha": "22C5F94F-CBDB-4891-8290-CBBF9433ADE4",
+			"mode": "3A11ECC6-166E-4729-8A55-E10A678DC397",
+			"calpha": "g5FD8FCB2B99446798CBF652DA7F87A07_calpha",
+			"nodeType": "Fresnel"
+		},
+		{
+			"uuid": "0E7B6AAD-91EB-4E63-AD11-CB5805CE2939",
+			"type": "f",
+			"src": "g5FD8FCB2B99446798CBF652DA7F87A07_calpha",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{ "uuid": "CF1264FF-BB00-405A-A26A-5D942E02A6D9", "type": "f", "value": 1, "nodeType": "Float" },
+		{
+			"uuid": "1F34726A-19D4-456B-8ABF-6084DD18F581",
+			"type": "c",
+			"r": 0,
+			"g": 0,
+			"b": 0,
+			"value": 0,
+			"nodeType": "Color"
+		},
+		{
+			"uuid": "0A23FA0B-CD34-4D4F-994E-BE08A3409216",
+			"type": "c",
+			"r": 1,
+			"g": 0.403921568627451,
+			"b": 0.9686274509803922,
+			"value": 16738295,
+			"alpha": "792110A3-178A-47B9-8D05-EDFDB0EA331C",
+			"nodeType": "Color"
+		},
+		{ "uuid": "792110A3-178A-47B9-8D05-EDFDB0EA331C", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "9D6043D4-7D6F-4641-9A03-B93897EB12B5", "type": "i", "value": 0, "nodeType": "Int" },
+		{ "uuid": "37D55CAA-B9DC-482A-985C-EDAC8FF82BCE", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "5062BD4A-181E-4C88-A7E5-B976D24DA317", "type": "i", "value": "3", "nodeType": "Int" },
+		{
+			"uuid": "CAC6CB34-C02A-4933-AA14-A412F48D02DB",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "0EFA72CE-9D1A-475B-A9F2-CBA0B50E22A0", "type": "f", "value": -0.17899999999999996, "nodeType": "Float" },
+		{ "uuid": "97DEFB4C-0F30-46E4-8AA7-9E2DA107DF19", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "F9D08648-0642-4352-A10A-220A6800846C", "type": "f", "value": 2, "nodeType": "Float" },
+		{ "uuid": "D7087A0D-7EBC-495E-A054-4D2337F61261", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "154F4CC9-CD04-4BCF-A9B5-3CB3B3E375A6", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "6FE519AD-AB7C-405E-8E29-FF54B9B07557", "type": "i", "value": 2, "nodeType": "Int" },
+		{
+			"uuid": "91CCCC29-23C5-45AC-95EE-CDCED9EC4A0E",
+			"type": "standard",
+			"color": "0A23FA0B-CD34-4D4F-994E-BE08A3409216",
+			"roughness": "CBBB0CC1-D394-40A8-94FF-B3E3571FD5E7",
+			"metalness": "34318923-1764-4E01-89BB-05E75A2250CB",
+			"alpha": "85055EE8-1CC0-4590-A2E8-0809F97868E4",
+			"reflectivity": "FBC8E651-86CC-4BD9-83C0-06EADEC342DC",
+			"shadingAlpha": "37D55CAA-B9DC-482A-985C-EDAC8FF82BCE",
+			"shadingBlend": "5062BD4A-181E-4C88-A7E5-B976D24DA317",
+			"afterColor": "320F68CE-E74D-4563-A5C4-CABF3E9B0143",
+			"nodeType": "Standard"
+		},
+		{ "uuid": "CBBB0CC1-D394-40A8-94FF-B3E3571FD5E7", "type": "f", "value": 0.3, "nodeType": "Float" },
+		{ "uuid": "34318923-1764-4E01-89BB-05E75A2250CB", "type": "f", "value": 0, "nodeType": "Float" },
+		{ "uuid": "85055EE8-1CC0-4590-A2E8-0809F97868E4", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "FBC8E651-86CC-4BD9-83C0-06EADEC342DC", "type": "f", "value": 0.5, "nodeType": "Float" },
+		{
+			"uuid": "320F68CE-E74D-4563-A5C4-CABF3E9B0143",
+			"type": "v3",
+			"a": "B8AA7CF2-C342-437B-8183-47095896CA5E",
+			"b": "1A4E930E-E119-44A8-BE2A-A0B905C5F893",
+			"alpha": "857EA668-753E-4FC1-821E-5888D50E6D23",
+			"mode": "6FE519AD-AB7C-405E-8E29-FF54B9B07557",
+			"nodeType": "Blend"
+		},
+		{
+			"uuid": "B8AA7CF2-C342-437B-8183-47095896CA5E",
+			"type": "f",
+			"src": "outgoingLight",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "1A4E930E-E119-44A8-BE2A-A0B905C5F893",
+			"type": "v3",
+			"color": "CAC6CB34-C02A-4933-AA14-A412F48D02DB",
+			"bias": "0EFA72CE-9D1A-475B-A9F2-CBA0B50E22A0",
+			"scale": "97DEFB4C-0F30-46E4-8AA7-9E2DA107DF19",
+			"intensity": "F9D08648-0642-4352-A10A-220A6800846C",
+			"factor": "D7087A0D-7EBC-495E-A054-4D2337F61261",
+			"alpha": "154F4CC9-CD04-4BCF-A9B5-3CB3B3E375A6",
+			"mode": "6FE519AD-AB7C-405E-8E29-FF54B9B07557",
+			"calpha": "g1A4E930EE11944A8BE2AA0B905C5F893_calpha",
+			"nodeType": "Fresnel"
+		},
+		{
+			"uuid": "857EA668-753E-4FC1-821E-5888D50E6D23",
+			"type": "f",
+			"src": "g1A4E930EE11944A8BE2AA0B905C5F893_calpha",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "F8228E69-3BD2-44FF-96C2-3BBD747763F8",
+			"type": "c",
+			"r": 0.5450980392156862,
+			"g": 0.09411764705882353,
+			"b": 1,
+			"value": 9115903,
+			"alpha": "8F22CA34-C2A3-428B-853E-719D3C8B4E88",
+			"nodeType": "Color"
+		},
+		{ "uuid": "8F22CA34-C2A3-428B-853E-719D3C8B4E88", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "D01FC680-FFBA-433E-A7B5-372D99441F5E", "type": "i", "value": "0", "nodeType": "Int" },
+		{ "uuid": "FB6AE038-E87B-4C34-A1E3-779D720C1190", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "844D80CF-CDC0-4D38-8FF6-2CBFA0EF2A57", "type": "i", "value": 0, "nodeType": "Int" },
+		{
+			"uuid": "A85053BA-2B07-4D47-AC94-28EB4C1EA88A",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "F93F7D9D-D48D-48FD-B2F5-A7F96C79ABB2", "type": "f", "value": 0.2691, "nodeType": "Float" },
+		{ "uuid": "748F9EF1-DA8C-4B2E-8D77-47197DBF3788", "type": "f", "value": 0.7879, "nodeType": "Float" },
+		{ "uuid": "AAE9F944-2CD3-475A-8574-741C63A749F4", "type": "f", "value": 2.1, "nodeType": "Float" },
+		{ "uuid": "9EA14A27-4FC2-48FB-ADC2-2DCB655DAB82", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "3F412D60-5F73-4818-BD13-CE86EDD93268", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "1A549314-A19D-41ED-9D9B-DD175A3AF8D7", "type": "i", "value": "3", "nodeType": "Int" },
+		{
+			"uuid": "BCBBB6B0-6563-4463-9B29-585E0614603E",
+			"type": "c",
+			"r": 0.5764705882352941,
+			"g": 0.26666666666666666,
+			"b": 0.8901960784313725,
+			"value": 9651427,
+			"alpha": "FEE32827-13E3-4B69-802C-6F0E0E5EA760",
+			"nodeType": "Color"
+		},
+		{ "uuid": "FEE32827-13E3-4B69-802C-6F0E0E5EA760", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "0D276953-A1D2-45AA-8CFD-811FE4B893C7", "type": "i", "value": "0", "nodeType": "Int" },
+		{ "uuid": "C0146000-E4B5-42CC-8EB1-E82B1212E6EE", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "778832F9-F603-47EC-827B-A9D422ACAE29", "type": "i", "value": 0, "nodeType": "Int" },
+		{
+			"uuid": "E8F14781-ACAC-48BA-B8D3-10E7DFE66C32",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "3C52E4CB-94BD-4B33-876A-079B29BC22BD", "type": "f", "value": 0.2691, "nodeType": "Float" },
+		{ "uuid": "1020092E-2482-4781-9103-2E07056B7904", "type": "f", "value": 0.7879, "nodeType": "Float" },
+		{ "uuid": "ABA48F56-1446-4158-AE49-B7B9456BCB43", "type": "f", "value": 2.1, "nodeType": "Float" },
+		{ "uuid": "334BB963-6C8C-4316-9F43-AD85E2742CE2", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "214D7580-A88F-4A80-AF85-7EB8495EDA1C", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "BD8494D3-D7FC-4C23-AA5C-92C56486D1D4", "type": "i", "value": "3", "nodeType": "Int" },
+		{
+			"uuid": "2FFCC00B-EDB6-45C9-ACF5-C9344305845F",
+			"type": "c",
+			"r": 0.5450980392156862,
+			"g": 0.09411764705882353,
+			"b": 1,
+			"value": 9115903,
+			"alpha": "02A5EDEA-BAE4-40E8-8C49-3CA42CF30FDA",
+			"nodeType": "Color"
+		},
+		{ "uuid": "02A5EDEA-BAE4-40E8-8C49-3CA42CF30FDA", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "A16F6EE8-38C8-458A-BB08-651F7F6AC0D5", "type": "i", "value": "0", "nodeType": "Int" },
+		{ "uuid": "4DC0D787-6670-4DE3-93B1-5D8D62C8AB5F", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "A613BD01-8018-461E-B0DF-39E7A6CACAAA", "type": "i", "value": 0, "nodeType": "Int" },
+		{
+			"uuid": "5F055F52-6A67-4D82-AA24-A3C55300376E",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "26B5D038-C66E-4A35-8DF4-496AC76E0C3C", "type": "f", "value": 0.2691, "nodeType": "Float" },
+		{ "uuid": "5D8769F9-E653-4236-83D3-4E2D24884809", "type": "f", "value": 0.7879, "nodeType": "Float" },
+		{ "uuid": "C7C5F1C7-17F8-45C2-A9C7-3FD0B91E304E", "type": "f", "value": 2.1, "nodeType": "Float" },
+		{ "uuid": "BB8420C0-3838-4092-A1C5-17C3CA3C0034", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "AE275620-F4C8-466E-B9A9-88F3C2010F7C", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "E999717B-53D2-4B2E-B535-F4EE0DD630C7", "type": "i", "value": "3", "nodeType": "Int" },
+		{
+			"uuid": "DD611DA3-E38E-4378-BDEF-3E046CDA514A",
+			"type": "standard",
+			"color": "2FFCC00B-EDB6-45C9-ACF5-C9344305845F",
+			"roughness": "B04B6B94-D091-4940-B74E-0988CF47A72F",
+			"metalness": "F79AAADB-5149-4B5C-B95A-E7DBEA433072",
+			"alpha": "B87D03CA-9691-4DE2-BD02-B11606B32877",
+			"reflectivity": "CB35684C-EF03-45C6-B8C4-FCF6CE82DE57",
+			"shadingAlpha": "4DC0D787-6670-4DE3-93B1-5D8D62C8AB5F",
+			"shadingBlend": "A613BD01-8018-461E-B0DF-39E7A6CACAAA",
+			"afterColor": "7668B8A5-AB02-48AE-97CC-51472E370A7E",
+			"nodeType": "Standard"
+		},
+		{ "uuid": "B04B6B94-D091-4940-B74E-0988CF47A72F", "type": "f", "value": 0.3, "nodeType": "Float" },
+		{ "uuid": "F79AAADB-5149-4B5C-B95A-E7DBEA433072", "type": "f", "value": 0, "nodeType": "Float" },
+		{ "uuid": "B87D03CA-9691-4DE2-BD02-B11606B32877", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "CB35684C-EF03-45C6-B8C4-FCF6CE82DE57", "type": "f", "value": 0.5, "nodeType": "Float" },
+		{
+			"uuid": "7668B8A5-AB02-48AE-97CC-51472E370A7E",
+			"type": "v3",
+			"a": "138237DA-C22E-403E-8F00-FEC341BB3B5D",
+			"b": "B1C2D570-B987-426B-9B59-D0B5BC89E900",
+			"alpha": "E03D723E-4895-4A24-BCD3-C6C4AC4BDE36",
+			"mode": "E999717B-53D2-4B2E-B535-F4EE0DD630C7",
+			"nodeType": "Blend"
+		},
+		{
+			"uuid": "138237DA-C22E-403E-8F00-FEC341BB3B5D",
+			"type": "f",
+			"src": "outgoingLight",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "B1C2D570-B987-426B-9B59-D0B5BC89E900",
+			"type": "v3",
+			"color": "5F055F52-6A67-4D82-AA24-A3C55300376E",
+			"bias": "26B5D038-C66E-4A35-8DF4-496AC76E0C3C",
+			"scale": "5D8769F9-E653-4236-83D3-4E2D24884809",
+			"intensity": "C7C5F1C7-17F8-45C2-A9C7-3FD0B91E304E",
+			"factor": "BB8420C0-3838-4092-A1C5-17C3CA3C0034",
+			"alpha": "AE275620-F4C8-466E-B9A9-88F3C2010F7C",
+			"mode": "E999717B-53D2-4B2E-B535-F4EE0DD630C7",
+			"calpha": "gB1C2D570B987426B9B59D0B5BC89E900_calpha",
+			"nodeType": "Fresnel"
+		},
+		{
+			"uuid": "E03D723E-4895-4A24-BCD3-C6C4AC4BDE36",
+			"type": "f",
+			"src": "gB1C2D570B987426B9B59D0B5BC89E900_calpha",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "E2DA52A4-47D1-4777-8CB3-5D550BDFDDA7",
+			"type": "c",
+			"r": 0.34509803921568627,
+			"g": 0.15294117647058825,
+			"b": 0.9019607843137255,
+			"value": 5777382,
+			"alpha": "4F88D8DA-4CB2-465B-A45D-9633E4397E9A",
+			"nodeType": "Color"
+		},
+		{ "uuid": "4F88D8DA-4CB2-465B-A45D-9633E4397E9A", "type": "f", "value": 0.38, "nodeType": "Float" },
+		{ "uuid": "04769BED-E52D-465F-8038-8AB2DD686E82", "type": "i", "value": 0, "nodeType": "Int" },
+		{ "uuid": "BB22F7E9-0D77-4D67-BCAE-7ED0E52BC345", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "A3DAA7C7-4727-4D21-9391-FF2F0B34A90B", "type": "i", "value": 0, "nodeType": "Int" },
+		{
+			"uuid": "B281C109-9B36-46FA-8ECE-1F94D3977C84",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "8FD97BD8-2217-47CD-9F86-017A4E079B10", "type": "f", "value": 0.1, "nodeType": "Float" },
+		{ "uuid": "D0ADE782-5E62-46BD-AACE-276A4A6012F2", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "E6A6D2EB-70A0-4821-9AF3-5D47A266BD37", "type": "f", "value": 2, "nodeType": "Float" },
+		{ "uuid": "53260959-0B31-4BE8-8A89-C8749CCD1952", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "5109EE8F-9B4B-4810-9B7E-E3B1B415327B", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "1B28DBC4-4F8A-4798-92B1-54D5CCAA452B", "type": "i", "value": 2, "nodeType": "Int" },
+		{
+			"uuid": "DAA79FC9-CB2D-4E27-8A7B-C22BB59509D7",
+			"type": "toon",
+			"color": "E2DA52A4-47D1-4777-8CB3-5D550BDFDDA7",
+			"specular": "5AF87DAC-16E2-45EC-9219-FC891130076D",
+			"shininess": "725E35DD-5332-4B99-B4F7-42BE5CA6B909",
+			"alpha": "44DF31EA-9E25-472F-B584-A1BE1D29AE1F",
+			"shadingAlpha": "BB22F7E9-0D77-4D67-BCAE-7ED0E52BC345",
+			"shadingBlend": "A3DAA7C7-4727-4D21-9391-FF2F0B34A90B",
+			"afterColor": "A3B8B5A5-A3D8-45A5-84C4-C402842BE865",
+			"nodeType": "Toon"
+		},
+		{
+			"uuid": "5AF87DAC-16E2-45EC-9219-FC891130076D",
+			"type": "c",
+			"r": 0.06666666666666667,
+			"g": 0.06666666666666667,
+			"b": 0.06666666666666667,
+			"value": 1118481,
+			"nodeType": "Color"
+		},
+		{ "uuid": "725E35DD-5332-4B99-B4F7-42BE5CA6B909", "type": "f", "value": 30, "nodeType": "Float" },
+		{ "uuid": "44DF31EA-9E25-472F-B584-A1BE1D29AE1F", "type": "f", "value": 1, "nodeType": "Float" },
+		{
+			"uuid": "A3B8B5A5-A3D8-45A5-84C4-C402842BE865",
+			"type": "v3",
+			"a": "A371987E-002A-4726-BC19-F8A6A1114751",
+			"b": "D72CCC95-64BD-400C-96A1-6E124C9D97B8",
+			"alpha": "E46A2FD8-F257-4399-AB95-C6D7FE1574B1",
+			"mode": "1B28DBC4-4F8A-4798-92B1-54D5CCAA452B",
+			"nodeType": "Blend"
+		},
+		{
+			"uuid": "A371987E-002A-4726-BC19-F8A6A1114751",
+			"type": "f",
+			"src": "outgoingLight",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "D72CCC95-64BD-400C-96A1-6E124C9D97B8",
+			"type": "v3",
+			"color": "B281C109-9B36-46FA-8ECE-1F94D3977C84",
+			"bias": "8FD97BD8-2217-47CD-9F86-017A4E079B10",
+			"scale": "D0ADE782-5E62-46BD-AACE-276A4A6012F2",
+			"intensity": "E6A6D2EB-70A0-4821-9AF3-5D47A266BD37",
+			"factor": "53260959-0B31-4BE8-8A89-C8749CCD1952",
+			"alpha": "5109EE8F-9B4B-4810-9B7E-E3B1B415327B",
+			"mode": "1B28DBC4-4F8A-4798-92B1-54D5CCAA452B",
+			"calpha": "gD72CCC9564BD400C96A16E124C9D97B8_calpha",
+			"nodeType": "Fresnel"
+		},
+		{
+			"uuid": "E46A2FD8-F257-4399-AB95-C6D7FE1574B1",
+			"type": "f",
+			"src": "gD72CCC9564BD400C96A16E124C9D97B8_calpha",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "0D2CBE22-34D2-453C-9FC8-62718BFA9C08",
+			"type": "c",
+			"r": 0.5450980392156862,
+			"g": 0.09411764705882353,
+			"b": 1,
+			"value": 9115903,
+			"alpha": "D944FE14-266D-498F-974B-D350A85C588B",
+			"nodeType": "Color"
+		},
+		{ "uuid": "D944FE14-266D-498F-974B-D350A85C588B", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "76D7799B-7B08-4E5A-A54E-62B281B5F228", "type": "i", "value": 0, "nodeType": "Int" },
+		{ "uuid": "B4BDBAD7-2585-41E1-A495-7EE41116D60D", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "131F7960-1603-41E6-9E6D-754995141EE4", "type": "i", "value": 0, "nodeType": "Int" },
+		{
+			"uuid": "DEA2E50E-5364-41B7-9311-8B50E3EBFB16",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "3801A2DA-2BC9-4859-A3E9-C812E4566439", "type": "f", "value": 0.2691, "nodeType": "Float" },
+		{ "uuid": "D9141A47-F116-4506-B62C-C51A3FECF303", "type": "f", "value": 0.7879, "nodeType": "Float" },
+		{ "uuid": "0823879D-C659-447D-8F91-6F67F7CE8961", "type": "f", "value": 2.1, "nodeType": "Float" },
+		{ "uuid": "15912C8C-56F9-4F46-9565-F141EDFAD171", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "4E881E17-224A-4E77-BB75-D0DE6EDCCB9E", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "2E4C8057-CA33-4B2C-B674-C2200022390C", "type": "i", "value": 3, "nodeType": "Int" },
+		{
+			"uuid": "29939A39-C4F6-48BF-82FB-F1673F06ADF8",
+			"type": "standard",
+			"color": "0D2CBE22-34D2-453C-9FC8-62718BFA9C08",
+			"roughness": "DF236B3B-EEB0-4E0B-8C5E-61562DBA314B",
+			"metalness": "FBA44163-76B6-4413-9FED-03C03D95904D",
+			"alpha": "CBF30EC9-A7C6-48E1-B9AC-697404C28D97",
+			"reflectivity": "A2EDF95C-2AF6-4404-9FC9-80A812A8B5A5",
+			"shadingAlpha": "B4BDBAD7-2585-41E1-A495-7EE41116D60D",
+			"shadingBlend": "131F7960-1603-41E6-9E6D-754995141EE4",
+			"afterColor": "C2245BBD-5307-4467-8480-48B862D018EE",
+			"nodeType": "Standard"
+		},
+		{ "uuid": "DF236B3B-EEB0-4E0B-8C5E-61562DBA314B", "type": "f", "value": 0.3, "nodeType": "Float" },
+		{ "uuid": "FBA44163-76B6-4413-9FED-03C03D95904D", "type": "f", "value": 0, "nodeType": "Float" },
+		{ "uuid": "CBF30EC9-A7C6-48E1-B9AC-697404C28D97", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "A2EDF95C-2AF6-4404-9FC9-80A812A8B5A5", "type": "f", "value": 0.5, "nodeType": "Float" },
+		{
+			"uuid": "C2245BBD-5307-4467-8480-48B862D018EE",
+			"type": "v3",
+			"a": "6D6B394E-38ED-494B-9333-AAAC2EFF8B70",
+			"b": "73832995-C38A-42FB-91A8-A146C1E95F5D",
+			"alpha": "DA4BE972-A3C5-4ADD-AAC0-39FA15877EAC",
+			"mode": "2E4C8057-CA33-4B2C-B674-C2200022390C",
+			"nodeType": "Blend"
+		},
+		{
+			"uuid": "6D6B394E-38ED-494B-9333-AAAC2EFF8B70",
+			"type": "f",
+			"src": "outgoingLight",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "73832995-C38A-42FB-91A8-A146C1E95F5D",
+			"type": "v3",
+			"color": "DEA2E50E-5364-41B7-9311-8B50E3EBFB16",
+			"bias": "3801A2DA-2BC9-4859-A3E9-C812E4566439",
+			"scale": "D9141A47-F116-4506-B62C-C51A3FECF303",
+			"intensity": "0823879D-C659-447D-8F91-6F67F7CE8961",
+			"factor": "15912C8C-56F9-4F46-9565-F141EDFAD171",
+			"alpha": "4E881E17-224A-4E77-BB75-D0DE6EDCCB9E",
+			"mode": "2E4C8057-CA33-4B2C-B674-C2200022390C",
+			"calpha": "g73832995C38A42FB91A8A146C1E95F5D_calpha",
+			"nodeType": "Fresnel"
+		},
+		{
+			"uuid": "DA4BE972-A3C5-4ADD-AAC0-39FA15877EAC",
+			"type": "f",
+			"src": "g73832995C38A42FB91A8A146C1E95F5D_calpha",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "2BFF7345-498A-4B4E-AA04-FE3E42159CD1",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"alpha": "939873A5-AA7B-49A1-B438-B77EC637A93C",
+			"nodeType": "Color"
+		},
+		{ "uuid": "939873A5-AA7B-49A1-B438-B77EC637A93C", "type": "f", "value": 0.25, "nodeType": "Float" },
+		{ "uuid": "83DBE9C9-D99B-4A3C-BD9D-500B2B3768A1", "type": "i", "value": 0, "nodeType": "Int" },
+		{ "uuid": "141BD765-269A-4E87-BB89-C27CAD0416AD", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "E5E239A3-046D-428C-9F9D-CBDFEFFACE24", "type": "i", "value": 0, "nodeType": "Int" },
+		{
+			"uuid": "AC36432F-EE37-4EDA-8E09-E972B2BB4471",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "411A1623-7BC7-42EC-9967-BC23EC85D039", "type": "f", "value": 0.1, "nodeType": "Float" },
+		{ "uuid": "18230896-ADF4-41F8-B760-6A156885B959", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "8C2C8F0A-3E32-494C-B736-C45A9AE556DB", "type": "f", "value": 2, "nodeType": "Float" },
+		{ "uuid": "D3B95E68-20A7-4223-9DB0-AB05C0236FC6", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "F6D9A638-5BC5-4953-B8AF-0CF78CF2E4E2", "type": "f", "value": 0.93, "nodeType": "Float" },
+		{ "uuid": "AB5B0BC0-618D-4692-8C6F-6D9416D4670D", "type": "i", "value": 3, "nodeType": "Int" },
+		{
+			"uuid": "AAC278AE-82D3-484B-BF3D-2B3A343B03EB",
+			"type": "toon",
+			"color": "2BFF7345-498A-4B4E-AA04-FE3E42159CD1",
+			"specular": "0B5F202E-2EB3-45C7-8384-B5EBAD80897A",
+			"shininess": "2ECB1B06-ED98-4E0A-A594-B91ECAB757F1",
+			"alpha": "4EBD4E91-6CDC-459C-B128-6675CC93940F",
+			"shadingAlpha": "141BD765-269A-4E87-BB89-C27CAD0416AD",
+			"shadingBlend": "E5E239A3-046D-428C-9F9D-CBDFEFFACE24",
+			"afterColor": "E576AF86-D1BF-46EF-850C-A30B85EDF226",
+			"nodeType": "Toon"
+		},
+		{
+			"uuid": "0B5F202E-2EB3-45C7-8384-B5EBAD80897A",
+			"type": "c",
+			"r": 0.06666666666666667,
+			"g": 0.06666666666666667,
+			"b": 0.06666666666666667,
+			"value": 1118481,
+			"nodeType": "Color"
+		},
+		{ "uuid": "2ECB1B06-ED98-4E0A-A594-B91ECAB757F1", "type": "f", "value": 30, "nodeType": "Float" },
+		{ "uuid": "4EBD4E91-6CDC-459C-B128-6675CC93940F", "type": "f", "value": 1, "nodeType": "Float" },
+		{
+			"uuid": "E576AF86-D1BF-46EF-850C-A30B85EDF226",
+			"type": "v3",
+			"a": "62A38578-6D79-401F-A406-BA75D5771180",
+			"b": "2F2FC50E-0448-4001-9229-B3861DDFAC09",
+			"alpha": "8F3E09C7-1828-46C2-83FB-FCA456796CCD",
+			"mode": "AB5B0BC0-618D-4692-8C6F-6D9416D4670D",
+			"nodeType": "Blend"
+		},
+		{
+			"uuid": "62A38578-6D79-401F-A406-BA75D5771180",
+			"type": "f",
+			"src": "outgoingLight",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "2F2FC50E-0448-4001-9229-B3861DDFAC09",
+			"type": "v3",
+			"color": "AC36432F-EE37-4EDA-8E09-E972B2BB4471",
+			"bias": "411A1623-7BC7-42EC-9967-BC23EC85D039",
+			"scale": "18230896-ADF4-41F8-B760-6A156885B959",
+			"intensity": "8C2C8F0A-3E32-494C-B736-C45A9AE556DB",
+			"factor": "D3B95E68-20A7-4223-9DB0-AB05C0236FC6",
+			"alpha": "F6D9A638-5BC5-4953-B8AF-0CF78CF2E4E2",
+			"mode": "AB5B0BC0-618D-4692-8C6F-6D9416D4670D",
+			"calpha": "g2F2FC50E044840019229B3861DDFAC09_calpha",
+			"nodeType": "Fresnel"
+		},
+		{
+			"uuid": "8F3E09C7-1828-46C2-83FB-FCA456796CCD",
+			"type": "f",
+			"src": "g2F2FC50E044840019229B3861DDFAC09_calpha",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "73DDAF41-BBD3-48EE-BB71-58710B9C4A9A",
+			"type": "c",
+			"r": 1,
+			"g": 0.403921568627451,
+			"b": 0.9686274509803922,
+			"value": 16738295,
+			"alpha": "49DCC26B-3789-46A7-8AD0-0789BEB00271",
+			"nodeType": "Color"
+		},
+		{ "uuid": "49DCC26B-3789-46A7-8AD0-0789BEB00271", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "F151E951-2845-41D6-BD99-7119315DA257", "type": "i", "value": 0, "nodeType": "Int" },
+		{ "uuid": "B8546FB7-F9CA-4550-98B4-E4EBEA323BCE", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "EFF1B3DD-D3BA-417A-8E4B-8500E9793D8E", "type": "i", "value": "3", "nodeType": "Int" },
+		{
+			"uuid": "FE68102D-4753-49CA-BF69-071873CA88E8",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "3247F869-7979-4E3C-8792-8E314B9C0928", "type": "f", "value": -0.17899999999999996, "nodeType": "Float" },
+		{ "uuid": "B0DE7ECB-C56C-40EA-9E73-FACEB31716FE", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "C07D23D0-5EDF-4C81-B42C-FF4BA5235319", "type": "f", "value": 2, "nodeType": "Float" },
+		{ "uuid": "A4E1EC80-055F-4D1A-85ED-A07819E529EF", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "1996431A-49E3-4069-859E-D311756E9D43", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "578AE022-AB4E-4DD3-A030-6FC189AFCBD7", "type": "i", "value": "2", "nodeType": "Int" },
+		{
+			"uuid": "5CA93F96-ACE3-4FD9-85D0-7B6DC8EDD950",
+			"type": "c",
+			"r": 1,
+			"g": 0.403921568627451,
+			"b": 0.9686274509803922,
+			"value": 16738295,
+			"alpha": "D0F57BD5-F849-4279-B962-0DB187C47F8C",
+			"nodeType": "Color"
+		},
+		{ "uuid": "D0F57BD5-F849-4279-B962-0DB187C47F8C", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "94E9D3D6-CD50-4623-8714-26F1E5C6D0A1", "type": "i", "value": 0, "nodeType": "Int" },
+		{ "uuid": "9169A41F-9420-4CC5-A186-35AB523F83C7", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "18121F60-0888-4CA3-B167-E21BF2ED2E41", "type": "i", "value": "3", "nodeType": "Int" },
+		{
+			"uuid": "9175D9A9-0D46-4003-892B-796F71023A54",
+			"type": "c",
+			"r": 1,
+			"g": 1,
+			"b": 1,
+			"value": 16777215,
+			"nodeType": "Color"
+		},
+		{ "uuid": "7E333D84-94EA-449A-A707-7D8ABD033ACF", "type": "f", "value": -0.17899999999999996, "nodeType": "Float" },
+		{ "uuid": "0110A545-99DC-48C7-A005-66325561C45E", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "C748020F-FC0C-442F-9110-FD29168C070D", "type": "f", "value": 2, "nodeType": "Float" },
+		{ "uuid": "D4B68E4E-E123-49B3-8B37-E05BA53F743A", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "77F7D8DD-CE7A-4980-8C87-ABFB4954B95F", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "1EDD3B2B-E247-4D85-96A6-40A5809E1160", "type": "i", "value": 2, "nodeType": "Int" },
+		{
+			"uuid": "ADF5CB8D-090F-4348-8C0C-7BE347E0AF88",
+			"type": "standard",
+			"color": "5CA93F96-ACE3-4FD9-85D0-7B6DC8EDD950",
+			"roughness": "F35FF771-9226-4AF8-B5E4-6293E759119F",
+			"metalness": "3F975BAC-24EE-4F21-A3E4-B19C4D37051B",
+			"alpha": "E06030CB-3106-4A2C-A500-CDF40D6235DF",
+			"reflectivity": "81225BC7-92BA-4F95-A928-7E4686F8D790",
+			"shadingAlpha": "9169A41F-9420-4CC5-A186-35AB523F83C7",
+			"shadingBlend": "18121F60-0888-4CA3-B167-E21BF2ED2E41",
+			"afterColor": "053EC396-DA9C-41CE-AAA0-C46D8503AE60",
+			"nodeType": "Standard"
+		},
+		{ "uuid": "F35FF771-9226-4AF8-B5E4-6293E759119F", "type": "f", "value": 0.3, "nodeType": "Float" },
+		{ "uuid": "3F975BAC-24EE-4F21-A3E4-B19C4D37051B", "type": "f", "value": 0, "nodeType": "Float" },
+		{ "uuid": "E06030CB-3106-4A2C-A500-CDF40D6235DF", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "81225BC7-92BA-4F95-A928-7E4686F8D790", "type": "f", "value": 0.5, "nodeType": "Float" },
+		{
+			"uuid": "053EC396-DA9C-41CE-AAA0-C46D8503AE60",
+			"type": "v3",
+			"a": "61441D0F-F97B-4202-9875-5DA12B794635",
+			"b": "E264E8B4-9E81-401B-9460-3D85F7F25CE2",
+			"alpha": "596F4622-F0CB-4920-A954-E4362447BE84",
+			"mode": "1EDD3B2B-E247-4D85-96A6-40A5809E1160",
+			"nodeType": "Blend"
+		},
+		{
+			"uuid": "61441D0F-F97B-4202-9875-5DA12B794635",
+			"type": "f",
+			"src": "outgoingLight",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "E264E8B4-9E81-401B-9460-3D85F7F25CE2",
+			"type": "v3",
+			"color": "9175D9A9-0D46-4003-892B-796F71023A54",
+			"bias": "7E333D84-94EA-449A-A707-7D8ABD033ACF",
+			"scale": "0110A545-99DC-48C7-A005-66325561C45E",
+			"intensity": "C748020F-FC0C-442F-9110-FD29168C070D",
+			"factor": "D4B68E4E-E123-49B3-8B37-E05BA53F743A",
+			"alpha": "77F7D8DD-CE7A-4980-8C87-ABFB4954B95F",
+			"mode": "1EDD3B2B-E247-4D85-96A6-40A5809E1160",
+			"calpha": "gE264E8B49E81401B94603D85F7F25CE2_calpha",
+			"nodeType": "Fresnel"
+		},
+		{
+			"uuid": "596F4622-F0CB-4920-A954-E4362447BE84",
+			"type": "f",
+			"src": "gE264E8B49E81401B94603D85F7F25CE2_calpha",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "DD514657-6E71-4761-AF88-A9210E52E147",
+			"type": "c",
+			"r": 1,
+			"g": 0.5098039215686274,
+			"b": 0.5098039215686274,
+			"value": 16745090,
+			"alpha": "D13EF70E-86A6-450A-8F98-3B637A622E54",
+			"nodeType": "Color"
+		},
+		{ "uuid": "D13EF70E-86A6-450A-8F98-3B637A622E54", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "7B3F6C7E-2290-4928-A0F2-E80683CEEC6F", "type": "i", "value": 0, "nodeType": "Int" },
+		{ "uuid": "E99E4765-3089-4E8F-A223-A37B510DBA5C", "type": "f", "value": 1, "nodeType": "Float" },
+		{ "uuid": "A79AE374-5DFB-4A87-9319-403AFC957D43", "type": "i", "value": "2", "nodeType": "Int" },
+		{
+			"uuid": "E694568A-8ECC-4703-834C-CDAB9B5B8665",
+			"type": "c",
+			"r": 0.7647058823529411,
+			"g": 0.21568627450980393,
+			"b": 0.21568627450980393,
+			"value": 12793655,
+			"nodeType": "Color"
+		},
+		{ "uuid": "D49CDBA4-6B05-4B77-B843-F96F01A01518", "type": "f", "value": 0.051000000000000004, "nodeType": "Float" },
+		{ "uuid": "B7D70EAC-0776-43B0-BBF2-C741CA56AE94", "type": "f", "value": 0.9, "nodeType": "Float" },
+		{ "uuid": "BF8BD70A-1D5E-4090-BFF1-A80590F3A55D", "type": "f", "value": 2.21, "nodeType": "Float" },
+		{ "uuid": "BF408307-26C1-40C9-A5A1-267DA2310F65", "type": "f", "value": 0.95, "nodeType": "Float" },
+		{ "uuid": "BA841445-21A7-44B0-9844-67F9EB81BABF", "type": "f", "value": 0.55, "nodeType": "Float" },
+		{ "uuid": "E440C034-D002-44E3-85AE-0DD48B865472", "type": "i", "value": 3, "nodeType": "Int" },
+		{
+			"uuid": "3592D363-1C8F-4AAE-AB6F-1C1876109A8D",
+			"type": "lambert",
+			"color": "DD514657-6E71-4761-AF88-A9210E52E147",
+			"emissiveIntensity": "B8DBE8EC-73BD-4C01-9C79-85631F267872",
+			"shadingAlpha": "E99E4765-3089-4E8F-A223-A37B510DBA5C",
+			"shadingBlend": "A79AE374-5DFB-4A87-9319-403AFC957D43",
+			"afterColor": "605BC365-177C-4035-A155-F48044616617",
+			"alpha": "EAF39DEC-1BF4-4114-BD45-6E4693CAF71B",
+			"emissive": "FC819E23-7F1D-449A-BB93-D36455398E54",
+			"nodeType": "Lambert"
+		},
+		{ "uuid": "B8DBE8EC-73BD-4C01-9C79-85631F267872", "type": "f", "value": 1, "nodeType": "Float" },
+		{
+			"uuid": "605BC365-177C-4035-A155-F48044616617",
+			"type": "v3",
+			"a": "597212CC-2D68-487C-BC40-4D8E51FBD05B",
+			"b": "277266B2-6EC7-4377-A3C1-F854C7EDCCC7",
+			"alpha": "7B44C7AE-B9E9-4BB5-9216-6952C693BE04",
+			"mode": "E440C034-D002-44E3-85AE-0DD48B865472",
+			"nodeType": "Blend"
+		},
+		{
+			"uuid": "597212CC-2D68-487C-BC40-4D8E51FBD05B",
+			"type": "f",
+			"src": "outgoingLight",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{
+			"uuid": "277266B2-6EC7-4377-A3C1-F854C7EDCCC7",
+			"type": "v3",
+			"color": "E694568A-8ECC-4703-834C-CDAB9B5B8665",
+			"bias": "D49CDBA4-6B05-4B77-B843-F96F01A01518",
+			"scale": "B7D70EAC-0776-43B0-BBF2-C741CA56AE94",
+			"intensity": "BF8BD70A-1D5E-4090-BFF1-A80590F3A55D",
+			"factor": "BF408307-26C1-40C9-A5A1-267DA2310F65",
+			"alpha": "BA841445-21A7-44B0-9844-67F9EB81BABF",
+			"mode": "E440C034-D002-44E3-85AE-0DD48B865472",
+			"calpha": "g277266B26EC74377A3C1F854C7EDCCC7_calpha",
+			"nodeType": "Fresnel"
+		},
+		{
+			"uuid": "7B44C7AE-B9E9-4BB5-9216-6952C693BE04",
+			"type": "f",
+			"src": "g277266B26EC74377A3C1F854C7EDCCC7_calpha",
+			"isMethod": false,
+			"useKeywords": true,
+			"extensions": {},
+			"keywords": {},
+			"nodeType": "Expression"
+		},
+		{ "uuid": "EAF39DEC-1BF4-4114-BD45-6E4693CAF71B", "type": "f", "value": 1, "nodeType": "Float" },
+		{
+			"uuid": "FC819E23-7F1D-449A-BB93-D36455398E54",
+			"type": "c",
+			"r": 0,
+			"g": 0,
+			"b": 0,
+			"value": 0,
+			"nodeType": "Color"
+		}
+	],
+	"assets": { "materials": {} },
+	"editor": {
+		"publish": { "type": 1, "web": { "quality": "default", "logo": true } },
+		"orbitControls": {
+			"useKeyEvents": false,
+			"enableDamping": true,
+			"enablePan": true,
+			"enableZoom": false,
+			"enableRotate": true,
+			"rotationLimitsMode": 0,
+			"rotationVerticalOffset": { "min": 1.5707963267948966, "max": 1.5707963267948966 },
+			"rotationHorizontalOffset": { "min": 1.5707963267948966, "max": 1.5707963267948966 },
+			"autoRotate": false,
+			"autoRotateSpeed": 2,
+			"autoRotateClockwise": true
+		},
+		"helperState": true
+	}
+}
