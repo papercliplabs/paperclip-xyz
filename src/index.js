@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import App from "./app";
+import App from "./App";
 import Theme, { GlobalStyle } from "theme";
 
 function Index() {
-	const [darkMode, setDarkMode] = useState(false);
-
 	return (
-		<Theme darkMode={darkMode}>
+		<Theme>
 			<GlobalStyle />
-			<App toggleDarkMode={() => setDarkMode(!darkMode)} />
+			<App />
 		</Theme>
 	);
 }

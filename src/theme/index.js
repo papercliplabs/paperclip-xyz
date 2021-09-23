@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 
 // Media queries (px)
 const mediaQuerySizes = {
-	small: 400,
+	small: 640,
 };
 
 const mediaQueries = Object.keys(mediaQuerySizes).reduce((acc, key) => {
@@ -16,16 +16,16 @@ const mediaQueries = Object.keys(mediaQuerySizes).reduce((acc, key) => {
 	return acc;
 }, {});
 
-const theme = (darkMode) => ({
+const theme = () => ({
 	color: {
 		white: "#FFFFFF",
 		black: "#000000",
 
-		bg1: darkMode ? "#000000" : "#FFFFFF",
-		bg2: darkMode ? "#FFFFFF" : "#000000",
+		bg1: "#050505",
+		bg2: "rgba(255, 255, 255, 0.1)",
 
-		text1: darkMode ? "#FFFFFF" : "#000000",
-		text2: darkMode ? "#000000" : "#FFFFFF",
+		text1: "#FFFFFF",
+		text2: "rgba(255, 255, 255, 0.7)",
 
 		primary1: "#43EF44",
 		secondary1: "#ECFF0C",
@@ -55,8 +55,8 @@ const theme = (darkMode) => ({
 });
 
 // Everything that is child of theme, gets theme as its props, so it can be used everywhere
-export default function Theme({ darkMode, children }) {
-	return <ThemeProvider theme={theme(darkMode)}>{children}</ThemeProvider>;
+export default function Theme({ children }) {
+	return <ThemeProvider theme={theme()}>{children}</ThemeProvider>;
 }
 
 // Typography theme
@@ -68,21 +68,21 @@ const StyledText = styled.div`
 	line-height: ${({ lineHeight, useDefaultLineHeight }) => (useDefaultLineHeight ? "auto" : lineHeight + "px")};
 	text-align: ${({ align }) => align ?? "left"};
 	opacity: ${({ opacity }) => opacity ?? 1};
-	letter-spacing: 0.02em;
+	letter-spacing: 0.03em;
 `;
 
 export const Typography = {
 	displayXL(props) {
-		return <StyledText family="Space Grotesk" fontSize={48} fontWeight={600} lineHeight={61} {...props} />;
+		return <StyledText family="Space Grotesk" fontSize={72} fontWeight={600} lineHeight={92} {...props} />;
 	},
 	displayL(props) {
-		return <StyledText family="Space Grotesk" fontSize={36} fontWeight={600} lineHeight={46} {...props} />;
+		return <StyledText family="Space Grotesk" fontSize={56} fontWeight={600} lineHeight={72} {...props} />;
 	},
 	displayM(props) {
 		return <StyledText family="Space Grotesk" fontSize={20} fontWeight={400} lineHeight={24} {...props} />;
 	},
 	displayS(props) {
-		return <StyledText family="Space Grotesk" fontSize={15} fontWeight={400} lineHeight={24} {...props} />;
+		return <StyledText family="Space Grotesk" fontSize={17} fontWeight={400} lineHeight={24} {...props} />;
 	},
 };
 
@@ -98,13 +98,15 @@ export const GlobalStyle = createGlobalStyle`
 		width: 100%;
 		height: 100%;
 		font-weight: 400;
-		overflow-x: none;
+		-webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: grayscale;
 		color: ${({ theme }) => theme.color.primary1};
 		background-color: ${({ theme }) => theme.color.bg1};
 	}
 
 	#root, body {
-		overflow-y: scroll;
+		overflow: hidden;
+		display: div;
 	}
 
 	* {

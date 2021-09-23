@@ -2,63 +2,57 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 import Marquee from "react-fast-marquee";
 
-import Button from "components/Button";
 import Row from "components/Row";
 import Column from "components/Column";
 import PaperclipLogo from "components/PaperclipLogo";
-import { ExternalLink, ExternalLinkWrapper } from "components/Link";
+import Icon from "components/Icon";
+import { ExternalLink } from "components/Link";
 import { Typography } from "theme";
 import { URLS, EMAIL } from "common/constants";
 import { useWindowSize } from "common/hooks";
 
-const appPadding = 20; // px
+import twitterSvg from "assets/twitter.svg";
+import githubSvg from "assets/github.svg";
+
 const marqueeSpeed = 50; // px/sec
 
 const StyledApp = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	font-size: 40px;
 	width: 100%;
-	padding: 0 ${appPadding}px;
-	margin: 100px 0;
-	position: relative;
-
-	${({ theme }) =>
-		theme.mediaWidth.small`
-				flex-direction: ${({ reverse }) => (reverse ? "column-reverse" : "column")};
-				row-gap: ${({ gapSmall, theme }) => gapSmall ?? theme.spacing.xs};
-				column-gap: ${({ gapSmall, theme }) => gapSmall ?? theme.spacing.xs};
-				margin: 75px 0;
-			`};
-`;
-
-const CenterColumn = styled(Column)`
-	max-width: ${({ theme }) => theme.mediaQuerySizes.small}px;
+	height: 100%;
+	padding: ${({ theme }) => `${theme.spacing.lg} ${theme.spacing.md}`};
+	justify-content: space-between;
 	overflow: visible;
 `;
 
 const StyledMarquee = styled(Marquee)`
-	top: ${({ topOffset }) => topOffset}px;
-	z-index: 999;
-	mix-blend-mode: difference;
-	position: absolute;
-	transform: translateY(-50%);
-	overflow: hidden;
+	overflow: visible;
+	width: 110vw;
 `;
 
-export default function App({ toggleDarkMode }) {
+const StyledEmail = styled(Typography.displayS)`
+	background: ${({ theme }) => `linear-gradient(180deg, ${theme.color.primary1} 0%, ${theme.color.secondary1} 100%)`};
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+`;
+
+export default function App() {
 	const theme = useTheme();
 	const { windowWidth } = useWindowSize();
 
-	const marqueeTopOffset =
-		windowWidth > theme.mediaQuerySizes.small ? theme.mediaQuerySizes.small / 2 : (windowWidth - 2 * appPadding) / 2;
+	const isSmall = windowWidth < theme.mediaQuerySizes.small;
 
 	return (
-		<>
-			<StyledApp>
-				<StyledMarquee gradient={false} topOffset={marqueeTopOffset} speed={marqueeSpeed} direction="left">
-					{windowWidth > theme.mediaQuerySizes.small ? (
+		<StyledApp>
+			<Row justify="center">
+				<Typography.displayM>PAPERCLIP LABS</Typography.displayM>
+			</Row>
+			<Column justify="center" align="center" overflow="visible" width="100vw">
+				<StyledMarquee gradient={false} speed={marqueeSpeed} direction="left">
+					{isSmall ? (
 						<Typography.displayXL color={theme.color.white}>
 							PAPERCLIP LABS • PAPERCLIP LABS • PAPERCLIP LABS • PAPERCLIP LABS • PAPERCLIP LABS • PAPERCLIP LABS •
 							PAPERCLIP LABS • PAPERCLIP LABS • PAPERCLIP LABS • PAPERCLIP LABS • PAPERCLIP LABS • PAPERCLIP LABS •
@@ -70,25 +64,22 @@ export default function App({ toggleDarkMode }) {
 						</Typography.displayL>
 					)}
 				</StyledMarquee>
-				<CenterColumn justify="flex-start" gap={theme.spacing.xl}>
-					<PaperclipLogo onClickCallback={toggleDarkMode} />
-					<Row justify="center" gap={theme.spacing.lg} flex="none">
-						<ExternalLinkWrapper href={URLS.TWITTER} target="_blank" flex={1}>
-							<Button width="100%" variant="secondary">
-								TWITTER
-							</Button>
-						</ExternalLinkWrapper>
-						<ExternalLinkWrapper href={URLS.GITHUB} target="_blank" flex={1}>
-							<Button width="100%">GITHUB</Button>
-						</ExternalLinkWrapper>
-					</Row>
-					<Typography.displayS align="center" opacity={0.7}>
-						WE DESIGN AND BUILD TOOLS FOR DEFI AND WEB3.
-						{windowWidth > theme.mediaQuerySizes.small && <br />} WANT TO WORK TOGETGER?
-						<ExternalLink href={"mailto: " + EMAIL}> CONTACT@PAPERCLIP.XYZ</ExternalLink>
-					</Typography.displayS>
-				</CenterColumn>
-			</StyledApp>
-		</>
+				<PaperclipLogo />
+			</Column>
+			<Column gap={theme.spacing.xxs}>
+				<Typography.displayS color={theme.color.text1}>WE DESIGN AND DEVELOP WEB3 TOOLS.</Typography.displayS>
+				<ExternalLink href={"mailto: " + EMAIL}>
+					<StyledEmail>CONTACT@PAPERCLIP.XYZ</StyledEmail>
+				</ExternalLink>
+				<Row justify="center" gap={theme.spacing.lg} padding={theme.spacing.md}>
+					<ExternalLink href={URLS.TWITTER} target="_blank">
+						<Icon src={twitterSvg} alt="Twitter link" />
+					</ExternalLink>
+					<ExternalLink href={URLS.GITHUB} target="_blank">
+						<Icon src={githubSvg} alt="Github link" />
+					</ExternalLink>
+				</Row>
+			</Column>
+		</StyledApp>
 	);
 }

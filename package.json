@@ -1,6 +1,6 @@
 {
-	"homepage": "https://papercliplabs.github.io/home",
 	"name": "home",
+	"homepage": "https://www.paperclip.xyz/",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -15,7 +15,7 @@
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"predeploy": "npm run build",
+		"predeploy": "npm run build && cp CNAME build/CNAME",
 		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",

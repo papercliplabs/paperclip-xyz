@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-export const ExternalLinkWrapper = styled.a`
+const ExternalLinkWrapper = styled.a`
 	text-decoration: none;
-	color: ${({ theme }) => theme.color.externalLink};
-	flex: 1;
-	opacity: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	background-color: transparent;
+	border: none;
 	:hover {
 		cursor: pointer;
-		opacity: 0.7;
+		opacity: 0.8;
 	}
 `;
 
