@@ -8,9 +8,9 @@ const Background = styled.div`
 	position: absolute;
 `;
 
-export default function PaperclipLogo({ size }) {
+export default function PaperclipLogo() {
 	return (
-		<Background size={size}>
+		<Background>
 			<canvas id="canvas3d" />
 		</Background>
 	);

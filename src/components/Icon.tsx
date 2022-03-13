@@ -14,7 +14,7 @@ const Background = styled.div`
 	}
 `;
 
-export default function Icon({ src, alt }) {
+export default function Icon({ src, alt }: { src: string; alt: string }) {
 	return (
 		<Background>
 			<img src={src} alt={alt} />

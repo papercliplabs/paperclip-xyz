@@ -15,7 +15,7 @@ const ExternalLinkWrapper = styled.a`
 	}
 `;
 
-export function ExternalLink({ href, children }) {
+export function ExternalLink({ href, children }: { href: string; children: any }) {
 	return (
 		<ExternalLinkWrapper target="_blank" href={href}>
 			{children}

@@ -72,10 +72,10 @@ export default function App() {
 					<StyledEmail>CONTACT@PAPERCLIP.XYZ</StyledEmail>
 				</ExternalLink>
 				<Row justify="center" gap={theme.spacing.lg} padding={theme.spacing.md}>
-					<ExternalLink href={URLS.TWITTER} target="_blank">
+					<ExternalLink href={URLS.TWITTER}>
 						<Icon src={twitterSvg} alt="Twitter link" />
 					</ExternalLink>
-					<ExternalLink href={URLS.GITHUB} target="_blank">
+					<ExternalLink href={URLS.GITHUB}>
 						<Icon src={githubSvg} alt="Github link" />
 					</ExternalLink>
 				</Row>

@@ -1,14 +1,16 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "app";
 import Theme, { GlobalStyle } from "theme";
 
 function Index() {
 	return (
-		<Theme>
-			<GlobalStyle />
-			<App />
-		</Theme>
+		<StrictMode>
+			<Theme>
+				<GlobalStyle />
+				<App />
+			</Theme>
+		</StrictMode>
 	);
 }
 
