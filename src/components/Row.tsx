@@ -29,7 +29,7 @@ const Row = styled.div<{
 	margin: ${({ margin }) => margin ?? "0"};
 	column-gap: ${({ gap, theme }) => gap ?? theme.spacing.xs};
 	row-gap: ${({ gap, theme }) => gap ?? theme.spacing.xs};
-	flex: ${({ flex }) => flex ?? 1};
+	flex: ${({ flex }) => flex ?? ""};
 	overflow: ${({ overflow }) => overflow ?? "hidden"};
 `;
 
