@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
 
 const Background = styled.div`
 	display: flex;
@@ -17,7 +18,7 @@ const Background = styled.div`
 export default function Icon({ src, alt }: { src: string; alt: string }) {
 	return (
 		<Background>
-			<img src={src} alt={alt} />
+			<Image src={src} alt={alt} width="100%" height="100%" />
 		</Background>
 	);
 }

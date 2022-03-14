@@ -108,7 +108,7 @@ export const GlobalStyle = createGlobalStyle`
 		font-family: 'Inter', sans-serif;
 	}
 
-	html, body, #root {
+	html, body, #root, #__next {
 		margin: 0;
 		padding: 0;
 		width: 100%;

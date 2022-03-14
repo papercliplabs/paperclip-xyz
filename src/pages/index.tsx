@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled, { useTheme } from "styled-components";
 import Marquee from "react-fast-marquee";
 
@@ -11,8 +11,8 @@ import { Typography } from "theme";
 import { URLS, EMAIL } from "common/constants";
 import { useWindowSize } from "common/hooks";
 
-import twitterSvg from "assets/twitter.svg";
-import githubSvg from "assets/github.svg";
+const twitterSvg = "/images/twitter.svg";
+const githubSvg = "/images/github.svg";
 
 const marqueeSpeed = 50; // px/sec
 
@@ -39,7 +39,7 @@ const StyledEmail = styled(Typography.displayS)`
 	-moz-text-fill-color: transparent;
 `;
 
-export default function App() {
+export default function Index() {
 	const theme = useTheme();
 	const { windowWidth } = useWindowSize();
 

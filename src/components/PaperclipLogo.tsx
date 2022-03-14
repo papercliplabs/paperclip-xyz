@@ -1,5 +1,14 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
+import dynamic from "next/dynamic";
+
+const WrappedSpline = dynamic(() => import("components/WrappedSpline").then((mod: any) => mod.WrappedSpline), {
+	ssr: false,
+});
+
+const Spline = forwardRef((props: any, ref: any) => {
+	return <WrappedSpline {...props} splineRef={ref} />;
+});
 
 const Background = styled.div`
 	display: flex;
@@ -11,7 +20,7 @@ const Background = styled.div`
 export default function PaperclipLogo() {
 	return (
 		<Background>
-			<canvas id="canvas3d" />
+			<Spline scene="/paperclip.spline" />
 		</Background>
 	);
 }
