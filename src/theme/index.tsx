@@ -6,6 +6,7 @@ import { Colors } from "theme/styled";
 // Media queries
 export const mediaQuerySizes = {
 	small: 640,
+	large: 1800,
 };
 
 const mediaQueries: { [width in keyof typeof mediaQuerySizes]: typeof css } = Object.keys(mediaQuerySizes).reduce(
@@ -27,8 +28,9 @@ export function theme(): DefaultTheme {
 			white: "#FFFFFF",
 			black: "#000000",
 
-			bg1: "#050505",
-			bg2: "rgba(255, 255, 255, 0.1)",
+			bg0: "#060606",
+			bg1: "#1C1C1E",
+			bg2: "#282828",
 
 			text1: "#FFFFFF",
 			text2: "rgba(255, 255, 255, 0.7)",
@@ -43,6 +45,7 @@ export function theme(): DefaultTheme {
 			sm: "8px",
 			md: "12px",
 			lg: "16px",
+			xl: "32px",
 		},
 
 		mediaWidth: mediaQueries,
@@ -57,6 +60,11 @@ export function theme(): DefaultTheme {
 			lg: "24px",
 			xl: "40px",
 			xxl: "64px",
+		},
+
+		shadow: {
+			none: "none",
+			card: "0px 10px 10px rgba(0, 0, 0, 0.1), inset 0px 1px 6px rgba(255, 255, 255, 0.05);",
 		},
 	};
 }
@@ -95,6 +103,15 @@ export const Typography = {
 	displayS(props: any) {
 		return <StyledText family="Space Grotesk" fontSize={17} fontWeight={400} lineHeight={24} {...props} />;
 	},
+	heading(props: any) {
+		return <StyledText family="Space Grotesk" fontSize={24} fontWeight={600} lineHeight={32} {...props} />;
+	},
+	subHeader(props: any) {
+		return <StyledText family="Space Grotesk" fontSize={18} fontWeight={600} lineHeight={24} {...props} />;
+	},
+	body(props: any) {
+		return <StyledText family="Space Grotesk" fontSize={17} fontWeight={400} lineHeight={22} {...props} />;
+	},
 };
 
 // Everything that is child of theme, gets theme as its props, so it can be used everywhere
@@ -117,12 +134,14 @@ export const GlobalStyle = createGlobalStyle`
 		-webkit-font-smoothing: antialiased;
   		-moz-osx-font-smoothing: grayscale;
 		color: ${({ theme }) => theme.color.primary1};
-		background-color: ${({ theme }) => theme.color.bg1};
 	}
 
 	#root, body {
-		overflow: hidden;
 		display: div;
+		background: ${({ theme }) => `linear-gradient(335.52deg, ${theme.color.bg0} -20%, ${theme.color.bg2} 109.68%)`};
+		box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.5);
+		scroll-behavior: smooth;
+		// background-repeat: no-repeat;
 	}
 
 	* {

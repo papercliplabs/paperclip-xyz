@@ -6,6 +6,7 @@ export interface Colors {
 	white: string;
 	black: string;
 
+	bg0: string;
 	bg1: string;
 	bg2: string;
 
@@ -27,14 +28,17 @@ declare module "styled-components" {
 			sm: string;
 			md: string;
 			lg: string;
+			xl: string;
 		};
 
 		mediaWidth: {
 			small: ThemedCssFunction<DefaultTheme>;
+			large: ThemedCssFunction<DefaultTheme>;
 		};
 
 		mediaQuerySizes: {
 			small: number;
+			large: number;
 		};
 
 		spacing: {
@@ -46,6 +50,11 @@ declare module "styled-components" {
 			lg: string;
 			xl: string;
 			xxl: string;
+		};
+
+		shadow: {
+			none: string;
+			card: string;
 		};
 	}
 }

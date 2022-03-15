@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import styled from "styled-components";
 import dynamic from "next/dynamic";
 
-const WrappedSpline = dynamic(() => import("components/WrappedSpline").then((mod: any) => mod.WrappedSpline), {
+const WrappedSpline = dynamic(() => import("./WrappedSpline").then((mod: any) => mod.WrappedSpline), {
 	ssr: false,
 });
 
@@ -17,7 +17,7 @@ const Background = styled.div`
 	position: absolute;
 `;
 
-export default function PaperclipLogo() {
+export default function PaperclipSpline() {
 	return (
 		<Background>
 			<Spline scene="/paperclip.spline" />

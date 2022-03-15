@@ -14,10 +14,11 @@ const Row = styled.div<{
 	flex?: number;
 	overflow?: string;
 	order?: string;
+	wrapEnabled?: boolean;
 }>`
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: ${({ wrapEnabled }) => (wrapEnabled ? "wrap" : "no-swap")};
 	width: ${({ width }) => width ?? "100%"};
 	height: ${({ height }) => height ?? ""};
 	max-height: ${({ maxHeight }) => maxHeight ?? "min-content"};

@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
+import { WindowSize } from "common/enums";
+import { mediaQuerySizes } from "theme";
 
-export function useWindowSize() {
-	const [windowSize, setWindowSize] = useState({
-		windowWidth: 0,
-		windowHeight: 0,
-	});
+export function useWindowSize(): WindowSize {
+	const [windowSize, setWindowSize] = useState(WindowSize.MEDIUM);
 
 	useEffect(() => {
 		// Handler to call on window resize
 		function handleResize() {
-			// Set window width/height to state
-			setWindowSize({
-				windowWidth: window.innerWidth,
-				windowHeight: window.innerHeight,
-			});
+			const width = window.innerWidth;
+			setWindowSize(
+				width < mediaQuerySizes.small
+					? WindowSize.SMALL
+					: width < mediaQuerySizes.large
+					? WindowSize.MEDIUM
+					: WindowSize.LARGE
+			);
 		}
 
 		// Add event listener
