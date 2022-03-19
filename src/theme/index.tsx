@@ -121,11 +121,8 @@ export default function Theme({ children }: { children: any }) {
 
 // Import fonts in public/index.html
 export const GlobalStyle = createGlobalStyle`
-	html, div {
-		font-family: 'Inter', sans-serif;
-	}
-
 	html, body, #root, #__next {
+		font-family: 'Inter', sans-serif;
 		margin: 0;
 		padding: 0;
 		width: 100%;
@@ -133,15 +130,31 @@ export const GlobalStyle = createGlobalStyle`
 		font-weight: 400;
 		-webkit-font-smoothing: antialiased;
   		-moz-osx-font-smoothing: grayscale;
+		background-repeat: no-repeat;
 		color: ${({ theme }) => theme.color.primary1};
+		color-scheme: dark;
+		scroll-behavior: smooth;
+		background: radial-gradient(68.02% 58.73% at 59.49% 48.53%, #1D1D1D 0%, #060606 100%)
 	}
 
-	#root, body {
-		display: div;
-		background: ${({ theme }) => `linear-gradient(335.52deg, ${theme.color.bg0} -20%, ${theme.color.bg2} 109.68%)`};
-		box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.5);
-		scroll-behavior: smooth;
-		// background-repeat: no-repeat;
+	div {
+		scrollbar-color: ${({ theme }) => theme.color.bg2} transparent;
+		scrollbar-width: thin;
+
+		::-webkit-scrollbar {
+			width: 8px;
+			background-color: transparent;
+		}
+	
+		::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+	
+		::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			background-color: ${({ theme }) => theme.color.bg2};
+		}
 	}
 
 	* {

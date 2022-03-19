@@ -13,10 +13,12 @@ const ProjectImageContainer = styled.div`
 	border-radius: ${({ theme }) => theme.radius.md};
 	width: 100%;
 	overflow: hidden;
+	perspective: 1px;
 `;
 
 const Card = styled.div<{
 	column?: boolean;
+	noShadow?: boolean;
 	height?: string;
 	width?: string;
 	padding?: string;
@@ -34,10 +36,10 @@ const Card = styled.div<{
 	padding: ${({ padding, paddingHorizontal, theme }) =>
 		padding ? padding + (paddingHorizontal ? " " + paddingHorizontal : "") : theme.spacing.md};
 	margin: 0;
-	box-shadow: ${({ theme }) => theme.shadow.card};
+	box-shadow: ${({ theme, noShadow }) => (noShadow ? "" : theme.shadow.card)};
 	row-gap: 8px;
 	${({ theme }) => theme.mediaWidth.small`
-		padding: ${theme.spacing.md};
+		padding: ${theme.spacing.sm};
 	`}
 	max-height: ${({ maxHeight }) => maxHeight ?? ""};
 	max-width: ${({ maxWidth }) => maxWidth ?? ""};
@@ -55,7 +57,7 @@ export function ProjectCard({ projectInfo, width }: { projectInfo: ProjectInfo; 
 	}
 
 	return (
-		<Card backgroundColor={theme.color.bg2} padding={theme.spacing.sm} width={width} height="auto" maxWidth="600px">
+		<Card backgroundColor={theme.color.bg2} width={width} height="auto" noShadow={true}>
 			<ExternalLink href={projectInfo.link} fillParent={true}>
 				<Column align="flex-start">
 					<ProjectImageContainer>

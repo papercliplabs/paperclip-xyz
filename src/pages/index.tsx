@@ -1,4 +1,4 @@
-import React, { forwardRef, useMemo } from "react";
+import React, { forwardRef, useEffect, useMemo, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import Marquee from "react-fast-marquee";
 
@@ -14,6 +14,7 @@ import { useWindowSize } from "common/hooks";
 import { ProjectCard } from "components/Card";
 import { ProjectInfo } from "common/types";
 import { ProjectTag, WindowSize } from "common/enums";
+import { HighlightSpanKind } from "typescript";
 
 const MARQUEE_SPEED_PX_PER_SECS = 50;
 const NUM_PROJECT_PER_ROW_FOR_SIZE = [1, 2, 3]; // small, medium, large
@@ -22,20 +23,20 @@ const PEAK_HEIGHT = "100px";
 const Sticky = styled(Column)`
 	position: sticky;
 	position: -webkit-sticky;
-	top: 70px;
-	height: calc(100vh - 70px - ${PEAK_HEIGHT});
+	top: 0;
+	height: calc(100% - ${PEAK_HEIGHT});
 	justify-content: center;
 	align-items: center;
 	width: 100%;
 	max-height: none;
-	z-index: 0;
+	z-index: -1;
 `;
 
 const Overlay = styled(Column)`
 	background-color: pink;
 	width: 100%;
 	max-height: none;
-	z-index: 900;
+	z-index: 999;
 	padding: ${({ theme }) => theme.spacing.xl};
 	padding-top: ${({ theme }) => theme.spacing.sm};
 	background-color: ${({ theme }) => theme.color.bg1};
@@ -99,7 +100,19 @@ const projectInfoList: ProjectInfo[] = [
 
 export default function Index() {
 	const theme = useTheme();
+	const stickyRef = useRef<HTMLInputElement>(null);
 	const windowSize = useWindowSize();
+
+	// Scroll to inital position on load after short delay
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			if (stickyRef.current && stickyRef.current.parentElement) {
+				stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 4, left: 0, behavior: "smooth" });
+			}
+		}, 2000);
+
+		return () => clearTimeout(timer);
+	});
 
 	const projectTable = useMemo(() => {
 		const gap = theme.spacing.lg;
@@ -122,16 +135,17 @@ export default function Index() {
 	}, [windowSize]);
 
 	function scrollProjects() {
-		window.scrollTo({
-			top: window.innerHeight - 170,
-			left: 0,
-			behavior: "smooth",
-		});
+		if (stickyRef.current && stickyRef.current.parentElement) {
+			const currentScrollPosition = stickyRef.current.offsetTop;
+			const hitHeaderScrollPosition = stickyRef.current.scrollHeight;
+			console.log(stickyRef);
+			stickyRef.current.parentElement.scrollTo({ top: hitHeaderScrollPosition, left: 0, behavior: "smooth" });
+		}
 	}
 
 	return (
 		<>
-			<Sticky>
+			<Sticky ref={stickyRef}>
 				<Marquee gradient={false} speed={MARQUEE_SPEED_PX_PER_SECS} direction="left">
 					{windowSize == WindowSize.SMALL ? (
 						<Typography.displayXL color={theme.color.white}>
@@ -149,8 +163,10 @@ export default function Index() {
 			</Sticky>
 
 			<Overlay gap={theme.spacing.lg}>
-				<DragDash onClick={scrollProjects} />
-				<Typography.subHeader color={theme.color.text1}>WE MAKE WEB3 TOOLS</Typography.subHeader>
+				<Column onClick={scrollProjects} isClickable={true}>
+					<DragDash />
+					<Typography.subHeader color={theme.color.text1}>WE MAKE WEB3 TOOLS</Typography.subHeader>
+				</Column>
 				{projectTable}
 				<ExternalLink href={"mailto: " + EMAIL}>
 					<StyledEmail>contact@paperclip.xyz</StyledEmail>
