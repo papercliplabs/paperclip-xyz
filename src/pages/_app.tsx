@@ -5,16 +5,7 @@ import { polyfill } from "smoothscroll-polyfill";
 
 import Theme, { GlobalStyle } from "theme";
 import Header from "components/partial/Header";
-
-const headerHeight = "80px";
-
-const StyledBody = styled.div`
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	padding-top: ${headerHeight};
-	justify-content: space-between;
-`;
+import Layout from "components/partial/Layout";
 
 export default function App({ Component, pageProps }: { Component: any; pageProps: any }) {
 	// Kick off smooth scrolling since safari doesn't support nativly
@@ -29,10 +20,9 @@ export default function App({ Component, pageProps }: { Component: any; pageProp
 			</Head>
 			<Theme>
 				<GlobalStyle />
-				<Header height={headerHeight} />
-				<StyledBody>
+				<Layout>
 					<Component {...pageProps} />
-				</StyledBody>
+				</Layout>
 			</Theme>
 		</>
 	);

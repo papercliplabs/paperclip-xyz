@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Row = styled.div<{
 	width?: string;
 	height?: string;
 	maxHeight?: string;
+	widthMaxContent?: boolean;
 	justify?: string;
 	align?: string;
 	border?: string;
@@ -15,6 +16,7 @@ const Row = styled.div<{
 	overflow?: string;
 	order?: string;
 	wrapEnabled?: boolean;
+	isClickable?: boolean;
 }>`
 	display: flex;
 	flex-direction: row;
@@ -22,6 +24,7 @@ const Row = styled.div<{
 	width: ${({ width }) => width ?? "100%"};
 	height: ${({ height }) => height ?? ""};
 	max-height: ${({ maxHeight }) => maxHeight ?? "min-content"};
+	max-width: ${({ widthMaxContent }) => (widthMaxContent ? "min-content" : "")};
 	justify-content: ${({ justify }) => justify ?? "flex-start"};
 	align-items: ${({ align }) => align ?? "center"};
 	padding: ${({ padding }) => padding ?? "0"};
@@ -32,6 +35,14 @@ const Row = styled.div<{
 	row-gap: ${({ gap, theme }) => gap ?? theme.spacing.xs};
 	flex: ${({ flex }) => flex ?? ""};
 	overflow: ${({ overflow }) => overflow ?? "hidden"};
+
+	${({ isClickable }) =>
+		isClickable &&
+		css`
+			:hover {
+				cursor: pointer;
+			}
+		`}
 `;
 
 export default Row;

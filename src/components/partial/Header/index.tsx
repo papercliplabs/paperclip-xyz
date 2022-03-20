@@ -22,10 +22,13 @@ const StyledHeader = styled(Row)<{
 	width: 100%;
 	top: 0;
 	height: ${({ height }) => height};
-	padding: ${({ theme }) => theme.spacing.md};
-	justifycontent: space-between;
+	padding: ${({ theme }) => theme.spacing.xl};
+	justify-content: space-between;
 	z-index: 999;
-	background-color: ${({ theme }) => theme.color.bg0};
+
+	${({ theme }) => theme.mediaWidth.small`
+		padding: ${({ theme }) => theme.spacing.md};
+	`}
 `;
 
 export default function Header({ height }: { height: string }) {
@@ -35,19 +38,19 @@ export default function Header({ height }: { height: string }) {
 	return (
 		<StyledHeader height={height}>
 			{windowSize != WindowSize.SMALL && <Row></Row>}
-			<Row justify="center">
+			<Row justify={windowSize == WindowSize.SMALL ? "flex-start" : "center"}>
 				<Typography.subHeader align="center">PAPERCLIP LABS</Typography.subHeader>
 			</Row>
-			<Row justify="flex-end" gap={theme.spacing.sm} padding="0">
-				<ExternalLink href={URLS.TWITTER}>
-					<Card padding={theme.spacing.sm} paddingHorizontal={theme.spacing.md}>
-						<Icon src={twitterSvg} alt="Twitter link" size="24px" />
-					</Card>
-				</ExternalLink>
+			<Row
+				justify="flex-end"
+				gap={windowSize == WindowSize.SMALL ? theme.spacing.lg : theme.spacing.xl}
+				widthMaxContent={windowSize == WindowSize.SMALL}
+			>
 				<ExternalLink href={URLS.GITHUB}>
-					<Card padding={theme.spacing.sm} paddingHorizontal={theme.spacing.md}>
-						<Icon src={githubSvg} alt="Github link" size="24px" />
-					</Card>
+					<Icon src={githubSvg} alt="Github link" size="24px" />
+				</ExternalLink>
+				<ExternalLink href={URLS.TWITTER}>
+					<Icon src={twitterSvg} alt="Twitter link" size="24px" />
 				</ExternalLink>
 			</Row>
 		</StyledHeader>

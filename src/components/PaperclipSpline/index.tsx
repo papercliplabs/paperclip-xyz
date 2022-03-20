@@ -15,6 +15,7 @@ const Background = styled.div`
 	justify-content: center;
 	z-index: 999;
 	position: absolute;
+	pointer-events: none;
 `;
 
 export default function PaperclipSpline() {
