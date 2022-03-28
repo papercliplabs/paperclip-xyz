@@ -1,6 +1,6 @@
 export enum ProjectTag {
-	BRAND_IDENTITY = "Brand identity",
-	PRODUCT_DESIGN = "Project design",
+	BRAND_IDENTITY = "Brand Identity",
+	PRODUCT_DESIGN = "Product Design",
 	ENGINEERING = "Engineering",
 }
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { WindowSize } from "common/enums";
-import { mediaQuerySizes } from "theme";
+
+import { mediaQuerySizes } from "@theme";
+import { WindowSize } from "@common/enums";
 
 export function useWindowSize(): WindowSize {
 	const [windowSize, setWindowSize] = useState(WindowSize.MEDIUM);

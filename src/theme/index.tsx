@@ -1,10 +1,15 @@
 import React from "react";
 import styled, { css, createGlobalStyle, ThemeProvider, DefaultTheme } from "styled-components";
 
-import { Colors } from "theme/styled";
+import { Colors } from "@theme/styled";
+
+interface MediaSize {
+	small: number;
+	large: number;
+}
 
 // Media queries
-export const mediaQuerySizes = {
+export const mediaQuerySizes: MediaSize = {
 	small: 640,
 	large: 1800,
 };
@@ -30,15 +35,17 @@ export function theme(): DefaultTheme {
 
 			bg0: "#060606",
 			bg1: "#1C1C1E",
-			bg2: "#282828",
 
-			text1: "#FFFFFF",
-			text2: "rgba(255, 255, 255, 0.7)",
+			card0: "rgba(255, 255, 255, 0.05)",
+			card1: "rgba(255, 255, 255, 0.10)",
+			card2: "rgba(255, 255, 255, 0.15)",
 
-			primary1: "#43EF44",
-			secondary1: "#ECFF0C",
+			text1: "#F5F5F5",
+			text2: "rgba(245, 245, 245, 0.7)",
+			text3: "rgba(245, 245, 245, 0.5)",
 
-			externalLink: "#EB00FF",
+			paperclipGradient: "linear-gradient(197.26deg, #43EF44 -1.74%, #ECFF0C 102.63%)",
+			twitter: "#088AE1",
 		},
 
 		radius: {
@@ -73,44 +80,102 @@ export function theme(): DefaultTheme {
 const StyledText = styled.div<{
 	family: string;
 	color: keyof Colors;
-	fontSize: number;
-	fontWeight: number;
-	lineHeight: number;
 	align?: string;
 	opacity?: number;
-	useDefaultLineHeight?: boolean;
+	fontSize: MediaSize;
+	fontWeight: MediaSize;
+	lineHeight: MediaSize;
+	letterSpacing: MediaSize;
 }>`
-	font-family: ${({ family }) => family};
+	font-family: ${({ family }) => family ?? "inherit"};
 	color: ${({ color, theme }) => color ?? theme.color["text1"]};
-	font-size: ${({ fontSize }) => fontSize}px;
-	font-weight: ${({ fontWeight }) => fontWeight};
-	line-height: ${({ lineHeight, useDefaultLineHeight }) => (useDefaultLineHeight ? "auto" : lineHeight + "px")};
 	text-align: ${({ align }) => align ?? "left"};
 	opacity: ${({ opacity }) => opacity ?? 1};
-	letter-spacing: 0.03em;
+	font-size: ${({ fontSize }) => fontSize.large}px;
+	font-weight: ${({ fontWeight }) => fontWeight.large};
+	line-height: ${({ lineHeight }) => lineHeight.large + "px"};
+	letter-spacing: ${({ letterSpacing }) => letterSpacing.large ?? 0.0}em;
+
+	${({ theme, fontSize, fontWeight, lineHeight, letterSpacing }) => theme.mediaWidth.small`
+		font-size: ${fontSize.small}px;
+		font-weight: ${fontWeight.small};
+		line-height: ${lineHeight.small}px;
+		letter-spacing: ${letterSpacing.small ?? 0.0}em;
+	`}
 `;
 
 export const Typography = {
-	displayXL(props: any) {
-		return <StyledText family="Space Grotesk" fontSize={72} fontWeight={600} lineHeight={92} {...props} />;
+	hero(props: any) {
+		return (
+			<StyledText
+				family="Space Grotesk"
+				fontWeight={{ small: 500, large: 500 }}
+				fontSize={{ small: 48, large: 64 }}
+				lineHeight={{ small: 64, large: 80 }}
+				letterSpacing={{ small: 0.02, large: 0.02 }}
+				{...props}
+			/>
+		);
 	},
-	displayL(props: any) {
-		return <StyledText family="Space Grotesk" fontSize={56} fontWeight={600} lineHeight={72} {...props} />;
+	h2(props: any) {
+		return (
+			<StyledText
+				family="Space Grotesk"
+				fontWeight={{ small: 600, large: 500 }}
+				fontSize={{ small: 26, large: 36 }}
+				lineHeight={{ small: 28, large: 40 }}
+				letterSpacing={{ small: 0, large: 0 }}
+				{...props}
+			/>
+		);
 	},
-	displayM(props: any) {
-		return <StyledText family="Space Grotesk" fontSize={20} fontWeight={400} lineHeight={24} {...props} />;
+	h3(props: any) {
+		return (
+			<StyledText
+				family="Space Grotesk"
+				fontWeight={{ small: 600, large: 600 }}
+				fontSize={{ small: 22, large: 24 }}
+				lineHeight={{ small: 28, large: 32 }}
+				letterSpacing={{ small: 0, large: 0 }}
+				{...props}
+			/>
+		);
 	},
-	displayS(props: any) {
-		return <StyledText family="Space Grotesk" fontSize={17} fontWeight={400} lineHeight={24} {...props} />;
-	},
-	heading(props: any) {
-		return <StyledText family="Space Grotesk" fontSize={24} fontWeight={600} lineHeight={32} {...props} />;
-	},
-	subHeader(props: any) {
-		return <StyledText family="Space Grotesk" fontSize={18} fontWeight={600} lineHeight={24} {...props} />;
+	h4(props: any) {
+		return (
+			<StyledText
+				family="Space Grotesk"
+				fontWeight={{ small: 600, large: 600 }}
+				fontSize={{ small: 18, large: 18 }}
+				lineHeight={{ small: 24, large: 24 }}
+				letterSpacing={{ small: 0.02, large: 0.02 }}
+				{...props}
+			/>
+		);
 	},
 	body(props: any) {
-		return <StyledText family="Space Grotesk" fontSize={17} fontWeight={400} lineHeight={22} {...props} />;
+		return (
+			<StyledText
+				family="Inter"
+				fontWeight={{ small: 400, large: 400 }}
+				fontSize={{ small: 15, large: 17 }}
+				lineHeight={{ small: 20, large: 24 }}
+				letterSpacing={{ small: 0.02, large: 0 }}
+				{...props}
+			/>
+		);
+	},
+	caption(props: any) {
+		return (
+			<StyledText
+				family="Inter"
+				fontWeight={{ small: 400, large: 400 }}
+				fontSize={{ small: 13, large: 13 }}
+				lineHeight={{ small: 20, large: 20 }}
+				letterSpacing={{ small: 0.02, large: 0 }}
+				{...props}
+			/>
+		);
 	},
 };
 
@@ -122,7 +187,7 @@ export default function Theme({ children }: { children: any }) {
 // Import fonts in public/index.html
 export const GlobalStyle = createGlobalStyle`
 	html, body, #root, #__next {
-		font-family: 'Inter', sans-serif;
+		font-family: 'Space Grotesk', sans-serif;
 		margin: 0;
 		padding: 0;
 		width: 100%;
@@ -131,14 +196,17 @@ export const GlobalStyle = createGlobalStyle`
 		-webkit-font-smoothing: antialiased;
   		-moz-osx-font-smoothing: grayscale;
 		background-repeat: no-repeat;
-		color: ${({ theme }) => theme.color.primary1};
+		color: ${({ theme }) => theme.color.text1};
 		color-scheme: dark;
 		scroll-behavior: smooth;
-		background: radial-gradient(68.02% 58.73% at 59.49% 48.53%, #1D1D1D 0%, #060606 100%)
+		--scroll-behavior: smooth;
+
+		background: radial-gradient(58.53% 69.42% at 50% 59.22%, #1D1D1D 0%, #060606 100%)
+		
 	}
 
 	div {
-		scrollbar-color: ${({ theme }) => theme.color.bg2} transparent;
+		scrollbar-color: ${({ theme }) => theme.color.bg1} transparent;
 		scrollbar-width: thin;
 
 		::-webkit-scrollbar {
@@ -153,7 +221,7 @@ export const GlobalStyle = createGlobalStyle`
 		::-webkit-scrollbar-thumb {
 			border-radius: 10px;
 			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-			background-color: ${({ theme }) => theme.color.bg2};
+			background-color: ${({ theme }) => theme.color.bg1};
 		}
 	}
 

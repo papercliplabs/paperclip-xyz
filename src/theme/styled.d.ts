@@ -8,15 +8,17 @@ export interface Colors {
 
 	bg0: string;
 	bg1: string;
-	bg2: string;
+
+	card0: string;
+	card1: string;
+	card2: string;
 
 	text1: string;
 	text2: string;
+	text3: string;
 
-	primary1: string;
-	secondary1: string;
-
-	externalLink: string;
+	paperclipGradient: string;
+	twitter: string;
 }
 
 // Extend the default theme to include my custom fields
