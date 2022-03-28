@@ -1,8 +1,8 @@
-import { ProjectTag } from "./enums";
+import { ProjectTag } from "@common/enums";
 
 export interface ProjectInfo {
 	title: string;
-	img: string;
+	img: any;
 	link: string;
 	tags: ProjectTag[];
 }

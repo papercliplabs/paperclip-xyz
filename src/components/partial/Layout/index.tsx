@@ -1,9 +1,7 @@
-import React, { forwardRef, useRef } from "react";
-import styled, { useTheme } from "styled-components";
-import dynamic from "next/dynamic";
+import React from "react";
+import styled from "styled-components";
 
-import Row from "components/Row";
-import Header from "components/partial/Header";
+import Header from "@components/partial/Header";
 
 const headerHeight = "80px";
 

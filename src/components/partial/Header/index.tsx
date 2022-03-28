@@ -1,19 +1,17 @@
 import React, { forwardRef } from "react";
 import styled, { useTheme } from "styled-components";
-import dynamic from "next/dynamic";
 
-import Row from "components/Row";
-import { Typography } from "theme";
-import { ExternalLink } from "components/Link";
-import Icon from "components/Icon";
-import { URLS } from "common/constants";
-import Card from "components/Card";
-import { useWindowSize } from "common/hooks";
-import { getTextOfJSDocComment } from "typescript";
-import { WindowSize } from "common/enums";
+import Row from "@components/Row";
+import { Link } from "@components/Link";
+import Icon from "@components/Icon";
 
-const twitterSvg = "/images/twitter.svg";
-const githubSvg = "/images/github.svg";
+import { URLS } from "@common/constants";
+import { useWindowSize } from "@common/hooks";
+import { WindowSize } from "@common/enums";
+
+import twitterImg from "@images/twitter.svg";
+import githubImg from "@images/github.svg";
+import paperclipImg from "@images/paperclip.svg";
 
 const StyledHeader = styled(Row)<{
 	height: string;
@@ -37,21 +35,20 @@ export default function Header({ height }: { height: string }) {
 
 	return (
 		<StyledHeader height={height}>
-			{windowSize != WindowSize.SMALL && <Row></Row>}
-			<Row justify={windowSize == WindowSize.SMALL ? "flex-start" : "center"}>
-				<Typography.subHeader align="center">PAPERCLIP LABS</Typography.subHeader>
-			</Row>
+			<Link href="/" disableHoverOpacity openInSameTab>
+				<Icon src={paperclipImg} alt="Paperclip Labs logo" size="48px" padding="4px" isButton={true} />
+			</Link>
 			<Row
 				justify="flex-end"
 				gap={windowSize == WindowSize.SMALL ? theme.spacing.lg : theme.spacing.xl}
 				widthMaxContent={windowSize == WindowSize.SMALL}
 			>
-				<ExternalLink href={URLS.GITHUB}>
-					<Icon src={githubSvg} alt="Github link" size="24px" />
-				</ExternalLink>
-				<ExternalLink href={URLS.TWITTER}>
-					<Icon src={twitterSvg} alt="Twitter link" size="24px" />
-				</ExternalLink>
+				<Link href={URLS.GITHUB} disableHoverOpacity>
+					<Icon src={githubImg} alt="Github link" size="48px" padding="12px" isButton={true} />
+				</Link>
+				<Link href={URLS.TWITTER} disableHoverOpacity>
+					<Icon src={twitterImg} alt="Twitter link" size="48px" padding="12px" isButton={true} />
+				</Link>
 			</Row>
 		</StyledHeader>
 	);
