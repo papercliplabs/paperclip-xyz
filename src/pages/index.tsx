@@ -83,26 +83,26 @@ const projectInfoList: ProjectInfo[] = [
 		title: "Defi Education Fund",
 		img: defiEducationFundImg,
 		link: "https://www.defieducationfund.org",
-		tags: [ProjectTag.BRAND_IDENTITY],
+		tags: [ProjectTag.BRAND_IDENTITY]
 	},
 	{
 		title: "Compound Grants",
 		img: compoundGrantsBrandingImg,
 		link: "https://compoundgrants.org/branding-compound-grants",
-		tags: [ProjectTag.BRAND_IDENTITY],
+		tags: [ProjectTag.BRAND_IDENTITY]
 	},
 	{
 		title: "Compound Info Dashboard",
 		img: compoundInfoDashboardImg,
 		link: "https://compoundfinance.info",
-		tags: [ProjectTag.PRODUCT_DESIGN, ProjectTag.ENGINEERING],
+		tags: [ProjectTag.PRODUCT_DESIGN, ProjectTag.ENGINEERING]
 	},
 	{
 		title: "Compound Info Subgraph",
 		img: compoundInfoSubgraphImg,
 		link: "https://thegraph.com/hosted-service/subgraph/papercliplabs/compound-info",
-		tags: [ProjectTag.ENGINEERING],
-	},
+		tags: [ProjectTag.ENGINEERING]
+	}
 ];
 
 export default function Index() {
@@ -201,6 +201,7 @@ export default function Index() {
 						link={"mailto: " + EMAIL}
 					/>
 				</Column>
+				THIS IS A TEST
 			</Overlay>
 		</>
 	);

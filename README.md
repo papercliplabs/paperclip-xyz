@@ -9,11 +9,5 @@ yarn
 ###### Running locally
 
 ```bash
-yarn start
-```
-
-###### Deploy changes
-
-```bash
-yarn run deploy
+yarn dev
 ```
