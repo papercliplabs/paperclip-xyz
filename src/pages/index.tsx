@@ -46,7 +46,7 @@ const Overlay = styled(Column)`
 	padding: ${({ theme }) => theme.spacing.xl};
 	padding-top: ${({ theme }) => theme.spacing.sm};
 	background-color: ${({ theme }) => theme.color.bg1};
-	border-radius: ${({ theme }) => theme.radius.xl};
+	border-radius: ${({ theme }) => "5% 5% 0% 0%"};
 	box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.25);
 
 	${({ theme }) => theme.mediaWidth.small`

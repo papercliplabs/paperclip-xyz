@@ -31,7 +31,7 @@ const Card = styled.div<{
 }>`
 	display: flex;
 	flex-direction: ${({ column }) => (column ? "column" : "row")};
-	border-radius: ${({ theme }) => theme.radius.lg};
+	border-radius: ${({ theme }) => (theme.radius.lg)};
 	background-color: ${({ theme, backgroundColor }) => backgroundColor ?? theme.color.card0};
 	height: ${({ height }) => height ?? "100%"};
 	width: ${({ width }) => width ?? "100%"};
