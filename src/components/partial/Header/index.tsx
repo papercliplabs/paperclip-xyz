@@ -11,7 +11,7 @@ import { WindowSize } from "@common/enums";
 
 import twitterImg from "@images/twitter.svg";
 import githubImg from "@images/github.svg";
-import paperclipImg from "@images/paperclip.svg";
+import paperclipImg from "@images/paperclip.png";
 
 const StyledHeader = styled(Row)<{
 	height: string;
