@@ -1,6 +1,6 @@
 # [Paperclip labs home page](https://paperclip.xyz)
 
-###### Installing dependencies
+###### Install dependencies
 
 ```bash
 yarn
@@ -9,11 +9,9 @@ yarn
 ###### Running locally
 
 ```bash
-yarn start
+yarn dev
 ```
 
-###### Deploy changes
+###### Deploying
 
-```bash
-yarn run deploy
-```
+Will happen automatically when your PR merges into master
