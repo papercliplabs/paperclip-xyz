@@ -18,6 +18,7 @@ import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
 import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
+import dydxGrantsImg from "@images/dydx-grants.png";
 import twitterImg from "@images/twitter.svg";
 import emailImg from "@images/email.svg";
 
@@ -79,6 +80,12 @@ const PaperclipGradientText = styled(Typography.h4)`
 `;
 
 const projectInfoList: ProjectInfo[] = [
+	{
+		title: "dYdX Grants",
+		img: dydxGrantsImg,
+		link: "https://www.dydxgrants.com/",
+		tags: [ProjectTag.BRAND_IDENTITY],
+	},
 	{
 		title: "Defi Education Fund",
 		img: defiEducationFundImg,
