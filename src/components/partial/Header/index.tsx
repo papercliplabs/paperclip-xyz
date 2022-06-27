@@ -11,6 +11,7 @@ import { WindowSize } from "@common/enums";
 
 import twitterImg from "@images/twitter.svg";
 import githubImg from "@images/github.svg";
+import figmaImg from "@images/figma.svg";
 import paperclipImg from "@images/paperclip.png";
 
 const StyledHeader = styled(Row)<{
@@ -43,6 +44,9 @@ export default function Header({ height }: { height: string }) {
 				gap={windowSize == WindowSize.SMALL ? theme.spacing.lg : theme.spacing.xl}
 				widthMaxContent={windowSize == WindowSize.SMALL}
 			>
+				<Link href={URLS.FIGMA} disableHoverOpacity>
+					<Icon src={figmaImg} alt="Figma link" size="48px" padding="12px" isButton={true} />
+				</Link>
 				<Link href={URLS.GITHUB} disableHoverOpacity>
 					<Icon src={githubImg} alt="Github link" size="48px" padding="12px" isButton={true} />
 				</Link>
