@@ -18,6 +18,7 @@ const ProjectImageContainer = styled.div`
 	overflow: visable;
 `;
 
+
 const Card = styled.div<{
 	column?: boolean;
 	noShadow?: boolean;
@@ -46,14 +47,16 @@ const Card = styled.div<{
 	max-height: ${({ maxHeight }) => maxHeight ?? ""};
 	max-width: ${({ maxWidth }) => maxWidth ?? ""};
 	overflow: hidden;
+	transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
 
 	:hover {
 		background-color: ${({ theme, backgroundColor }) => backgroundColor ?? theme.color.card1};
 		opacity: ${({ backgroundColor }) => (backgroundColor ? 0.8 : 1.0)};
+		transform: scale(1.01);
 	}
 
 	:active {
-		transform: scale(0.95);
+		transform: scale(0.98);
 		background-color: ${({ theme, backgroundColor }) => backgroundColor ?? theme.color.card2};
 		opacity: ${({ backgroundColor }) => (backgroundColor ? 0.8 : 1.0)};
 	}
