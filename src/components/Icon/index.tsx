@@ -28,7 +28,7 @@ const Background = styled.div<{
 			}
 			:active {
 				background-color: ${theme.color.card2};
-				transform: scale(0.98);
+				transform: scale(0.95);
 			}
 		`}
 `;
