@@ -24,6 +24,7 @@ const StyledHeader = styled(Row)<{
 	padding: ${({ theme }) => theme.spacing.xl};
 	justify-content: space-between;
 	z-index: 999;
+	
 
 	${({ theme }) => theme.mediaWidth.small`
 		padding: ${({ theme }) => theme.spacing.md};

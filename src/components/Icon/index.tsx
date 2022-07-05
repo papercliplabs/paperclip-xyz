@@ -16,6 +16,7 @@ const Background = styled.div<{
 	width: ${({ size }) => size ?? "24px"};
 	border-radius: ${({ size }) => size ?? "24px"};
 	z-index: 999;
+	transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
 
 	${({ isButton, theme }) =>
 		isButton &&
@@ -23,9 +24,11 @@ const Background = styled.div<{
 			background-color: ${theme.color.card0};
 			:hover {
 				background-color: ${theme.color.card1};
+				transform: scale(1.05);
 			}
 			:active {
 				background-color: ${theme.color.card2};
+				transform: scale(0.95);
 			}
 		`}
 `;
