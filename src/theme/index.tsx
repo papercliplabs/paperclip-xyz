@@ -158,7 +158,7 @@ export const Typography = {
 			<StyledText
 				family="Inter"
 				fontWeight={{ small: 400, large: 400 }}
-				fontSize={{ small: 15, large: 17 }}
+				fontSize={{ small: 17, large: 17 }}
 				lineHeight={{ small: 20, large: 24 }}
 				letterSpacing={{ small: 0.02, large: 0 }}
 				{...props}
