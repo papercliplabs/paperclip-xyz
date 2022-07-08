@@ -10,6 +10,7 @@ import { Link } from "@components/Link";
 
 const ProjectImageContainer = styled.div`
 	display: block;
+	margin-bottom: ${({ theme }) => theme.spacing.md};
 	border-radius: ${({ theme }) => theme.radius.md};
 	width: 100%;
 	overflow: hidden;
@@ -38,11 +39,13 @@ const Card = styled.div<{
 	width: ${({ width }) => width ?? "100%"};
 	padding: ${({ padding, paddingHorizontal, theme }) =>
 		padding ? padding + (paddingHorizontal ? " " + paddingHorizontal : "") : theme.spacing.md};
+	padding-bottom: ${({ theme }) => theme.spacing.lg};
 	margin: 0;
 	box-shadow: ${({ theme, noShadow }) => (noShadow ? "" : theme.shadow.card)};
 	row-gap: 8px;
 	${({ theme }) => theme.mediaWidth.small`
 		padding: ${theme.spacing.sm};
+		padding-bottom: ${({ theme }) => theme.spacing.lg};
 	`}
 	max-height: ${({ maxHeight }) => maxHeight ?? ""};
 	max-width: ${({ maxWidth }) => maxWidth ?? ""};
