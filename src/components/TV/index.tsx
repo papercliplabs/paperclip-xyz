@@ -1,25 +1,46 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+import paperclip from "assets/paperclip.svg";
 import Column from "@components/Column";
 
-const Screen = styled.a<{
-	width?: string;
-	height?: string;
-	maxWidth?: string;
-	disableHoverOpacity?: boolean;
-}>`
+const pulse = keyframes`
+    0% { 
+        width: 0%;
+        height: 0%;
+    }
+    50% { 
+        width: 100%;
+        height: 2px;
+    }
+    100% { 
+        width: 100%;
+        height: 100%;
+    }
+`;
+
+const AnimatedImg = styled.div`
+    animation: ${pulse} 1000ms ease-in infinite;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+`;
+
+const DumbBox = styled.div`
+    display: flex;
+    background-color: red;
+    width: 100%;
+    height: 100%;
     $color-text: #e1eef6;
     $color-link: #ff5f2e;
     $color-link-hover: #fcbe32;
     $black: #111111;
 
     body {
-    font-family: sans-serif;
-    background-color: $black;
+        background-color: $black;
     }
     
-    background-color: $color-text;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -41,43 +62,12 @@ const Screen = styled.a<{
 	}
 `;
 
-const pulse = keyframes`
-    0% { 
-        width: 0%;
-        height: 0%;
-    }
-    50% { 
-        width: 100%;
-        height: 2px;
-    }
-    100% { 
-        width: 100%;
-        height: 100%;
-    }
-`;
-
-const AnimatedImg = styled.div`
-    animation: ${pulse} 1000ms ease-in;
-    display: block;
-    width: 100%;
-    height: 100%;
-`;
-
-const DumbBox = styled.div`
-    display: flex;
-    background-color: red;
-    width: 100%;
-    height: 100%;
-`;
-
 export default function Loader({ size }: { size: string }): JSX.Element {
     return (
         <Column width="100%" height="100%" align="center" justify="center">
-            <Screen>
-            <AnimatedImg>
-                <DumbBox />
-            </AnimatedImg>
-            </Screen>
+                <AnimatedImg>
+                    <DumbBox />
+                </AnimatedImg>
         </Column>
     );
 }
