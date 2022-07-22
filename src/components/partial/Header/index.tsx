@@ -13,6 +13,7 @@ import twitterImg from "@images/twitter.svg";
 import githubImg from "@images/github.svg";
 import figmaImg from "@images/figma.svg";
 import paperclipImg from "@images/paperclip.png";
+import SlideDown from "@components/Animations/Slide/SlideDown";
 
 const StyledHeader = styled(Row)<{
 	height: string;
@@ -36,6 +37,7 @@ export default function Header({ height }: { height: string }) {
 	const windowSize = useWindowSize();
 
 	return (
+		<SlideDown>
 		<StyledHeader height={height}>
 			<Link href="/" disableHoverOpacity openInSameTab>
 				<Icon src={paperclipImg} alt="Paperclip Labs logo" size="48px" padding="4px" isButton={true} />
@@ -56,5 +58,6 @@ export default function Header({ height }: { height: string }) {
 				</Link>
 			</Row>
 		</StyledHeader>
+		</SlideDown>
 	);
 }

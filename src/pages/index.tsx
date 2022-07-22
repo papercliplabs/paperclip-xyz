@@ -21,6 +21,10 @@ import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
 import dydxGrantsImg from "@images/dydx-grants.png";
 import twitterImg from "@images/twitter.svg";
 import emailImg from "@images/email.svg";
+import TvOpen from "@components/Animations/TV";
+import DumBox from "@components/Canvas/DumboxM";
+import SlideUp from "@components/Animations/Slide/SlideUp";
+import SlideDown from "@components/Animations/Slide/SlideDown";
 
 const MARQUEE_SPEED_PX_PER_SECS = 50;
 const NUM_PROJECT_PER_ROW_FOR_SIZE = [1, 2, 3]; // small, medium, large
@@ -166,6 +170,8 @@ export default function Index() {
 
 	return (
 		<>
+		<DumBox>
+		<TvOpen>
 			<Sticky ref={stickyRef}>
 				<Marquee gradient={false} speed={MARQUEE_SPEED_PX_PER_SECS} direction="left">
 					{windowSize == WindowSize.SMALL ? (
@@ -182,7 +188,8 @@ export default function Index() {
 				</Marquee>
 				<PaperclipSpline />
 			</Sticky>
-
+		</TvOpen>
+		</DumBox>
 			<Overlay gap={theme.spacing.lg}>
 				<Column onClick={scrollProjects} isClickable={true}>
 					<DragDash />
