@@ -50,8 +50,8 @@ export function theme(): DefaultTheme {
 
 		radius: {
 			sm: "8px",
-			md: "12px",
-			lg: "16px",
+			md: "20px",
+			lg: "24px",
 			xl: "32px",
 		},
 

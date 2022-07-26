@@ -10,13 +10,15 @@ import { Link } from "@components/Link";
 
 const ProjectImageContainer = styled.div`
 	display: block;
+	margin-bottom: ${({ theme }) => theme.spacing.md};
 	border-radius: ${({ theme }) => theme.radius.md};
 	width: 100%;
 	overflow: hidden;
 	perspective: 1px;
-	// filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.3));
 	overflow: visable;
 `;
+
 
 const Card = styled.div<{
 	column?: boolean;
@@ -37,23 +39,27 @@ const Card = styled.div<{
 	width: ${({ width }) => width ?? "100%"};
 	padding: ${({ padding, paddingHorizontal, theme }) =>
 		padding ? padding + (paddingHorizontal ? " " + paddingHorizontal : "") : theme.spacing.md};
+	padding-bottom: ${({ theme }) => theme.spacing.lg};
 	margin: 0;
 	box-shadow: ${({ theme, noShadow }) => (noShadow ? "" : theme.shadow.card)};
 	row-gap: 8px;
 	${({ theme }) => theme.mediaWidth.small`
 		padding: ${theme.spacing.sm};
+		padding-bottom: ${({ theme }) => theme.spacing.lg};
 	`}
 	max-height: ${({ maxHeight }) => maxHeight ?? ""};
 	max-width: ${({ maxWidth }) => maxWidth ?? ""};
 	overflow: hidden;
+	transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
 
 	:hover {
 		background-color: ${({ theme, backgroundColor }) => backgroundColor ?? theme.color.card1};
 		opacity: ${({ backgroundColor }) => (backgroundColor ? 0.8 : 1.0)};
+		transform: scale(1.01);
 	}
 
 	:active {
-		transform: scale(0.95);
+		transform: scale(0.98);
 		background-color: ${({ theme, backgroundColor }) => backgroundColor ?? theme.color.card2};
 		opacity: ${({ backgroundColor }) => (backgroundColor ? 0.8 : 1.0)};
 	}

@@ -18,6 +18,7 @@ import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
 import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
+import dydxGrantsImg from "@images/dydx-grants.png";
 import twitterImg from "@images/twitter.svg";
 import emailImg from "@images/email.svg";
 
@@ -46,7 +47,7 @@ const Overlay = styled(Column)`
 	padding: ${({ theme }) => theme.spacing.xl};
 	padding-top: ${({ theme }) => theme.spacing.sm};
 	background-color: ${({ theme }) => theme.color.bg1};
-	border-radius: ${({ theme }) => theme.radius.xl};
+	border-radius: ${({ theme }) => theme.radius.xl} ${({ theme }) => theme.radius.xl} 0 0;
 	box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.25);
 
 	${({ theme }) => theme.mediaWidth.small`
@@ -80,10 +81,17 @@ const PaperclipGradientText = styled(Typography.h4)`
 
 const projectInfoList: ProjectInfo[] = [
 	{
+<<<<<<< HEAD
 		title: "Compound Info Subgraph",
 		img: compoundInfoSubgraphImg,
 		link: "https://compoundfinance.info",
 		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
+=======
+		title: "dYdX Grants",
+		img: dydxGrantsImg,
+		link: "https://www.dydxgrants.com/",
+		tags: [ProjectTag.BRAND_IDENTITY],
+>>>>>>> d3e9f6d5e8bada8681fd44c5dae3d686815a0834
 	},
 	{
 		title: "Defi Education Fund",
