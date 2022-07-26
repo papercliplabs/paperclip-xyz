@@ -83,10 +83,16 @@ const PaperclipGradientText = styled(Typography.h4)`
 
 const projectInfoList: ProjectInfo[] = [
 	{
+		title: "Compound Info Subgraph",
+		img: compoundInfoSubgraphImg,
+		link: "https://compoundfinance.info",
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
+	},
+	{
 		title: "Maple Finance Subgraph",
 		img: mapleFinanceSubgraphImg,
 		link: "https://thegraph.com/hosted-service/subgraph/messari/maple-finance-ethereum ",
-		tags: [ProjectTag.ENGINEERING],
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
 	},
 	{
 		title: "I Pledge Allegiance ",
@@ -111,12 +117,6 @@ const projectInfoList: ProjectInfo[] = [
 		img: compoundGrantsBrandingImg,
 		link: "https://compoundgrants.org/branding-compound-grants",
 		tags: [ProjectTag.BRAND_IDENTITY],
-	},
-	{
-		title: "Subgraph Engineering",
-		img: compoundInfoSubgraphImg,
-		link: "https://compoundfinance.info",
-		tags: [ProjectTag.ENGINEERING, ProjectTag.PRODUCT_DESIGN],
 	},
 ];
 
