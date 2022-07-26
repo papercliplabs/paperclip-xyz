@@ -18,11 +18,7 @@ import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
 import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
-<<<<<<< HEAD
 import iPledgeAllegianceImg from "@images/i-pledge-allegiance.png";
-=======
-import dydxGrantsImg from "@images/dydx-grants.png";
->>>>>>> d3e9f6d5e8bada8681fd44c5dae3d686815a0834
 import twitterImg from "@images/twitter.svg";
 import emailImg from "@images/email.svg";
 
@@ -85,15 +81,9 @@ const PaperclipGradientText = styled(Typography.h4)`
 
 const projectInfoList: ProjectInfo[] = [
 	{
-<<<<<<< HEAD
 		title: "I Pledge Allegiance ",
 		img: iPledgeAllegianceImg,
 		link: "https://open.spotify.com/show/4mTiWTYpcHcX5ZU6cRng9B?si=1788f38c17134d79",
-=======
-		title: "dYdX Grants",
-		img: dydxGrantsImg,
-		link: "https://www.dydxgrants.com/",
->>>>>>> d3e9f6d5e8bada8681fd44c5dae3d686815a0834
 		tags: [ProjectTag.BRAND_IDENTITY],
 	},
 	{
