@@ -34,7 +34,6 @@ const Row = styled.div<{
 	column-gap: ${({ gap, theme }) => gap ?? theme.spacing.xs};
 	row-gap: ${({ gap, theme }) => gap ?? theme.spacing.xs};
 	flex: ${({ flex }) => flex ?? ""};
-	overflow: ${({ overflow }) => overflow ?? "hidden"};
 
 	${({ isClickable }) =>
 		isClickable &&
