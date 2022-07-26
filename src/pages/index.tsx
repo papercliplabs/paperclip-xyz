@@ -18,7 +18,9 @@ import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
 import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
+import mapleFinanceSubgraphImg from "@images/maple-finance-subgraph.png";
 import dydxGrantsImg from "@images/dydx-grants.png";
+import iPledgeAllegianceImg from "@images/i-pledge-allegiance.png";
 import twitterImg from "@images/twitter.svg";
 import emailImg from "@images/email.svg";
 
@@ -81,6 +83,18 @@ const PaperclipGradientText = styled(Typography.h4)`
 
 const projectInfoList: ProjectInfo[] = [
 	{
+		title: "Maple Finance Subgraph",
+		img: mapleFinanceSubgraphImg,
+		link: "https://thegraph.com/hosted-service/subgraph/messari/maple-finance-ethereum ",
+		tags: [ProjectTag.ENGINEERING],
+	},
+	{
+		title: "I Pledge Allegiance ",
+		img: iPledgeAllegianceImg,
+		link: "https://open.spotify.com/show/4mTiWTYpcHcX5ZU6cRng9B?si=1788f38c17134d79",
+		tags: [ProjectTag.BRAND_IDENTITY],
+	},
+	{
 		title: "dYdX Grants",
 		img: dydxGrantsImg,
 		link: "https://www.dydxgrants.com/",
@@ -99,16 +113,10 @@ const projectInfoList: ProjectInfo[] = [
 		tags: [ProjectTag.BRAND_IDENTITY],
 	},
 	{
-		title: "Compound Info Dashboard",
-		img: compoundInfoDashboardImg,
-		link: "https://compoundfinance.info",
-		tags: [ProjectTag.PRODUCT_DESIGN, ProjectTag.ENGINEERING],
-	},
-	{
-		title: "Compound Info Subgraph",
+		title: "Subgraph Engineering",
 		img: compoundInfoSubgraphImg,
-		link: "https://thegraph.com/hosted-service/subgraph/papercliplabs/compound-info",
-		tags: [ProjectTag.ENGINEERING],
+		link: "https://compoundfinance.info",
+		tags: [ProjectTag.ENGINEERING, ProjectTag.PRODUCT_DESIGN],
 	},
 ];
 
