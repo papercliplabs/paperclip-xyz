@@ -80,6 +80,12 @@ const PaperclipGradientText = styled(Typography.h4)`
 
 const projectInfoList: ProjectInfo[] = [
 	{
+		title: "Compound Info Subgraph",
+		img: compoundInfoSubgraphImg,
+		link: "https://compoundfinance.info",
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
+	},
+	{
 		title: "Defi Education Fund",
 		img: defiEducationFundImg,
 		link: "https://www.defieducationfund.org",
@@ -96,12 +102,6 @@ const projectInfoList: ProjectInfo[] = [
 		img: compoundInfoDashboardImg,
 		link: "https://compoundfinance.info",
 		tags: [ProjectTag.PRODUCT_DESIGN, ProjectTag.ENGINEERING],
-	},
-	{
-		title: "Compound Info Subgraph",
-		img: compoundInfoSubgraphImg,
-		link: "https://thegraph.com/hosted-service/subgraph/papercliplabs/compound-info",
-		tags: [ProjectTag.ENGINEERING],
 	},
 ];
 
