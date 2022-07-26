@@ -16,6 +16,7 @@ import { ProjectTag, WindowSize } from "@common/enums";
 
 import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
+import mapleFinanceSubgraphImg from "@images/maple-finance-subgraph.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
 import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
 import twitterImg from "@images/twitter.svg";
@@ -79,6 +80,12 @@ const PaperclipGradientText = styled(Typography.h4)`
 `;
 
 const projectInfoList: ProjectInfo[] = [
+	{
+		title: "Maple Finance Subgraph",
+		img: mapleFinanceSubgraphImg,
+		link: "https://thegraph.com/hosted-service/subgraph/messari/maple-finance-ethereum ",
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
+	},
 	{
 		title: "Defi Education Fund",
 		img: defiEducationFundImg,
