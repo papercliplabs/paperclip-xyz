@@ -81,12 +81,6 @@ const PaperclipGradientText = styled(Typography.h4)`
 
 const projectInfoList: ProjectInfo[] = [
 	{
-		title: "I Pledge Allegiance ",
-		img: iPledgeAllegianceImg,
-		link: "https://open.spotify.com/show/4mTiWTYpcHcX5ZU6cRng9B?si=1788f38c17134d79",
-		tags: [ProjectTag.BRAND_IDENTITY],
-	},
-	{
 		title: "Defi Education Fund",
 		img: defiEducationFundImg,
 		link: "https://www.defieducationfund.org",
@@ -96,6 +90,12 @@ const projectInfoList: ProjectInfo[] = [
 		title: "Compound Grants",
 		img: compoundGrantsBrandingImg,
 		link: "https://compoundgrants.org/branding-compound-grants",
+		tags: [ProjectTag.BRAND_IDENTITY],
+	},
+	{
+		title: "I Pledge Allegiance ",
+		img: iPledgeAllegianceImg,
+		link: "https://open.spotify.com/show/4mTiWTYpcHcX5ZU6cRng9B?si=1788f38c17134d79",
 		tags: [ProjectTag.BRAND_IDENTITY],
 	},
 	{
