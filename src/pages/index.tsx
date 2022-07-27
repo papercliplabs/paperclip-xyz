@@ -81,19 +81,6 @@ const PaperclipGradientText = styled(Typography.h4)`
 
 const projectInfoList: ProjectInfo[] = [
 	{
-<<<<<<< HEAD
-		title: "Compound Info Subgraph",
-		img: compoundInfoSubgraphImg,
-		link: "https://compoundfinance.info",
-		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
-=======
-		title: "dYdX Grants",
-		img: dydxGrantsImg,
-		link: "https://www.dydxgrants.com/",
-		tags: [ProjectTag.BRAND_IDENTITY],
->>>>>>> d3e9f6d5e8bada8681fd44c5dae3d686815a0834
-	},
-	{
 		title: "Defi Education Fund",
 		img: defiEducationFundImg,
 		link: "https://www.defieducationfund.org",
@@ -110,6 +97,12 @@ const projectInfoList: ProjectInfo[] = [
 		img: compoundInfoDashboardImg,
 		link: "https://compoundfinance.info",
 		tags: [ProjectTag.PRODUCT_DESIGN, ProjectTag.ENGINEERING],
+	},
+	{
+		title: "Compound Info Subgraph",
+		img: compoundInfoSubgraphImg,
+		link: "https://compoundfinance.info",
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
 	},
 ];
 
