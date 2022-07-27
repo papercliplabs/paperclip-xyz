@@ -82,17 +82,10 @@ const PaperclipGradientText = styled(Typography.h4)`
 
 const projectInfoList: ProjectInfo[] = [
 	{
-<<<<<<< HEAD
-		title: "Maple Finance Subgraph",
-		img: mapleFinanceSubgraphImg,
-		link: "https://thegraph.com/hosted-service/subgraph/messari/maple-finance-ethereum ",
-		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
-=======
 		title: "dYdX Grants",
 		img: dydxGrantsImg,
 		link: "https://www.dydxgrants.com/",
 		tags: [ProjectTag.BRAND_IDENTITY],
->>>>>>> d3e9f6d5e8bada8681fd44c5dae3d686815a0834
 	},
 	{
 		title: "Defi Education Fund",
@@ -117,6 +110,12 @@ const projectInfoList: ProjectInfo[] = [
 		img: compoundInfoSubgraphImg,
 		link: "https://thegraph.com/hosted-service/subgraph/papercliplabs/compound-info",
 		tags: [ProjectTag.ENGINEERING],
+	},
+	{
+		title: "Maple Finance Subgraph",
+		img: mapleFinanceSubgraphImg,
+		link: "https://thegraph.com/hosted-service/subgraph/messari/maple-finance-ethereum ",
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
 	},
 ];
 
