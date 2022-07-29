@@ -17,8 +17,9 @@ import { ProjectTag, WindowSize } from "@common/enums";
 import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
-import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
 import dydxGrantsImg from "@images/dydx-grants.png";
+import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
+import iPledgeAllegianceImg from "@images/i-pledge-allegiance.png";
 import twitterImg from "@images/twitter.svg";
 import emailImg from "@images/email.svg";
 
@@ -96,6 +97,12 @@ const projectInfoList: ProjectInfo[] = [
 		title: "Compound Grants",
 		img: compoundGrantsBrandingImg,
 		link: "https://compoundgrants.org/branding-compound-grants",
+		tags: [ProjectTag.BRAND_IDENTITY],
+	},
+	{
+		title: "I Pledge Allegiance ",
+		img: iPledgeAllegianceImg,
+		link: "https://open.spotify.com/show/4mTiWTYpcHcX5ZU6cRng9B?si=1788f38c17134d79",
 		tags: [ProjectTag.BRAND_IDENTITY],
 	},
 	{
