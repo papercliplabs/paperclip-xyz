@@ -16,6 +16,7 @@ import { ProjectTag, WindowSize } from "@common/enums";
 
 import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
+import mapleFinanceSubgraphImg from "@images/maple-finance-subgraph.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
 import dydxGrantsImg from "@images/dydx-grants.png";
 import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
@@ -116,6 +117,12 @@ const projectInfoList: ProjectInfo[] = [
 		img: compoundInfoSubgraphImg,
 		link: "https://thegraph.com/hosted-service/subgraph/papercliplabs/compound-info",
 		tags: [ProjectTag.ENGINEERING],
+	},
+	{
+		title: "Maple Finance Subgraph",
+		img: mapleFinanceSubgraphImg,
+		link: "https://thegraph.com/hosted-service/subgraph/messari/maple-finance-ethereum ",
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
 	},
 ];
 
