@@ -115,7 +115,7 @@ const projectInfoList: ProjectInfo[] = [
 		title: "Compound Info Subgraph",
 		img: compoundInfoSubgraphImg,
 		link: "https://thegraph.com/hosted-service/subgraph/papercliplabs/compound-info",
-		tags: [ProjectTag.ENGINEERING],
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
 	},
 ];
 
