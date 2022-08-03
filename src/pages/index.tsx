@@ -18,6 +18,7 @@ import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
 import dydxGrantsImg from "@images/dydx-grants.png";
+import reverieImg from "@images/reverie.png";
 import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
 import iPledgeAllegianceImg from "@images/i-pledge-allegiance.png";
 import twitterImg from "@images/twitter.svg";
@@ -97,6 +98,12 @@ const projectInfoList: ProjectInfo[] = [
 		title: "Compound Grants",
 		img: compoundGrantsBrandingImg,
 		link: "https://compoundgrants.org/branding-compound-grants",
+		tags: [ProjectTag.BRAND_IDENTITY],
+	},
+	{
+		title: "Reverie",
+		img: reverieImg,
+		link: "https://www.reverie.ooo/",
 		tags: [ProjectTag.BRAND_IDENTITY],
 	},
 	{
