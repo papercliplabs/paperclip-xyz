@@ -13,7 +13,6 @@ const StyledBody = styled.div`
 	bottom: 0;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
-		
 `;
 
 export default function Layout({ children }: { children: JSX.Element }) {
