@@ -9,10 +9,11 @@ const StyledBody = styled.div`
 	position: fixed;
 	flex-direction: column;
 	width: 100%;
-	top: ${headerHeight};
+	top: 0;
 	bottom: 0;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
+		
 `;
 
 export default function Layout({ children }: { children: JSX.Element }) {
