@@ -200,7 +200,6 @@ export const GlobalStyle = createGlobalStyle`
 		color-scheme: dark;
 		scroll-behavior: smooth;
 		--scroll-behavior: smooth;
-
 		background: radial-gradient(58.53% 69.42% at 50% 59.22%, #1D1D1D 0%, #060606 100%)
 		
 	}

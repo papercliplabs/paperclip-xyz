@@ -17,6 +17,7 @@ const LinkWrapper = styled.a<{
 	max-width: ${({ maxWidth }) => maxWidth ?? "auto"};
 	background-color: transparent;
 	border: none;
+	
 	:hover {
 		cursor: pointer;
 		opacity: ${({ disableHoverOpacity }) => (disableHoverOpacity ? 1.0 : 0.8)};
