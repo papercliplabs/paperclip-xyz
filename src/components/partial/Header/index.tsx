@@ -24,7 +24,8 @@ const StyledHeader = styled(Row)<{
 	padding: ${({ theme }) => theme.spacing.xl};
 	justify-content: space-between;
 	z-index: 999;
-	
+	background: rgba(6, 6, 6, 0.5);
+	backdrop-filter: blur(16px);
 
 	${({ theme }) => theme.mediaWidth.small`
 		padding: ${({ theme }) => theme.spacing.md};

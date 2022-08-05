@@ -18,8 +18,10 @@ import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
 import mapleFinanceSubgraphImg from "@images/maple-finance-subgraph.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
-import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
 import dydxGrantsImg from "@images/dydx-grants.png";
+import reverieImg from "@images/reverie.png";
+import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
+import iPledgeAllegianceImg from "@images/i-pledge-allegiance.png";
 import twitterImg from "@images/twitter.svg";
 import emailImg from "@images/email.svg";
 
@@ -100,6 +102,18 @@ const projectInfoList: ProjectInfo[] = [
 		tags: [ProjectTag.BRAND_IDENTITY],
 	},
 	{
+		title: "Reverie",
+		img: reverieImg,
+		link: "https://www.reverie.ooo/",
+		tags: [ProjectTag.BRAND_IDENTITY],
+	},
+	{
+		title: "I Pledge Allegiance ",
+		img: iPledgeAllegianceImg,
+		link: "https://open.spotify.com/show/4mTiWTYpcHcX5ZU6cRng9B?si=1788f38c17134d79",
+		tags: [ProjectTag.BRAND_IDENTITY],
+	},
+	{
 		title: "Compound Info Dashboard",
 		img: compoundInfoDashboardImg,
 		link: "https://compoundfinance.info",
@@ -109,7 +123,7 @@ const projectInfoList: ProjectInfo[] = [
 		title: "Compound Info Subgraph",
 		img: compoundInfoSubgraphImg,
 		link: "https://thegraph.com/hosted-service/subgraph/papercliplabs/compound-info",
-		tags: [ProjectTag.ENGINEERING],
+		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
 	},
 	{
 		title: "Maple Finance Subgraph",
