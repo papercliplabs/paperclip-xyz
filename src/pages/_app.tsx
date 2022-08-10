@@ -20,7 +20,20 @@ export default function App({ Component, pageProps }: { Component: any; pageProp
 				<title>Paperclip Labs</title>
   				<meta name="description" content="Paperclip Labs is a design, research, and engineering studio building Web3 tools."/>
 			
-			<OgHead>
+				<meta property="og:url" content="https://www.paperclip.xyz/"/>
+				<meta property="og:type" content="website"/>
+				<meta property="og:title" content="Paperclip Labs"/>
+				<meta property="og:description" content="Paperclip Labs is a design, research, and engineering studio building Web3 tools."/>
+				<meta property="og:image" content="%PUBLIC_URL%/public/images/paperclip-og.png"/>
+
+				<meta name="twitter:card" content="summary_large_image"/>
+				<meta property="twitter:domain" content="paperclip.xyz"/>
+				<meta property="twitter:url" content="https://www.paperclip.xyz/"/>
+				<meta name="twitter:title" content="Paperclip Labs"/>
+				<meta name="twitter:description" content="Paperclip Labs is a design, research, and engineering studio building Web3 tools."/>
+				<meta name="twitter:image" content="%PUBLIC_URL%/public/images/paperclip-og.png"/>
+
+			{/* <OgHead>
 				description={"Paperclip Labs is a design, research, and engineering studio building Web3 tools."}
 				ogUrl={"https://www.paperclip.xyz/"}
 				ogImage={OgImg}
@@ -32,7 +45,7 @@ export default function App({ Component, pageProps }: { Component: any; pageProp
 				ogUrl: {"https://www.paperclip.xyz/"}
 				ogImage={OgImg}
 				ogTitle={"Paperclip Labs"}
-			</TwitterHead>
+			</TwitterHead> */}
 			
 			</Head>
 			<Theme>
