@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import styled, { useTheme, keyframes } from "styled-components";
 import Image from "next/image";
 
 import { Typography } from "@theme";
@@ -7,6 +7,21 @@ import { ProjectInfo } from "@common/types";
 
 import Column from "@components/Column";
 import { Link } from "@components/Link";
+
+const fadeIn = keyframes`
+  0% { 
+    opacity: 0; 
+	filter: brightness(1) blur(20px);
+  }
+  10% { 
+    opacity: 1; 
+	filter: brightness(2) blur(10px);
+  }
+  100% { 
+    opacity: 1; 
+	filter: brightness(1) blur(0);
+  }
+`;
 
 const ProjectImageContainer = styled.div`
 	display: block;
@@ -17,6 +32,8 @@ const ProjectImageContainer = styled.div`
 	perspective: 1px;
 	filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.3));
 	overflow: visable;
+
+	animation: ${fadeIn} 1s linear 0s;
 `;
 
 
@@ -88,7 +105,6 @@ export function ProjectCard({ projectInfo, width }: { projectInfo: ProjectInfo; 
 							width="100%"
 							height="54%"
 							objectFit="contain"
-							placeholder="blur"
 						/>
 					</ProjectImageContainer>
 					<Typography.h3 align="left">{projectInfo.title}</Typography.h3>
