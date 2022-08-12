@@ -33,7 +33,7 @@ const ProjectImageContainer = styled.div`
 	filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.3));
 	overflow: visable;
 
-	animation: ${fadeIn} 3s linear 0s;
+	animation: ${fadeIn} 1s linear 0s;
 `;
 
 
