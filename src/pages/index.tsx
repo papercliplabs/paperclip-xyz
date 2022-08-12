@@ -145,7 +145,7 @@ const projectInfoList: ProjectInfo[] = [
 	{
 		title: "Maple Finance Subgraph",
 		img: mapleFinanceSubgraphImg,
-		link: "https://thegraph.com/hosted-service/subgraph/messari/maple-finance-ethereum ",
+		link: "https://thegraph.com/explorer/subgraph?id=5H97eNhy9fVHcqRXZtCV2UxHG2DbzcFA7yth1TaVZ45x&view=Overview",
 		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
 	},
 ];
