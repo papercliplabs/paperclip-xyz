@@ -43,9 +43,11 @@ export function theme(): DefaultTheme {
 			text1: "#F5F5F5",
 			text2: "rgba(245, 245, 245, 0.7)",
 			text3: "rgba(245, 245, 245, 0.5)",
+			text5: "rgba(245, 245, 245, 0.7)",
 
 			paperclipGradient: "linear-gradient(197.26deg, #43EF44 -1.74%, #ECFF0C 102.63%)",
 			twitter: "#088AE1",
+
 		},
 
 		radius: {
@@ -153,13 +155,25 @@ export const Typography = {
 			/>
 		);
 	},
+	h5(props: any) {
+		return (
+			<StyledText
+				family="Space Grotesk"
+				fontWeight={{ small: 600, large: 600 }}
+				fontSize={{ small: 9, large: 13 }}
+				lineHeight={{ small: 24, large: 24 }}
+				letterSpacing={{ small: 0.02, large: 0.02 }}
+				{...props}
+			/>
+		);
+	},
 	body(props: any) {
 		return (
 			<StyledText
 				family="Inter"
 				fontWeight={{ small: 400, large: 400 }}
-				fontSize={{ small: 15, large: 17 }}
-				lineHeight={{ small: 20, large: 24 }}
+				fontSize={{ small: 9, large: 13 }}
+				lineHeight={{ small: 16, large: 20 }}
 				letterSpacing={{ small: 0.02, large: 0 }}
 				{...props}
 			/>

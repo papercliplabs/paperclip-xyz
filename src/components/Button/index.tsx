@@ -24,14 +24,14 @@ export function ContactButton({
 	const theme = useTheme();
 
 	return (
-		<Link href={link} width="100%" maxWidth={theme.mediaQuerySizes.small + "px"} disableHoverOpacity>
-			<Card backgroundColor={backgroundColor} padding={theme.spacing.sm}>
-				<Row justify="space-between">
-					<Row>
-						<Icon src={img} alt={text} size="48px" padding="12px" isButton={false} />
+		<Link href={link} width ="225px" height ="56px" disableHoverOpacity>
+			<Card backgroundColor={backgroundColor} padding={theme.spacing.md} line-height = "225px" max-width ="225px">
+				<Row justify="space-between" align-items="center">
+				<Icon src={img} alt={text} size="45px" padding="6px 3px" isButton={false} />
+					<Row align-items="center" white-space="nowrap" text-align ="center" justify="space-between" padding="12px">
 						<Typography.body>{text}</Typography.body>
 					</Row>
-					<Icon src={linkImg} alt="Link img" size="48px" padding="12px" isButton={false} />
+					{/* <Icon src={linkImg} alt="Link img" size="48px" isButton={false} /> */}
 				</Row>
 			</Card>
 		</Link>
