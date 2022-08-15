@@ -89,6 +89,17 @@ const BottomButton = styled.div`
 	margin-top: 24px;
 	margin-bottom: 42px;
 	gap: 32px;
+
+	${({ theme }) => theme.mediaWidth.small`
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0px;
+		gap: 24px;
+		margin-top: 16px;
+	
+	`}
+
 `;
 
 const Trademark = styled(Typography.h5)`
@@ -231,7 +242,6 @@ export default function Index() {
 					<PaperclipGradientText>CONTACT US</PaperclipGradientText>
 					<Typography.h2 align="center">
 						Want to work together?
-						{/* {windowSize == WindowSize.SMALL ? <br /> : " "} */}
 						<br/>
 						Send us a message.
 					</Typography.h2>
