@@ -229,13 +229,11 @@ export default function Index() {
 				{projectTable}
 				<Column gap={theme.spacing.sm} padding={theme.spacing.xl + " 0"}>
 					<PaperclipGradientText>CONTACT US</PaperclipGradientText>
-					<Typography.h2>
+					<Typography.h2 align="center">
 						Want to work together?
-						{windowSize == WindowSize.SMALL ? <br /> : " "}
-					</Typography.h2>
-					<Typography.h2>
+						{/* {windowSize == WindowSize.SMALL ? <br /> : " "} */}
+						<br/>
 						Send us a message.
-						{windowSize == WindowSize.SMALL ? <br /> : " "}
 					</Typography.h2>
 					<BottomButton>
 					<ContactButton
@@ -251,7 +249,6 @@ export default function Index() {
 					/>
 					</BottomButton>
 					<Trademark>
-						
 						Paperclip Labs a Web3 company
 						{windowSize == WindowSize.SMALL ? <br /> : " "}
 					</Trademark>

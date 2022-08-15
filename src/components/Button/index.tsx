@@ -32,13 +32,12 @@ const ConctactDiv = styled.div<{
 	align-items: center;
 	padding: 16px 24px;
 	gap: 8px;
-
+	white-space: nowrap;
 	width: 225px;
 	height: 56px;
+	align: center;
 
 	border-radius: 1000px;
-
-	/* Inside auto layout */
 
 	flex: none;
 	order: 0;
@@ -75,9 +74,9 @@ export function ContactButton({
 		<Link href={link} width="100%" maxWidth={theme.mediaQuerySizes.small + "px"} disableHoverOpacity>
 			<ConctactDiv backgroundColor={backgroundColor} padding={theme.spacing.sm}>
 				<Row justify="space-between">
-					<Row>
-						<Icon src={img} alt={text} size="48px" padding="12px" isButton={false} />
-						<Typography.body>{text}</Typography.body>
+					<Row justify="center">
+						<Icon src={img} alt={text} size="30px" padding="2px" isButton={false} />
+						<Typography.button>{text}</Typography.button>
 					</Row>
 					{/* <Icon src={linkImg} alt="Link img" size="48px" padding="12px" isButton={false} /> */}
 				</Row>

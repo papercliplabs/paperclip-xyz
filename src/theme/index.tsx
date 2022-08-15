@@ -158,9 +158,21 @@ export const Typography = {
 	h5(props: any) {
 		return (
 			<StyledText
-				family="Space Grotesk"
-				fontWeight={{ small: 600, large: 600 }}
-				fontSize={{ small: 9, large: 13 }}
+				family="Inter"
+				fontWeight={{ small: 400, large: 400 }}
+				fontSize={{ small: 13, large: 13 }}
+				lineHeight={{ small: 20, large: 20 }}
+				letterSpacing={{ small: 0.02, large: 0.02 }}
+				{...props}
+			/>
+		);
+	},
+	button(props: any) {
+		return (
+			<StyledText
+				family="Inter"
+				fontWeight={{ small: 400, large: 400 }}
+				fontSize={{ small: 17, large: 17 }}
 				lineHeight={{ small: 24, large: 24 }}
 				letterSpacing={{ small: 0.02, large: 0.02 }}
 				{...props}
@@ -172,7 +184,7 @@ export const Typography = {
 			<StyledText
 				family="Inter"
 				fontWeight={{ small: 400, large: 400 }}
-				fontSize={{ small: 9, large: 13 }}
+				fontSize={{ small: 15, large: 17 }}
 				lineHeight={{ small: 16, large: 20 }}
 				letterSpacing={{ small: 0.02, large: 0 }}
 				{...props}
