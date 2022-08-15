@@ -242,7 +242,6 @@ export default function Index() {
 					<PaperclipGradientText>CONTACT US</PaperclipGradientText>
 					<Typography.h2 align="center">
 						Want to work together?
-						{/* {windowSize == WindowSize.SMALL ? <br /> : " "} */}
 						<br/>
 						Send us a message.
 					</Typography.h2>
