@@ -24,14 +24,14 @@ export default function App({ Component, pageProps }: { Component: any; pageProp
 				<meta property="og:type" content="website"/>
 				<meta property="og:title" content="Paperclip Labs"/>
 				<meta property="og:description" content="Paperclip Labs is a design, research, and engineering studio building Web3 tools."/>
-				<meta property="og:image" content="%PUBLIC_URL%/public/images/paperclip-og.png"/>
+				<meta property="og:image" content="https://github.com/papercliplabs/paperclip-xyz/blob/main/public/static/images/paperclip-og.png?raw=true"/>
 
 				<meta name="twitter:card" content="summary_large_image"/>
 				<meta property="twitter:domain" content="paperclip.xyz"/>
 				<meta property="twitter:url" content="https://www.paperclip.xyz/"/>
 				<meta name="twitter:title" content="Paperclip Labs"/>
 				<meta name="twitter:description" content="Paperclip Labs is a design, research, and engineering studio building Web3 tools."/>
-				<meta name="twitter:image" content="%PUBLIC_URL%/public/images/paperclip-og.png"/>
+				<meta name="twitter:image" content="https://github.com/papercliplabs/paperclip-xyz/blob/main/public/static/images/paperclip-og.png?raw=true"/>
 
 			{/* <OgHead>
 				description={"Paperclip Labs is a design, research, and engineering studio building Web3 tools."}
