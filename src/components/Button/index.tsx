@@ -27,6 +27,10 @@ const ConctactDiv = styled.div<{
 	overflow: hidden;
 	transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
 	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	padding: 16px 24px;
 	gap: 8px;
 	white-space: nowrap;
