@@ -82,6 +82,34 @@ const PaperclipGradientText = styled(Typography.h4)`
 	-moz-text-fill-color: transparent;
 `;
 
+const BottomButton = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 24px;
+	margin-bottom: 42px;
+	gap: 32px;
+
+	${({ theme }) => theme.mediaWidth.small`
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0px;
+		gap: 24px;
+		margin-top: 16px;
+	
+	`}
+
+`;
+
+const Trademark = styled(Typography.h5)`
+	background: ${({ theme }) => theme.color.text5};
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+`;
+
 const projectInfoList: ProjectInfo[] = [
 	{
 		title: "dYdX Grants",
@@ -210,24 +238,30 @@ export default function Index() {
 					<Typography.h4 color={theme.color.text1}>WE MAKE WEB3 TOOLS</Typography.h4>
 				</Column>
 				{projectTable}
-				<Column gap={theme.spacing.md} padding={theme.spacing.xl + " 0"}>
+				<Column gap={theme.spacing.sm} padding={theme.spacing.xl + " 0"}>
 					<PaperclipGradientText>CONTACT US</PaperclipGradientText>
-					<Typography.h2>
-						Want to collab?
-						{windowSize == WindowSize.SMALL ? <br /> : " "}
-						Have questions?
+					<Typography.h2 align="center">
+						Want to work together?
+						<br/>
+						Send us a message.
 					</Typography.h2>
+					<BottomButton>
 					<ContactButton
 						img={twitterImg}
-						text="Send us a DM on Twitter"
+						text="DM us on Twitter"
 						link={URLS.TWITTER}
 						backgroundColor={theme.color.twitter}
 					/>
 					<ContactButton
 						img={emailImg}
-						text={"Email us " + (windowSize == WindowSize.SMALL ? "" : EMAIL)}
+						text="Email us "
 						link={"mailto: " + EMAIL}
 					/>
+					</BottomButton>
+					<Trademark>
+						Paperclip Labs a Web3 company
+						{windowSize == WindowSize.SMALL ? <br /> : " "}
+					</Trademark>
 				</Column>
 			</Overlay>
 		</>
