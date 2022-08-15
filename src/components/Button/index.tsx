@@ -27,9 +27,6 @@ const ConctactDiv = styled.div<{
 	overflow: hidden;
 	transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
 	
-	display: flex;
-	flex-direction: row;
-	align-items: center;
 	padding: 16px 24px;
 	gap: 8px;
 	white-space: nowrap;
@@ -42,6 +39,20 @@ const ConctactDiv = styled.div<{
 	flex: none;
 	order: 0;
 	flex-grow: 0;
+
+	${({ theme }) => theme.mediaWidth.small`
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 16px 24px;
+		gap: 8px;
+	
+		width: 294px;
+		height: 56px;
+	
+	`}
+	
 
 	:hover {
 		background-color: ${({ theme, backgroundColor }) => backgroundColor ?? theme.color.card1};

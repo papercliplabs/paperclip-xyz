@@ -60,10 +60,12 @@ const Card = styled.div<{
 	margin: 0;
 	box-shadow: ${({ theme, noShadow }) => (noShadow ? "" : theme.shadow.card)};
 	row-gap: 8px;
+
 	${({ theme }) => theme.mediaWidth.small`
 		padding: ${theme.spacing.sm};
 		padding-bottom: ${({ theme }) => theme.spacing.lg};
 	`}
+	
 	max-height: ${({ maxHeight }) => maxHeight ?? ""};
 	max-width: ${({ maxWidth }) => maxWidth ?? ""};
 	overflow: hidden;
