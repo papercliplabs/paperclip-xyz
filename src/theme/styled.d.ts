@@ -16,6 +16,7 @@ export interface Colors {
 	text1: string;
 	text2: string;
 	text3: string;
+	text5: string,
 
 	paperclipGradient: string;
 	twitter: string;
