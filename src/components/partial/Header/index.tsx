@@ -1,11 +1,11 @@
 import React, { forwardRef } from "react";
-import styled, { useTheme } from "styled-components";
+import styled, { keyframes, useTheme } from "styled-components";
 
 import Row from "@components/Row";
 import { Link } from "@components/Link";
 import Icon from "@components/Icon";
 
-import { URLS } from "@common/constants";
+import { TIME, URLS } from "@common/constants";
 import { useWindowSize } from "@common/hooks";
 import { WindowSize } from "@common/enums";
 
@@ -14,12 +14,35 @@ import githubImg from "@images/github.svg";
 import figmaImg from "@images/figma.svg";
 import paperclipImg from "@images/paperclip.png";
 
+const slidedown = keyframes`
+    0% {
+		top: -80px;
+	}
+	25% {
+		top: -60px;
+	}
+	50% {
+		top: -40px;
+	}
+	75% {
+		top: -20px;
+	}
+    100% {
+		top: 0;
+		display:block
+	}
+`;
+
+
+
 const StyledHeader = styled(Row)<{
 	height: string;
 }>`
+	animation: ${slidedown} calc(${TIME}*0.3ms) ease-in calc(${TIME}*0.9ms);
+	animation-pause: 3s;
+	animation-fill-mode: forwards;
 	position: fixed;
 	width: 100%;
-	top: 0;
 	height: ${({ height }) => height};
 	padding: ${({ theme }) => theme.spacing.xl};
 	justify-content: space-between;
@@ -31,6 +54,7 @@ const StyledHeader = styled(Row)<{
 		padding: ${({ theme }) => theme.spacing.md};
 	`}
 `;
+
 
 export default function Header({ height }: { height: string }) {
 	const theme = useTheme();

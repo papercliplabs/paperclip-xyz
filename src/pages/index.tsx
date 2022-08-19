@@ -9,10 +9,13 @@ import { ProjectCard } from "@components/Card";
 import { ContactButton } from "@components/Button";
 
 import { Typography } from "@theme";
-import { EMAIL, URLS } from "@common/constants";
+import { TIME, EMAIL, URLS } from "@common/constants";
 import { useWindowSize } from "@common/hooks";
 import { ProjectInfo } from "@common/types";
 import { ProjectTag, WindowSize } from "@common/enums";
+
+import CanvasSpline from "@components/Tvanimation/SplineCanvas";
+import TvOpen from "@components/Tvanimation/TV"
 
 import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
@@ -27,7 +30,7 @@ import emailImg from "@images/email.svg";
 
 const MARQUEE_SPEED_PX_PER_SECS = 50;
 const NUM_PROJECT_PER_ROW_FOR_SIZE = [1, 2, 3]; // small, medium, large
-const PEAK_HEIGHT = "100px";
+const PEAK_HEIGHT = "0px";
 
 const Sticky = styled(Column)`
 	position: sticky;
@@ -177,9 +180,9 @@ export default function Index() {
 		const timer = setTimeout(() => {
 			// If still at the top of page after short time, pop up the project cards so user knows they can scroll
 			if (stickyRef.current && stickyRef.current.parentElement && stickyRef.current.parentElement.scrollTop == 0) {
-				stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 8, left: 0, behavior: "smooth" });
+				stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 5, left: 0, behavior: "smooth" });
 			}
-		}, 1000);
+		}, TIME);
 
 		return () => clearTimeout(timer);
 	}, []);
@@ -215,6 +218,8 @@ export default function Index() {
 
 	return (
 		<>
+		<CanvasSpline>
+			<TvOpen>
 			<Sticky ref={stickyRef}>
 				<Marquee gradient={false} speed={MARQUEE_SPEED_PX_PER_SECS} direction="left">
 					{windowSize == WindowSize.SMALL ? (
@@ -231,6 +236,9 @@ export default function Index() {
 				</Marquee>
 				<PaperclipSpline />
 			</Sticky>
+			</TvOpen>
+			</CanvasSpline>
+
 
 			<Overlay gap={theme.spacing.lg}>
 				<Column onClick={scrollProjects} isClickable={true}>

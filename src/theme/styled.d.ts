@@ -26,13 +26,14 @@ export interface Colors {
 declare module "styled-components" {
 	export interface DefaultTheme {
 		color: Colors;
-
+		
 		radius: {
 			sm: string;
 			md: string;
 			lg: string;
 			xl: string;
 		};
+
 
 		mediaWidth: {
 			small: ThemedCssFunction<DefaultTheme>;
