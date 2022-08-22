@@ -39,10 +39,10 @@ const StyledHeader = styled(Row)<{
 	height: string;
 }>`
 	animation: ${slidedown} calc(${TIME}*0.3ms) ease-in calc(${TIME}*0.9ms);
-	animation-pause: 3s;
 	animation-fill-mode: forwards;
 	position: fixed;
 	width: 100%;
+	top: -80px;
 	height: ${({ height }) => height};
 	padding: ${({ theme }) => theme.spacing.xl};
 	justify-content: space-between;

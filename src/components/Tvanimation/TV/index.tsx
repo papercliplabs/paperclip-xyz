@@ -22,8 +22,9 @@ const pulse = keyframes`
 `;
 
 const TvOpen = styled.div`
-    animation: ${pulse} calc(${TIME}*1ms-1000ms) ease-in;
+    animation: ${pulse} calc(${TIME} * 1ms - 1000ms) ease-in;
     animation-fill-mode: forwards;
+    display: block;
     width: 100%;
     height: 100%;
     

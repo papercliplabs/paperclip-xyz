@@ -237,7 +237,7 @@ export default function Index() {
 				<PaperclipSpline />
 			</Sticky>
 			</TvOpen>
-			</CanvasSpline>
+		</CanvasSpline>
 
 
 			<Overlay gap={theme.spacing.lg}>
