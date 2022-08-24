@@ -18,15 +18,6 @@ const slidedown = keyframes`
     0% {
 		top: -80px;
 	}
-	25% {
-		top: -60px;
-	}
-	50% {
-		top: -40px;
-	}
-	75% {
-		top: -20px;
-	}
     100% {
 		top: 0;
 		display:block

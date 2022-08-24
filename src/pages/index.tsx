@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef } from "react";
-import styled, { useTheme } from "styled-components";
+import styled, { keyframes, useTheme } from "styled-components";
 import Marquee from "react-fast-marquee";
 
 import Row from "@components/Row";
@@ -45,10 +45,21 @@ const Sticky = styled(Column)`
 	-webkit-transform: translate3d(0, 0, 0);
 `;
 
+const slideup = keyframes`
+    0% {
+		margin-top: 200px;
+	}
+    100% {
+		margin-top: 0;
+	}
+`;
+
+
 const Overlay = styled(Column)`
 	background-color: pink;
 	width: 100%;
 	max-height: none;
+	margin-top: 200px;
 	z-index: 999;
 	padding: ${({ theme }) => theme.spacing.xl};
 	padding-top: ${({ theme }) => theme.spacing.sm};
@@ -56,6 +67,9 @@ const Overlay = styled(Column)`
 	border-radius: ${({ theme }) => theme.radius.xl} ${({ theme }) => theme.radius.xl} 0 0;
 	box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.25);
 
+	animation: ${slideup} calc(${TIME}*0.3ms) ease-in calc(${TIME}*0.9ms);
+	animation-fill-mode: forwards;
+	
 	${({ theme }) => theme.mediaWidth.small`
 		padding: ${({ theme }) => theme.spacing.sm};
 		padding-bottom: 120px;
@@ -169,23 +183,23 @@ export default function Index() {
 	const stickyRef = useRef<HTMLInputElement>(null);
 	const windowSize = useWindowSize();
 
-	// Scroll to inital position on load after short delay
-	useEffect(() => {
-		// Scroll to top on load/refresh
-		window.scrollTo(0, 0);
-		if (stickyRef.current && stickyRef.current.parentElement) {
-			stickyRef.current.parentElement.scrollTo({ top: 0, left: 0, behavior: "auto" });
-		}
+	// // Scroll to inital position on load after short delay
+	// useEffect(() => {
+	// 	// Scroll to top on load/refresh
+	// 	window.scrollTo(0, 0);
+	// 	if (stickyRef.current && stickyRef.current.parentElement) {
+	// 		stickyRef.current.parentElement.scrollTo({ top: 0, left: 0, behavior: "auto" });
+	// 	}
 
-		const timer = setTimeout(() => {
-			// If still at the top of page after short time, pop up the project cards so user knows they can scroll
-			if (stickyRef.current && stickyRef.current.parentElement && stickyRef.current.parentElement.scrollTop == 0) {
-				stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 5, left: 0, behavior: "smooth" });
-			}
-		}, TIME);
+	// 	const timer = setTimeout(() => {
+	// 		// If still at the top of page after short time, pop up the project cards so user knows they can scroll
+	// 		if (stickyRef.current && stickyRef.current.parentElement && stickyRef.current.parentElement.scrollTop == 0) {
+	// 			stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 3, left: 0, behavior: "smooth" });
+	// 		}
+	// 	}, TIME);
 
-		return () => clearTimeout(timer);
-	}, []);
+	// 	return () => clearTimeout(timer);
+	// }, []);
 
 	const projectTable = useMemo(() => {
 		const gap = theme.spacing.lg;
