@@ -23,6 +23,7 @@ import mapleFinanceSubgraphImg from "@images/maple-finance-subgraph.png";
 import compoundInfoDashboardImg from "@images/compound-info.png";
 import dydxGrantsImg from "@images/dydx-grants.png";
 import reverieImg from "@images/reverie.png";
+import etherlandsImg from "@images/etherlands.png";
 import compoundInfoSubgraphImg from "@images/compound-info-subgraph.png";
 import iPledgeAllegianceImg from "@images/i-pledge-allegiance.png";
 import twitterImg from "@images/twitter.svg";
@@ -151,6 +152,12 @@ const projectInfoList: ProjectInfo[] = [
 		img: reverieImg,
 		link: "https://www.reverie.ooo/",
 		tags: [ProjectTag.BRAND_IDENTITY],
+	},
+	{
+		title: "Etherlands",
+		img: etherlandsImg,
+		link: "https://etherlands.com/",
+		tags: [ ProjectTag.PRODUCT_DESIGN, ProjectTag.ENGINEERING, ProjectTag.BRAND_IDENTITY,],
 	},
 	{
 		title: "I Pledge Allegiance ",
