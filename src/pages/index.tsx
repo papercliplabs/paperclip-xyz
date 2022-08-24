@@ -183,23 +183,23 @@ export default function Index() {
 	const stickyRef = useRef<HTMLInputElement>(null);
 	const windowSize = useWindowSize();
 
-	// // Scroll to inital position on load after short delay
-	// useEffect(() => {
-	// 	// Scroll to top on load/refresh
-	// 	window.scrollTo(0, 0);
-	// 	if (stickyRef.current && stickyRef.current.parentElement) {
-	// 		stickyRef.current.parentElement.scrollTo({ top: 0, left: 0, behavior: "auto" });
-	// 	}
+	// Scroll to inital position on load after short delay - this animation is canceled by splide-up for the overlay
+	useEffect(() => {
+		// Scroll to top on load/refresh
+		window.scrollTo(0, 0);
+		if (stickyRef.current && stickyRef.current.parentElement) {
+			stickyRef.current.parentElement.scrollTo({ top: 0, left: 0, behavior: "auto" });
+		}
 
-	// 	const timer = setTimeout(() => {
-	// 		// If still at the top of page after short time, pop up the project cards so user knows they can scroll
-	// 		if (stickyRef.current && stickyRef.current.parentElement && stickyRef.current.parentElement.scrollTop == 0) {
-	// 			stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 3, left: 0, behavior: "smooth" });
-	// 		}
-	// 	}, TIME);
+		const timer = setTimeout(() => {
+			// If still at the top of page after short time, pop up the project cards so user knows they can scroll
+			if (stickyRef.current && stickyRef.current.parentElement && stickyRef.current.parentElement.scrollTop == 0) {
+				stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 3, left: 0, behavior: "smooth" });
+			}
+		}, TIME);
 
-	// 	return () => clearTimeout(timer);
-	// }, []);
+		return () => clearTimeout(timer);
+	}, []);
 
 	const projectTable = useMemo(() => {
 		const gap = theme.spacing.lg;
