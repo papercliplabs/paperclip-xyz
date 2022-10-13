@@ -100,7 +100,6 @@ const BottomButton = styled.div`
 		margin-top: 16px;
 	
 	`}
-
 `;
 
 const Trademark = styled(Typography.h5)`
@@ -140,7 +139,7 @@ const projectInfoList: ProjectInfo[] = [
 		title: "Etherlands",
 		img: etherlandsImg,
 		link: "https://etherlands.com/",
-		tags: [ ProjectTag.PRODUCT_DESIGN, ProjectTag.ENGINEERING, ProjectTag.BRAND_IDENTITY,],
+		tags: [ProjectTag.PRODUCT_DESIGN, ProjectTag.ENGINEERING, ProjectTag.BRAND_IDENTITY],
 	},
 	{
 		title: "I Pledge Allegiance ",
@@ -157,7 +156,7 @@ const projectInfoList: ProjectInfo[] = [
 	{
 		title: "Compound Info Subgraph",
 		img: compoundInfoSubgraphImg,
-		link: "https://thegraph.com/hosted-service/subgraph/papercliplabs/compound-info",
+		link: "https://thegraph.com/explorer/subgraph?id=AcQLRyJfoDLzTAMMdR6wVE5WCowMLVP8uGkoLvZmxmAv&view=Overview",
 		tags: [ProjectTag.SUBGRAPH_ENGINEERING],
 	},
 	{
@@ -249,21 +248,17 @@ export default function Index() {
 					<PaperclipGradientText>CONTACT US</PaperclipGradientText>
 					<Typography.h2 align="center">
 						Want to work together?
-						<br/>
+						<br />
 						Send us a message.
 					</Typography.h2>
 					<BottomButton>
-					<ContactButton
-						img={twitterImg}
-						text="DM us on Twitter"
-						link={URLS.TWITTER}
-						backgroundColor={theme.color.twitter}
-					/>
-					<ContactButton
-						img={emailImg}
-						text="Email us "
-						link={"mailto: " + EMAIL}
-					/>
+						<ContactButton
+							img={twitterImg}
+							text="DM us on Twitter"
+							link={URLS.TWITTER}
+							backgroundColor={theme.color.twitter}
+						/>
+						<ContactButton img={emailImg} text="Email us " link={"mailto: " + EMAIL} />
 					</BottomButton>
 					<Trademark>
 						Paperclip Labs a Web3 company
