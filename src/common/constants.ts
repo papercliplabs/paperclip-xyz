@@ -5,3 +5,5 @@ export const URLS = {
 };
 
 export const EMAIL = "contact@paperclip.xyz";
+
+export const TIME =3000;

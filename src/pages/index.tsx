@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef } from "react";
-import styled, { useTheme } from "styled-components";
+import styled, { keyframes, useTheme } from "styled-components";
 import Marquee from "react-fast-marquee";
 
 import Row from "@components/Row";
@@ -9,10 +9,13 @@ import { ProjectCard } from "@components/Card";
 import { ContactButton } from "@components/Button";
 
 import { Typography } from "@theme";
-import { EMAIL, URLS } from "@common/constants";
+import { TIME, EMAIL, URLS } from "@common/constants";
 import { useWindowSize } from "@common/hooks";
 import { ProjectInfo } from "@common/types";
 import { ProjectTag, WindowSize } from "@common/enums";
+
+import CanvasSpline from "@components/Tvanimation/SplineCanvas";
+import TvOpen from "@components/Tvanimation/TV"
 
 import defiEducationFundImg from "@images/defi-education.png";
 import compoundGrantsBrandingImg from "@images/compound-grants-branding.png";
@@ -28,7 +31,7 @@ import emailImg from "@images/email.svg";
 
 const MARQUEE_SPEED_PX_PER_SECS = 50;
 const NUM_PROJECT_PER_ROW_FOR_SIZE = [1, 2, 3]; // small, medium, large
-const PEAK_HEIGHT = "100px";
+const PEAK_HEIGHT = "0px";
 
 const Sticky = styled(Column)`
 	position: sticky;
@@ -43,10 +46,21 @@ const Sticky = styled(Column)`
 	-webkit-transform: translate3d(0, 0, 0);
 `;
 
+const slideup = keyframes`
+    0% {
+		margin-top: 200px;
+	}
+    100% {
+		margin-top: 0;
+	}
+`;
+
+
 const Overlay = styled(Column)`
 	background-color: pink;
 	width: 100%;
 	max-height: none;
+	margin-top: 200px;
 	z-index: 999;
 	padding: ${({ theme }) => theme.spacing.xl};
 	padding-top: ${({ theme }) => theme.spacing.sm};
@@ -54,6 +68,9 @@ const Overlay = styled(Column)`
 	border-radius: ${({ theme }) => theme.radius.xl} ${({ theme }) => theme.radius.xl} 0 0;
 	box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.25);
 
+	animation: ${slideup} calc(${TIME}*0.3ms) ease-in calc(${TIME}*0.9ms);
+	animation-fill-mode: forwards;
+	
 	${({ theme }) => theme.mediaWidth.small`
 		padding: ${({ theme }) => theme.spacing.sm};
 		padding-bottom: 120px;
@@ -172,7 +189,7 @@ export default function Index() {
 	const stickyRef = useRef<HTMLInputElement>(null);
 	const windowSize = useWindowSize();
 
-	// Scroll to inital position on load after short delay
+	// Scroll to inital position on load after short delay - this animation is canceled by splide-up for the overlay
 	useEffect(() => {
 		// Scroll to top on load/refresh
 		window.scrollTo(0, 0);
@@ -183,9 +200,9 @@ export default function Index() {
 		const timer = setTimeout(() => {
 			// If still at the top of page after short time, pop up the project cards so user knows they can scroll
 			if (stickyRef.current && stickyRef.current.parentElement && stickyRef.current.parentElement.scrollTop == 0) {
-				stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 8, left: 0, behavior: "smooth" });
+				stickyRef.current.parentElement.scrollTo({ top: window.innerHeight / 3, left: 0, behavior: "smooth" });
 			}
-		}, 1000);
+		}, TIME);
 
 		return () => clearTimeout(timer);
 	}, []);
@@ -221,6 +238,8 @@ export default function Index() {
 
 	return (
 		<>
+		<CanvasSpline>
+			<TvOpen>
 			<Sticky ref={stickyRef}>
 				<Marquee gradient={false} speed={MARQUEE_SPEED_PX_PER_SECS} direction="left">
 					{windowSize == WindowSize.SMALL ? (
@@ -237,6 +256,9 @@ export default function Index() {
 				</Marquee>
 				<PaperclipSpline />
 			</Sticky>
+			</TvOpen>
+		</CanvasSpline>
+
 
 			<Overlay gap={theme.spacing.lg}>
 				<Column onClick={scrollProjects} isClickable={true}>
